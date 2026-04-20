@@ -42,7 +42,20 @@ Selecione 1 destaque (lide mais forte) + 5 "e mais". Ordene por força. Diversif
 ### 4. Gerar HTML
 Leia `docs/edicoes/2026-04-20.html` (edição inaugural) como template EXATO. Mantenha TODO o `<style>`, paleta cream + rosa-coral + azul-petróleo, fontes Fraunces + Libre Franklin + JetBrains Mono.
 
-Estrutura da edição nova: nameplate + varredura + destaque + "saúde/educação/segurança" (subseção) + "e mais" (subseção) + curadoria + dashboard-embed + sobre-lai + metodologia + expediente com "quem faz".
+Estrutura da edição nova, nesta ORDEM:
+1. nameplate (logo + data)
+2. **descritivo** — bloco com `.descritivo` logo após o nameplate, com UM parágrafo italic explicando o que é a newsletter (texto fixo): "A LAI que pegou é uma newsletter semanal que vasculha o Busca LAI — sistema público da Controladoria-Geral da União com todos os pedidos de acesso à informação feitos ao governo federal. Destacamos o que o governo respondeu, o que tentou esconder, e o que vale virar pauta."
+3. destaque
+4. "saúde/educação/segurança" (subseção)
+5. "e mais" (subseção)
+6. curadoria de reportagens
+7. dashboard-embed
+8. sobre-lai
+9. metodologia
+10. **varredura** — metadados da varredura aqui PRÓXIMO do fim (não no topo)
+11. expediente com "quem faz"
+
+O CSS `.descritivo` já está definido no template (edição inaugural).
 
 Linguagem de cada parágrafo: mastigada. Jornalista cansado precisa entender em 30 segundos.
 
