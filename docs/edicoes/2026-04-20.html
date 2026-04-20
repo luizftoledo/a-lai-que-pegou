@@ -24,14 +24,12 @@
     min-height: 100vh; padding: 40px 32px 80px; line-height: 1.6;
   }
   .container { max-width: 760px; margin: 0 auto; }
-
   .back-link {
     font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
     text-transform: uppercase; color: var(--muted); text-decoration: none;
     margin-bottom: 20px; display: inline-block;
   }
   .back-link:hover { color: var(--stamp); }
-
   .nameplate {
     border-top: 4px double var(--ink); border-bottom: 2px solid var(--ink);
     padding: 18px 0 14px; margin-bottom: 24px; text-align: center; position: relative;
@@ -53,14 +51,12 @@
   .logo-subtext::after {
     content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--stamp);
   }
-
   .edition-meta {
     font-family: 'JetBrains Mono', monospace; font-size: 11px;
     letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
     display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-bottom: 6px;
   }
   .edition-meta .num { color: var(--stamp); font-weight: 700; }
-
   .varredura {
     background: var(--paper-2); border: 1px solid var(--line);
     border-left: 3px solid var(--stamp); padding: 16px 20px; margin: 32px 0;
@@ -73,16 +69,12 @@
   .varredura ul { list-style: none; padding: 0; margin: 0; }
   .varredura li { margin-bottom: 3px; padding-left: 14px; position: relative; }
   .varredura li::before { content: '›'; position: absolute; left: 0; color: var(--stamp); font-weight: 700; }
-
   .section-head {
     font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px;
     text-transform: uppercase; color: var(--stamp); font-weight: 700;
     border-top: 1px solid var(--ink); padding-top: 10px; margin: 48px 0 20px;
   }
-
-  .destaque {
-    padding: 24px 0; border-bottom: 1px solid var(--line);
-  }
+  .destaque { padding: 24px 0; border-bottom: 1px solid var(--line); }
   .destaque .kicker {
     font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
     text-transform: uppercase; color: var(--stamp); font-weight: 600; margin-bottom: 6px;
@@ -97,14 +89,12 @@
     color: var(--ink-2); margin-bottom: 18px;
   }
   .destaque p { margin-bottom: 14px; font-size: 15px; }
-  .destaque .lead {
-    font-size: 18px; font-weight: 500; line-height: 1.55; margin-bottom: 18px;
-  }
+  .destaque .lead { font-size: 18px; font-weight: 500; line-height: 1.55; margin-bottom: 18px; }
   .destaque .lead::first-letter {
     font-family: 'Fraunces', serif; font-size: 58px; font-weight: 900;
     float: left; line-height: 0.9; margin: 3px 8px 0 0; color: var(--stamp);
   }
-  .destaque .quote {
+  .quote {
     border-left: 3px solid var(--stamp); padding: 4px 16px;
     font-family: 'Fraunces', serif; font-style: italic; font-size: 15px;
     color: var(--ink-2); margin: 16px 0;
@@ -119,7 +109,6 @@
     font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
     color: var(--stamp); margin-bottom: 6px; font-weight: 700;
   }
-
   .ficha {
     background: var(--paper-2); border: 1px solid var(--line);
     padding: 10px 14px; margin: 14px 0; font-family: 'JetBrains Mono', monospace;
@@ -127,10 +116,7 @@
   }
   .ficha span b { color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-right: 4px; }
   .ficha span b::after { content: ':'; }
-
-  .item {
-    padding: 22px 0; border-bottom: 1px dashed var(--line);
-  }
+  .item { padding: 22px 0; border-bottom: 1px dashed var(--line); }
   .item:last-child { border-bottom: none; }
   .item .kicker {
     font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px;
@@ -143,11 +129,6 @@
   }
   .item h3 .mark { background: var(--highlight); padding: 0 3px; }
   .item p { font-size: 14px; margin-bottom: 8px; color: var(--ink-2); }
-  .item .quote {
-    border-left: 2px solid var(--stamp); padding: 2px 12px;
-    font-family: 'Fraunces', serif; font-style: italic; font-size: 13px;
-    color: var(--ink-2); margin: 10px 0;
-  }
   .item .angulo {
     font-family: 'Fraunces', serif; font-style: italic; font-size: 14px;
     color: var(--ink); margin-top: 10px; padding-left: 12px;
@@ -159,14 +140,48 @@
     text-transform: uppercase; margin-top: 6px; display: inline-block;
   }
   .item a.link:hover { text-decoration: underline; }
-
+  .curadoria {
+    margin-top: 40px; background: var(--paper-2); padding: 26px 28px;
+    border: 1px solid var(--line); border-top: 3px solid var(--ink);
+  }
+  .curadoria h2 {
+    font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800;
+    letter-spacing: -0.5px; margin-bottom: 6px;
+  }
+  .curadoria .sub {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 15px;
+    color: var(--muted); margin-bottom: 18px;
+  }
+  .curadoria .reportagem {
+    border-top: 1px dashed var(--line); padding: 14px 0;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .curadoria .reportagem:first-of-type { border-top: none; padding-top: 4px; }
+  .curadoria .rep-meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .curadoria .rep-meta b { color: var(--stamp); }
+  .curadoria .rep-titulo {
+    font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700;
+    line-height: 1.25; color: var(--ink); text-decoration: none;
+  }
+  .curadoria .rep-titulo:hover { background: var(--highlight); }
+  .curadoria .rep-como {
+    font-size: 13px; color: var(--ink-2); font-style: italic;
+    margin-top: 4px;
+  }
+  .curadoria .rep-como b {
+    font-family: 'JetBrains Mono', monospace; font-style: normal;
+    font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--stamp); margin-right: 6px; font-weight: 700;
+  }
   .expediente {
     margin-top: 56px; padding-top: 22px; border-top: 2px double var(--ink);
     font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted);
     letter-spacing: 1.5px; text-transform: uppercase; text-align: center;
   }
   .expediente p { margin-bottom: 6px; }
-
   @media (max-width: 680px) {
     body { padding: 24px 18px 60px; }
     .logo-text { font-size: 42px; } .logo-subtext { font-size: 24px; }
@@ -191,69 +206,120 @@
   <div class="varredura">
     <b>○ varredura desta edição</b>
     <ul>
-      <li>varredura: 20 de abril de 2026, manhã</li>
-      <li>fonte: buscalai.cgu.gov.br — ordenação "Mais recentes"</li>
-      <li>pedidos lidos nesta rodada: 22 (respostas publicadas entre 16 e 17 de abril)</li>
-      <li>critério: dado extraível + revelação de padrão/lacuna + ausente no jornalismo mainstream</li>
-      <li>aprovados: 3 de 22</li>
+      <li>varredura: 20 de abril de 2026 · manhã</li>
+      <li>fonte: buscalai.cgu.gov.br (respostas publicadas em 16-17.abr) + curadoria externa</li>
+      <li>ênfase temática: saúde · educação · segurança pública · regulação econômica</li>
+      <li>pedidos lidos: 22 · aprovados nesta edição: 6</li>
       <li>próxima varredura automática: segunda, 27 de abril, 08h Londres</li>
     </ul>
   </div>
 
-  <div class="section-head">○ em destaque</div>
+  <div class="section-head">○ em destaque · o mais forte</div>
 
   <div class="destaque">
-    <div class="kicker">susep · dados estatísticos do mercado de seguros</div>
+    <div class="kicker">susep · mercado de seguros · r$ 500 bi/ano</div>
     <h2>Base de sinistros de carros da SUSEP está <span class="mark">5 anos atrasada</span> — autarquia admite via LAI que ainda processa dados de 2021</h2>
-    <div class="subtitle">Autoseg, banco de microdados usado por toda a indústria para calcular prêmios de seguro, não recebe atualização há meia década</div>
+    <div class="subtitle">Autoseg, banco de microdados usado por toda a indústria para calcular prêmios, não recebe atualização há meia década</div>
 
-    <p class="lead">A Superintendência de Seguros Privados (SUSEP) respondeu em 17 de abril de 2026 a um pedido de acesso à informação de um analista de market pricing da MAPFRE admitindo que ainda está processando os dados de apólices e sinistros de automóveis referentes ao <strong>primeiro semestre de 2021</strong>. O banco Autoseg — base pública que alimenta scores de risco regionais e é usada por toda a indústria para precificar seguros — está, portanto, com mais de cinco anos de atraso.</p>
+    <p class="lead">A Superintendência de Seguros Privados respondeu em 17 de abril de 2026 a um pedido do analista Marcelo Montes, da MAPFRE, admitindo que ainda está processando os dados de apólices e sinistros de automóveis referentes ao <strong>primeiro semestre de 2021</strong>. O banco Autoseg — base pública que alimenta scores de risco regionais e é usada por todas as seguradoras — está, portanto, com mais de cinco anos de atraso.</p>
 
-    <p>O pedido partiu de Marcelo Montes, especialista em analytics da MAPFRE, que notou em 17/04 que os microdados com referências postais e coordenadas geográficas desapareceram do site da SUSEP a partir de 2021. O manual da Circular SUSEP nº 522/2015 obriga as seguradoras a enviarem os campos CEP e CEP_UTIL à autarquia — ou seja, os dados existem e são recebidos. Apenas não estão sendo processados e divulgados.</p>
+    <p>Os campos CEP e CEP_UTIL são obrigatórios por força da Circular SUSEP nº 522/2015 — ou seja, as seguradoras entregam os dados. A autarquia só não os processa.</p>
 
-    <div class="quote">"Ainda não temos uma estimativa de quando os envios estarão normalizados." — SUSEP, em resposta oficial ao pedido 18830.001440/2026-14</div>
-
-    <p>A SUSEP cita três motivos: prorrogações concedidas durante a pandemia, a adaptação ao novo sistema SRD (Sistema de Recepção de Dados), e "corpo técnico bastante enxuto" sem "previsão de aumento de recursos humanos".</p>
+    <div class="quote">"Não há previsão de aumento de recursos humanos envolvidos nas atividades desenvolvidas na unidade. Ainda não temos uma estimativa de quando os envios estarão normalizados." — SUSEP, resposta ao pedido 18830.001440/2026-14</div>
 
     <div class="ficha">
       <span><b>protocolo</b> 18830.001440/2026-14</span>
       <span><b>órgão</b> SUSEP</span>
-      <span><b>pedido</b> 17/04/2026</span>
       <span><b>resposta</b> 17/04/2026</span>
       <span><b>decisão</b> Acesso Concedido</span>
     </div>
 
     <div class="angulo-box">
       <b>ângulo de pauta</b>
-      O Autoseg orienta precificação em um mercado de prêmios de mais de R$ 500 bi/ano. Um atraso de 5 anos significa que seguradoras trabalham com dados pré-pandêmicos em uma realidade pós-pandêmica. <strong>Perguntas pra reportagem:</strong> quantas circulares não estão sendo cumpridas por falta de recursos na SUSEP? Qual o impacto em prêmios de seguro auto, especialmente em regiões com alta sinistralidade? O Ministério da Fazenda sabe que a autarquia reguladora está paralisada? Cruzar com reclamações de consumidores à SUSEP em 2023-2026 e com a Circular SUSEP nº 627/2021.
+      O Autoseg orienta precificação em mercado de R$ 500 bi/ano em prêmios. Atraso de 5 anos significa que seguradoras precificam com dados pré-pandêmicos num pós-pandemia. <strong>Perguntas:</strong> quantas circulares não estão sendo cumpridas por falta de recursos na SUSEP? Qual o impacto no prêmio pago pelo consumidor, por estado? O MF sabe que a autarquia reguladora está paralisada? Cruzar com Circular 627/2021 e com dados do CNSeg.
     </div>
 
-    <a class="link" href="https://buscalai.cgu.gov.br/busca/10813411" target="_blank">→ ver pedido original · buscalai</a>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10813411" target="_blank">→ ver pedido original</a>
   </div>
 
-  <div class="section-head">○ e mais · outros pedidos da semana</div>
+  <div class="section-head">○ saúde · educação · segurança</div>
 
   <div class="item">
-    <div class="kicker"><b>● MF · Ministério da Fazenda</b> · respondido 17/04/2026</div>
-    <h3>MF entrega via LAI solução fiscal de <span class="mark">1998</span> sobre IRPJ de investidor estrangeiro — contribuinte alega que documento não estava no DOU</h3>
-    <p>Uma solicitante pediu ao Ministério da Fazenda a íntegra da Solução de Consulta SRRF10/Disit nº 20, de <strong>27 de fevereiro de 1998</strong>, que trata do Imposto de Renda Pessoa Jurídica (IRPJ) em operações de integralização de capital social por investidores estrangeiros. Disse que não encontrou o documento no Diário Oficial da União. O MF respondeu dois dias depois com o PDF em anexo (152663614_1.pdf) — sem esclarecer se a solução realmente nunca foi publicada.</p>
-    <p class="angulo"><strong>Ângulo:</strong> quantas soluções de consulta fiscal de antes de 2010 não estão indexadas em bases públicas? Fazer amostragem aleatória de soluções antigas para checar se estão acessíveis. <strong>Potencial:</strong> revelar lacuna sistemática de transparência fiscal — soluções que valem jurisprudência tributária sendo efetivamente secretas para quem não sabe pedir via LAI.</p>
-    <a class="link" href="https://buscalai.cgu.gov.br/busca/10812891" target="_blank">→ ver pedido · protocolo 18800.093871/2026-56</a>
+    <div class="kicker"><b>● saúde</b> · EBSERH / HC-UFPE · respondido 17/04/2026</div>
+    <h3>Analista de TI do Hospital das Clínicas de Pernambuco demora <span class="mark">19 dias</span> entre convocação e ingresso — LAI revela rito interno</h3>
+    <p>Um cidadão pediu atualização sobre a convocação de um analista de TI na EBSERH - HC-UFPE (Hospital das Clínicas da UFPE). Resposta oficial: o candidato foi convocado em <strong>19/02/2026</strong> e só entrou em exercício em <strong>09/03/2026</strong> — 19 dias depois. O nome consta no Portal da Transparência apenas após ingresso efetivo.</p>
+    <p class="angulo"><strong>Ângulo:</strong> quantos cargos estratégicos em hospitais universitários ficam vagos por mais de um mês por lentidão administrativa da EBSERH? Cruzar com outras convocações via LAI em 2025-2026 e com processos seletivos em aberto nos 41 hospitais universitários federais. Vale a planilha completa ao RH da EBSERH.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10814440" target="_blank">→ ver pedido · 23658.015210/2026-11</a>
   </div>
 
   <div class="item">
-    <div class="kicker"><b>● SUSEP</b> · respondido 16/04/2026</div>
-    <h3>Herdeiros não têm como descobrir se parente falecido tinha seguro — SUSEP diz que dados de apólices são <span class="mark">"informação inexistente"</span> na autarquia</h3>
-    <p>Uma filha pediu à SUSEP ajuda para descobrir se o pai, falecido em abril de 2026, tinha algum seguro contratado. A resposta oficial: os dados de apólices estão na "Registradora" (entidade privada que consolida apólices), não na SUSEP. Consulta pública via gov.br funciona <em>apenas</em> para o próprio segurado — herdeiros e beneficiários não têm direito de consulta. O próprio sistema exclui títulos de capitalização, previdência privada aberta e empresas do sandbox regulatório.</p>
-    <div class="quote">"A informação de APÓLICES de seguros é considerada INFORMAÇÃO INEXISTENTE na SUSEP." — resposta oficial ao pedido 18830.001428/2026-18</div>
-    <p class="angulo"><strong>Ângulo:</strong> lacuna estrutural que afeta milhões. Pela Federação Nacional de Previdência Privada (FenaPrevi), há bilhões em seguros não reclamados por beneficiários que não sabem da existência. Cruzar com STJ (decisões sobre direito à informação sucessória) e com CNSP sobre a Registradora. <strong>Personas:</strong> advogados de família, sucessórios, e defensoria pública têm casos de gaveta.</p>
-    <a class="link" href="https://buscalai.cgu.gov.br/busca/10807991" target="_blank">→ ver pedido · protocolo 18830.001428/2026-18</a>
+    <div class="kicker"><b>● educação</b> · UFCSPA · respondido 17/04/2026</div>
+    <h3>Pedido por indicadores TCU de universidade expõe <span class="mark">UX hostil</span> da transparência — dados existem nos Relatórios de Gestão, mas cidadão não achou</h3>
+    <p>Um estudante pediu à UFCSPA (Fundação Universidade Federal de Ciências da Saúde de Porto Alegre) os Resultados dos Indicadores da Decisão TCU nº 408/2002 referentes a 2014-2025 — alegou não haver em fontes públicas. A universidade respondeu que os dados ESTÃO disponíveis "em todos os Relatórios de Gestão", enviou o link e sugeriu a consulta direta.</p>
+    <p class="angulo"><strong>Ângulo:</strong> indicadores TCU são obrigatórios em universidades federais, mas estão enterrados em PDFs de relatórios de gestão que só quem sabe acessa. <strong>Pauta:</strong> fazer o caminho do cidadão comum e medir quantos cliques/minutos leva para encontrar taxa de sucesso na graduação em 10 universidades federais. A transparência existe no papel; em prática, é opaca.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10810991" target="_blank">→ ver pedido · 23546.052377/2026-20</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● segurança regulatória</b> · SUSEP · respondido 16/04/2026</div>
+    <h3>Herdeiros não têm como descobrir se parente falecido deixou seguro — SUSEP diz que apólice é <span class="mark">"informação inexistente"</span> na autarquia</h3>
+    <p>Uma filha pediu à SUSEP ajuda para descobrir se o pai, falecido em 23/04/2026, tinha algum seguro. Resposta oficial: a base de apólices está em uma "Registradora" privada, não na autarquia. Consulta pública via gov.br funciona apenas para o próprio segurado — herdeiros e beneficiários ficam sem acesso. O sistema exclui previdência privada, capitalização e sandbox regulatório.</p>
+    <div class="quote">"A informação de APÓLICES de seguros é considerada INFORMAÇÃO INEXISTENTE na SUSEP." — resposta ao pedido 18830.001428/2026-18</div>
+    <p class="angulo"><strong>Ângulo:</strong> lacuna estrutural que afeta milhões. A FenaPrevi estima bilhões em seguros não reclamados por beneficiários. <strong>Fontes:</strong> defensoria pública (casos de gaveta), advogados de família, CNSP (sobre a Registradora) e STJ (jurisprudência sobre direito à informação sucessória).</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10807991" target="_blank">→ ver pedido · 18830.001428/2026-18</a>
+  </div>
+
+  <div class="section-head">○ e mais</div>
+
+  <div class="item">
+    <div class="kicker"><b>● Ministério da Fazenda</b> · respondido 17/04/2026</div>
+    <h3>MF entrega via LAI solução fiscal de <span class="mark">1998</span> sobre IRPJ de investidor estrangeiro que não estava no DOU</h3>
+    <p>Uma contribuinte pediu a íntegra da Solução de Consulta SRRF10/Disit nº 20, de 27/02/1998, sobre IRPJ em integralização de capital por investidores estrangeiros. Alegou não ter encontrado no Diário Oficial. O MF respondeu em 2 dias com o PDF em anexo — sem esclarecer se a solução foi efetivamente publicada.</p>
+    <p class="angulo"><strong>Ângulo:</strong> quantas soluções fiscais antigas só existem via LAI? Fazer amostragem com 50 soluções aleatórias anteriores a 2010 e testar acessibilidade pública. Se o padrão se confirmar, é lacuna sistemática de transparência tributária.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10812891" target="_blank">→ ver pedido · 18800.093871/2026-56</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● INSS</b> · pedidos repetidos · 17/04/2026</div>
+    <h3>INSS usa a LAI como balcão de <span class="mark">desvio de rota</span>: resposta padrão a pedidos é "ligue no 135"</h3>
+    <p>Em pelo menos dois pedidos respondidos no mesmo dia (protocolos 36777.127533 e 36777.127525), o INSS direciona solicitantes para a Central 135 — canal de atendimento operacional — como resposta a manifestações via Lei de Acesso. Pedidos eram por agendamento presencial, mas a prática parece ser uso generalizado da LAI para dúvidas operacionais, e uso generalizado da Central como "resposta" padrão.</p>
+    <p class="angulo"><strong>Ângulo:</strong> quantos pedidos LAI no INSS recebem a resposta "ligue 135" em 2026? Pedir à CGU a metragem dessa prática. É falha de canal de atendimento ou forma de esvaziar o instrumento da LAI? Comparar tempo médio de espera no 135 (já coberto) com eficácia da LAI como segundo canal.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10813077" target="_blank">→ ver pedido · 36777.127533/2026-41</a>
+  </div>
+
+  <div class="curadoria">
+    <h2>○ reportagens que usaram a LAI</h2>
+    <div class="sub">como o jornalismo brasileiro tem usado a Lei de Acesso à Informação nas últimas semanas</div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>núcleo jornalismo · investigate europe</b> · 13/03/2026</div>
+      <a class="rep-titulo" href="https://nucleo.jor.br/" target="_blank">Rejeitado na Europa, aplicado aqui: o sistema de reconhecimento facial que monitora alunos no Brasil</a>
+      <div class="rep-como"><b>método:</b> pedidos LAI a secretarias estaduais de educação mapearam contratos com empresas de reconhecimento facial instaladas em escolas públicas — a reportagem virou base para projeto de lei na Câmara.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>núcleo jornalismo</b> · 26/02/2026</div>
+      <a class="rep-titulo" href="https://nucleo.jor.br/curtas/2026-02-26-respostas-de-pedidos-de-acesso-a-informacao-somem-do-site-do-governo/" target="_blank">Respostas de pedidos de acesso à informação "somem" do site do governo</a>
+      <div class="rep-como"><b>método:</b> monitoramento automático de URLs de respostas LAI via ferramenta própria (Legislatech) identificou 28 respostas que desapareceram do sistema da CGU em fevereiro/2026. Após contato do Núcleo, links voltaram.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>núcleo jornalismo</b> · 23/03/2026</div>
+      <a class="rep-titulo" href="https://nucleo.jor.br/institucional/2026-03-23-apos-materia-do-nucleo-cgu-corrige-falha-do-sistema-busca-lai/" target="_blank">Após matéria do Núcleo, CGU corrige falha do sistema Busca LAI</a>
+      <div class="rep-como"><b>método:</b> desdobramento da reportagem de fevereiro — a CGU implementou correção técnica no próprio Busca LAI depois de ter sido formalmente questionada. Demonstra ciclo completo: LAI → reportagem → correção administrativa.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>núcleo jornalismo</b> · 09/04/2026</div>
+      <a class="rep-titulo" href="https://nucleo.jor.br/institucional/2026-04-09-apos-materia-do-nucleo-deputada-pede-investigacao-do-dono-do-perfil-cafe-com-teu-pai/" target="_blank">Após matéria do Núcleo, deputada pede investigação do dono do perfil "Café com teu pai"</a>
+      <div class="rep-como"><b>método:</b> LAI + OSINT (monitoramento de redes) identificaram operador de perfil de desinformação política — matéria motivou pedido formal de investigação parlamentar.</div>
+    </div>
   </div>
 
   <div class="expediente">
     <p>edição #001 · 20.abr.2026 · inaugural</p>
-    <p>22 pedidos lidos · 3 aprovados · curadoria automatizada</p>
-    <p>próxima: segunda 27.abr.2026, 08h Londres</p>
+    <p>22 pedidos lidos · 6 aprovados · 4 reportagens curadas</p>
+    <p>próxima varredura automática: segunda 27.abr.2026, 08h Londres</p>
   </div>
 
 </div>

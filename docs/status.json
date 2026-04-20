@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-04-20T06:30:00Z",
+  "last_run": "2026-04-20T06:45:00Z",
   "last_run_status": "success",
-  "last_run_note": "edição inaugural · 22 pedidos lidos · 3 aprovados",
+  "last_run_note": "edição inaugural · 6 achados + 4 reportagens curadas",
   "next_run_approx": "2026-04-27T08:00:00+01:00",
   "schedule": "semanal · segundas 08:00 Europe/London",
   "periodo_varredura_3_meses": "2026-01-20 a 2026-04-20",
@@ -12,7 +12,8 @@
       "file": "edicoes/2026-04-20.html",
       "titulo": "Base de sinistros da SUSEP está 5 anos atrasada",
       "em_destaque": "SUSEP admite via LAI que banco Autoseg ainda processa dados de 2021",
-      "e_mais": 2
+      "e_mais": 5,
+      "reportagens_curadas": 4
     }
   ]
 }
