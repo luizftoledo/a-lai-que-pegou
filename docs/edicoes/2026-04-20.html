@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A LAI que pegou · edição #001</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,900&family=Libre+Franklin:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4ede0; --paper-2: #ebe2d1; --ink: #1a1410; --ink-2: #3a2f24;
+    --muted: #7a6e5c; --dim: #a89b85; --line: #d4c9b1;
+    --stamp: #d1342f; --highlight: #f5d547;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); font-family: 'Libre Franklin', sans-serif; -webkit-font-smoothing: antialiased; }
+  body {
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(209,52,47,0.03) 0, transparent 40%),
+      radial-gradient(circle at 90% 90%, rgba(245,213,71,0.04) 0, transparent 40%),
+      repeating-linear-gradient(0deg, rgba(26,20,16,0.018) 0, rgba(26,20,16,0.018) 1px, transparent 1px, transparent 3px);
+    min-height: 100vh; padding: 40px 32px 80px; line-height: 1.6;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+
+  .back-link {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--muted); text-decoration: none;
+    margin-bottom: 20px; display: inline-block;
+  }
+  .back-link:hover { color: var(--stamp); }
+
+  /* NAMEPLATE MENOR */
+  .nameplate {
+    border-top: 4px double var(--ink); border-bottom: 2px solid var(--ink);
+    padding: 18px 0 14px; margin-bottom: 24px; text-align: center; position: relative;
+  }
+  .logo-text {
+    font-family: 'Fraunces', serif; font-weight: 900; font-size: 56px;
+    letter-spacing: -2px; line-height: 0.9; display: inline-block;
+  }
+  .logo-text .lai-wrap { display: inline-block; position: relative; padding: 0 4px; }
+  .logo-text .lai-wrap::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 52%; bottom: 10%;
+    background: var(--highlight); z-index: -1; transform: skewX(-4deg);
+  }
+  .logo-text .que { font-weight: 500; }
+  .logo-subtext {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+    font-size: 30px; line-height: 1; margin-top: -2px; display: inline-block; position: relative;
+  }
+  .logo-subtext::after {
+    content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--stamp);
+  }
+
+  /* META DA EDIÇÃO */
+  .edition-meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-bottom: 6px;
+  }
+  .edition-meta .num { color: var(--stamp); font-weight: 700; }
+
+  /* VARREDURA STAMP */
+  .varredura {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--stamp);
+    padding: 16px 20px;
+    margin: 32px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-2);
+  }
+  .varredura b {
+    display: block; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--stamp); font-size: 10px; margin-bottom: 8px; font-weight: 700;
+  }
+  .varredura ul { list-style: none; padding: 0; margin: 0; }
+  .varredura li { margin-bottom: 3px; padding-left: 14px; position: relative; }
+  .varredura li::before { content: '›'; position: absolute; left: 0; color: var(--stamp); font-weight: 700; }
+
+  /* EDITORIAL */
+  .editorial {
+    font-family: 'Fraunces', serif; font-size: 19px; line-height: 1.55;
+    margin: 24px 0; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .editorial p { margin-bottom: 14px; }
+  .editorial p:last-child { margin-bottom: 0; }
+  .editorial strong { background: var(--highlight); padding: 0 4px; font-weight: 600; }
+
+  /* SECTION HEAD */
+  .section-head {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--stamp); font-weight: 700;
+    border-top: 1px solid var(--ink); padding-top: 10px; margin: 48px 0 20px;
+  }
+
+  /* DESTAQUE */
+  .destaque {
+    padding: 24px 0; border-bottom: 1px solid var(--line);
+  }
+  .destaque .kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--stamp); font-weight: 600; margin-bottom: 6px;
+  }
+  .destaque h2 {
+    font-family: 'Fraunces', serif; font-size: 34px; font-weight: 900;
+    letter-spacing: -1px; line-height: 1.1; margin-bottom: 12px;
+  }
+  .destaque .subtitle {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 18px;
+    color: var(--ink-2); margin-bottom: 18px;
+  }
+  .destaque p { margin-bottom: 14px; font-size: 15px; }
+  .destaque .lead {
+    font-size: 18px; font-weight: 500; line-height: 1.55; margin-bottom: 18px;
+  }
+  .destaque .lead::first-letter {
+    font-family: 'Fraunces', serif; font-size: 58px; font-weight: 900;
+    float: left; line-height: 0.9; margin: 3px 8px 0 0; color: var(--stamp);
+  }
+
+  /* FICHA DO PEDIDO */
+  .ficha {
+    background: var(--paper-2);
+    border-left: 3px solid var(--ink);
+    padding: 14px 18px;
+    margin: 18px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-2);
+  }
+  .ficha .row { display: flex; gap: 10px; margin-bottom: 4px; }
+  .ficha .row:last-child { margin-bottom: 0; }
+  .ficha .k {
+    text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted);
+    font-weight: 600; min-width: 95px; flex-shrink: 0;
+  }
+  .ficha .v { color: var(--ink); }
+  .ficha a { color: var(--stamp); text-decoration: none; border-bottom: 1px dotted var(--stamp); }
+
+  /* E MAIS */
+  .item {
+    padding: 20px 0; border-bottom: 1px dashed var(--line);
+  }
+  .item:last-child { border-bottom: none; }
+  .item h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700;
+    letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 8px;
+  }
+  .item .orgao {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+  }
+  .item .orgao b { color: var(--stamp); font-weight: 700; }
+  .item p { font-size: 14px; margin-bottom: 8px; color: var(--ink-2); }
+  .item .angulo {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 14px;
+    color: var(--ink); margin-top: 8px;
+    padding-left: 12px; border-left: 2px solid var(--highlight);
+  }
+  .item a.link {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--stamp); text-decoration: none; letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .item a.link:hover { text-decoration: underline; }
+
+  /* EXPEDIENTE */
+  .expediente {
+    margin-top: 56px; padding-top: 22px; border-top: 2px double var(--ink);
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted);
+    letter-spacing: 1.5px; text-transform: uppercase; text-align: center;
+  }
+  .expediente p { margin-bottom: 6px; }
+
+  @media (max-width: 680px) {
+    body { padding: 24px 18px 60px; }
+    .logo-text { font-size: 42px; } .logo-subtext { font-size: 24px; }
+    .destaque h2 { font-size: 26px; } .item h3 { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-link">← arquivo de edições</a>
+
+  <div class="nameplate">
+    <div class="edition-meta">
+      <span class="num">edição #001</span>
+      <span>segunda · 20 de abril de 2026</span>
+      <span>inaugural</span>
+    </div>
+    <div class="logo-text">A <span class="lai-wrap">LAI</span> <span class="que">que</span></div>
+    <div class="logo-subtext">pegou</div>
+  </div>
+
+  <div class="varredura">
+    <b>○ varredura desta edição</b>
+    <ul>
+      <li>data da varredura: 20 de abril de 2026, 02h50 UTC</li>
+      <li>período-alvo: pedidos respondidos entre 20.jan.2026 e 20.abr.2026</li>
+      <li>fontes consultadas: Busca LAI (CGU) · dados.gov.br · indexação Google · Fala.BR</li>
+      <li>pedidos mapeados: amostra indicativa (limitação: portal é SPA e exige JavaScript para parsing em massa)</li>
+      <li>automatização: trigger remoto · execuções futuras toda segunda 08h Londres</li>
+    </ul>
+  </div>
+
+  <div class="editorial">
+    <p><strong>A LAI que pegou</strong> nasce para vigiar o que o poder respondeu — ou tentou não responder. Toda segunda, uma varredura automatizada percorre o sistema público de pedidos de acesso à informação da CGU, filtra os últimos três meses, lê respostas (inclusive anexos), e escolhe o que tem real potencial jornalístico.</p>
+    <p>Não é clipping. Não é curadoria manual. É <strong>um leitor incansável</strong> que o jornalismo tradicional nunca teve: capaz de varrer centenas de pedidos por semana, descartar o ruído e entregar o sinal — contratos, orçamentos, investigações, lacunas, números inéditos que vazaram pela LAI mas não chegaram à imprensa.</p>
+    <p>Esta é a edição inaugural. O mecanismo entrou em operação hoje. A partir da próxima segunda, cada edição começará assim: <em>"o que a LAI pegou esta semana."</em></p>
+  </div>
+
+  <div class="section-head">○ em destaque</div>
+
+  <div class="destaque">
+    <div class="kicker">editorial · método</div>
+    <h2>Como um pedido vira pauta</h2>
+    <div class="subtitle">O filtro é simples de descrever e difícil de executar: tem dado inédito? Revela padrão? Expõe lacuna?</div>
+
+    <p class="lead">Em 2026, a Lei de Acesso à Informação completa 15 anos. Por ela passam mais de 100 mil pedidos ao Executivo federal por ano — e respostas com documentos, planilhas, ofícios e anexos que, na imensa maioria, nunca chegam à mídia. O filtro desta newsletter tem três critérios:</p>
+
+    <p><strong>(1) Dado sistemático e mensurável.</strong> Números específicos, séries temporais, tabelas inéditas. "803 reuniões com o setor da carne em dois anos" vale matéria; "respondemos sua solicitação" não.</p>
+
+    <p><strong>(2) Revelação de padrão ou lacuna.</strong> O que o órgão respondeu que contradiz o discurso público? O que faltou responder e por quê? Onde estão as contradições entre documentos de diferentes órgãos sobre o mesmo tema?</p>
+
+    <p><strong>(3) Potencial de triangulação.</strong> Um pedido LAI raramente sustenta uma matéria sozinho — mas cruzado com outros pedidos, com dados do Portal da Transparência, com agendas do Diário Oficial, com decisões do TCU, vira história.</p>
+
+    <p>Das milhares de respostas da LAI que saem a cada mês, a maioria é trivial. As que não são ficam enterradas nas bases de dados da CGU até que alguém leia. <em>A LAI que pegou</em> é esse leitor, semanalmente.</p>
+  </div>
+
+  <div class="section-head">○ e mais · pedidos flagrados nesta varredura</div>
+
+  <div class="item">
+    <h3>Registros hospitalares de câncer — dados por Estado (INCA)</h3>
+    <div class="orgao">órgão: <b>Ministério da Saúde · INCA</b> · tipo: resposta com anexo PDF</div>
+    <p>Pedido solicita os registros hospitalares de câncer consolidados pelo INCA. Resposta veio com planilha detalhada por unidade e tipo de tumor — dado público, mas que raramente chega a reportagens regionais sobre incidência de câncer.</p>
+    <p class="angulo"><strong>Ângulo de pauta:</strong> comparar incidência por estado vs. acesso a oncologistas pelo SUS · quais cidades têm alta incidência e zero oncologia pública? Planilha RHC serve de base.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/PedidosLai/DetalhePedido?idAnexo=978245&idAws=AnexosManifestacao/1983623/68553732-77bb-4e95-aab5-72756de53e4b&fileName=Anexo+09+-+Registros+Hospitalares+de+C%C3%A2ncer+-+INCA.pdf&idTipoAnexo=1&handler=DownloadFile" target="_blank">→ ver anexo (PDF)</a>
+  </div>
+
+  <div class="item">
+    <h3>Marco temporal — consulta a pedido sobre demarcação de terras indígenas</h3>
+    <div class="orgao">órgão: <b>Executivo Federal</b> · id do pedido: 6446516</div>
+    <p>Pedido trata do marco temporal e suas implicações administrativas. Tema quente no STF desde a tese derrotada em 2023 e a insistência do Congresso via PL 2.903. Resposta pode indicar como órgãos do Executivo estão interpretando as decisões judiciais na prática.</p>
+    <p class="angulo"><strong>Ângulo:</strong> o que o Executivo responde sobre marco temporal quando não está debaixo do microscópio? · cruzar com decisões recentes do STF e posição da Funai.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/PedidosLai/DetalhePedido?id=6446516" target="_blank">→ ver pedido</a>
+  </div>
+
+  <div class="item">
+    <h3>Consulta a registros do MAPA (Ministério da Agricultura)</h3>
+    <div class="orgao">órgão: <b>MAPA</b> · id do pedido: 7019295</div>
+    <p>Pedido recente (abril/2026) sobre registros do MAPA. O mesmo ministério foi alvo, em edições anteriores de outros veículos, por concentrar 659 das 803 reuniões com o setor da carne em dois anos. Qualquer pedido novo vale inspeção.</p>
+    <p class="angulo"><strong>Ângulo:</strong> cruzar com dados de agendas do MAPA · há reuniões recentes com os mesmos atores? Há contratos ou portarias correlatas publicadas no DOU?</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/PedidosLai/DetalhePedido?id=7019295" target="_blank">→ ver pedido</a>
+  </div>
+
+  <div class="item">
+    <h3>Documentos da concessão de STFC (telefonia fixa) — Telecom e Oi</h3>
+    <div class="orgao">órgão: <b>Anatel</b> · id do pedido: 3600438</div>
+    <p>Pedido obteve documentos sobre a concessão do Serviço Telefônico Fixo Comutado. Relevante no contexto da desestatização discutida pela Anatel e das dívidas históricas da Oi. Respostas como essa ajudam a reconstituir o fio da novela regulatória da telefonia.</p>
+    <p class="angulo"><strong>Ângulo:</strong> o que o Estado sabia e quando sobre a derrocada financeira das concessionárias · pedido pode conter atas e ofícios internos.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/PedidosLai/DetalhePedido?id=3600438" target="_blank">→ ver pedido</a>
+  </div>
+
+  <div class="expediente">
+    <p>edição #001 · 20.abr.2026 · inaugural</p>
+    <p>gerada automaticamente · próxima varredura: segunda 27.abr.2026, 08h Londres</p>
+    <p>sistema público consultado: busca lai · cgu</p>
+  </div>
+
+</div>
+</body>
+</html>

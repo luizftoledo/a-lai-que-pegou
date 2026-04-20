@@ -1,0 +1,18 @@
+{
+  "last_run": "2026-04-20T02:50:00Z",
+  "last_run_status": "success",
+  "last_run_note": "edição inaugural · 20.abr.2026",
+  "next_run_approx": "2026-04-27T08:00:00+01:00",
+  "schedule": "semanal · segundas 08:00 Europe/London",
+  "periodo_varredura_3_meses": "2026-01-20 a 2026-04-20",
+  "edicoes": [
+    {
+      "numero": 1,
+      "data": "2026-04-20",
+      "file": "edicoes/2026-04-20.html",
+      "titulo": "Edição inaugural",
+      "em_destaque": "Editorial: por que existe",
+      "e_mais": 4
+    }
+  ]
+}

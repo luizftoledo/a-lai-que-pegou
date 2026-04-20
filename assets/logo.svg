@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 140" width="420" height="140">
+  <defs>
+    <style>
+      .a-lai { font-family: 'Fraunces', 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 82px; fill: #1a1410; letter-spacing: -3px; }
+      .que-pegou { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: italic; font-size: 40px; fill: #1a1410; letter-spacing: -0.5px; }
+      .highlight { fill: #f5d547; }
+      .stamp { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 3px; fill: #d1342f; font-weight: 700; }
+    </style>
+  </defs>
+  <!-- amarelo grifo embaixo de "LAI" -->
+  <rect class="highlight" x="62" y="60" width="138" height="24" opacity="0.9"/>
+  <!-- texto principal -->
+  <text x="10" y="78" class="a-lai">A LAI</text>
+  <text x="220" y="78" class="a-lai" style="fill:#1a1410">que</text>
+  <text x="60" y="122" class="que-pegou">pegou</text>
+  <!-- sublinhado em "pegou" -->
+  <line x1="60" y1="128" x2="180" y2="128" stroke="#d1342f" stroke-width="2"/>
+  <!-- carimbo pequeno -->
+  <g transform="translate(300, 95) rotate(-6)">
+    <rect x="0" y="0" width="110" height="28" fill="none" stroke="#d1342f" stroke-width="2"/>
+    <text x="55" y="19" class="stamp" text-anchor="middle">LEI 12.527</text>
+  </g>
+</svg>
