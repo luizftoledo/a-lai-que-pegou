@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-04-20T02:50:00Z",
+  "last_run": "2026-04-20T05:50:00Z",
   "last_run_status": "success",
-  "last_run_note": "edição inaugural · 20.abr.2026",
+  "last_run_note": "edição inaugural · 20.abr.2026 · títulos como lide",
   "next_run_approx": "2026-04-27T08:00:00+01:00",
   "schedule": "semanal · segundas 08:00 Europe/London",
   "periodo_varredura_3_meses": "2026-01-20 a 2026-04-20",
@@ -10,9 +10,9 @@
       "numero": 1,
       "data": "2026-04-20",
       "file": "edicoes/2026-04-20.html",
-      "titulo": "Edição inaugural",
-      "em_destaque": "Editorial: por que existe",
-      "e_mais": 4
+      "titulo": "Sigilo é a nova resposta: Lula nega 34% dos pedidos LAI",
+      "em_destaque": "Governo Lula nega 34% dos pedidos por sigilo — 6 pontos acima do teto Bolsonaro",
+      "e_mais": 3
     }
   ]
 }

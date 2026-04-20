@@ -65,14 +65,9 @@
 
   /* VARREDURA STAMP */
   .varredura {
-    background: var(--paper-2);
-    border: 1px solid var(--line);
-    border-left: 3px solid var(--stamp);
-    padding: 16px 20px;
-    margin: 32px 0;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--ink-2);
+    background: var(--paper-2); border: 1px solid var(--line);
+    border-left: 3px solid var(--stamp); padding: 16px 20px; margin: 32px 0;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-2);
   }
   .varredura b {
     display: block; text-transform: uppercase; letter-spacing: 2px;
@@ -81,15 +76,6 @@
   .varredura ul { list-style: none; padding: 0; margin: 0; }
   .varredura li { margin-bottom: 3px; padding-left: 14px; position: relative; }
   .varredura li::before { content: '›'; position: absolute; left: 0; color: var(--stamp); font-weight: 700; }
-
-  /* EDITORIAL */
-  .editorial {
-    font-family: 'Fraunces', serif; font-size: 19px; line-height: 1.55;
-    margin: 24px 0; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  }
-  .editorial p { margin-bottom: 14px; }
-  .editorial p:last-child { margin-bottom: 0; }
-  .editorial strong { background: var(--highlight); padding: 0 4px; font-weight: 600; }
 
   /* SECTION HEAD */
   .section-head {
@@ -110,6 +96,7 @@
     font-family: 'Fraunces', serif; font-size: 34px; font-weight: 900;
     letter-spacing: -1px; line-height: 1.1; margin-bottom: 12px;
   }
+  .destaque h2 .mark { background: var(--highlight); padding: 0 4px; }
   .destaque .subtitle {
     font-family: 'Fraunces', serif; font-style: italic; font-size: 18px;
     color: var(--ink-2); margin-bottom: 18px;
@@ -122,52 +109,55 @@
     font-family: 'Fraunces', serif; font-size: 58px; font-weight: 900;
     float: left; line-height: 0.9; margin: 3px 8px 0 0; color: var(--stamp);
   }
-
-  /* FICHA DO PEDIDO */
-  .ficha {
-    background: var(--paper-2);
-    border-left: 3px solid var(--ink);
-    padding: 14px 18px;
-    margin: 18px 0;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--ink-2);
+  .destaque .angulo-box {
+    background: var(--paper-2); border-left: 3px solid var(--highlight);
+    padding: 14px 18px; margin-top: 18px; font-family: 'Fraunces', serif;
+    font-style: italic; font-size: 15px; color: var(--ink);
   }
-  .ficha .row { display: flex; gap: 10px; margin-bottom: 4px; }
-  .ficha .row:last-child { margin-bottom: 0; }
-  .ficha .k {
-    text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted);
-    font-weight: 600; min-width: 95px; flex-shrink: 0;
+  .destaque .angulo-box b {
+    display: block; font-family: 'JetBrains Mono', monospace; font-style: normal;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--stamp); margin-bottom: 6px; font-weight: 700;
   }
-  .ficha .v { color: var(--ink); }
-  .ficha a { color: var(--stamp); text-decoration: none; border-bottom: 1px dotted var(--stamp); }
 
   /* E MAIS */
   .item {
-    padding: 20px 0; border-bottom: 1px dashed var(--line);
+    padding: 22px 0; border-bottom: 1px dashed var(--line);
   }
   .item:last-child { border-bottom: none; }
-  .item h3 {
-    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700;
-    letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 8px;
-  }
-  .item .orgao {
+  .item .kicker {
     font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
   }
-  .item .orgao b { color: var(--stamp); font-weight: 700; }
+  .item .kicker b { color: var(--stamp); font-weight: 700; }
+  .item h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 800;
+    letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 10px;
+  }
+  .item h3 .mark { background: var(--highlight); padding: 0 3px; }
   .item p { font-size: 14px; margin-bottom: 8px; color: var(--ink-2); }
   .item .angulo {
     font-family: 'Fraunces', serif; font-style: italic; font-size: 14px;
-    color: var(--ink); margin-top: 8px;
-    padding-left: 12px; border-left: 2px solid var(--highlight);
+    color: var(--ink); margin-top: 10px; padding-left: 12px;
+    border-left: 2px solid var(--highlight);
   }
   .item a.link {
     font-family: 'JetBrains Mono', monospace; font-size: 10px;
     color: var(--stamp); text-decoration: none; letter-spacing: 1.5px;
-    text-transform: uppercase;
+    text-transform: uppercase; margin-top: 6px; display: inline-block;
   }
   .item a.link:hover { text-decoration: underline; }
+
+  /* NOTA METODOLÓGICA */
+  .nota-meta {
+    margin-top: 40px; padding: 20px 24px; background: var(--paper-2);
+    border: 1px dashed var(--line); font-size: 13px; color: var(--ink-2);
+  }
+  .nota-meta b {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--stamp);
+    display: block; margin-bottom: 6px; font-weight: 700;
+  }
 
   /* EXPEDIENTE */
   .expediente {
@@ -201,75 +191,65 @@
   <div class="varredura">
     <b>○ varredura desta edição</b>
     <ul>
-      <li>data da varredura: 20 de abril de 2026, 02h50 UTC</li>
-      <li>período-alvo: pedidos respondidos entre 20.jan.2026 e 20.abr.2026</li>
-      <li>fontes consultadas: Busca LAI (CGU) · dados.gov.br · indexação Google · Fala.BR</li>
-      <li>pedidos mapeados: amostra indicativa (limitação: portal é SPA e exige JavaScript para parsing em massa)</li>
-      <li>automatização: trigger remoto · execuções futuras toda segunda 08h Londres</li>
+      <li>data da varredura: 20 de abril de 2026</li>
+      <li>período-alvo: respostas LAI e reportagens derivadas entre 20.jan.2026 e 20.abr.2026</li>
+      <li>fontes consultadas: Busca LAI (CGU) · Núcleo Jornalismo · Transparência Brasil · Radar Político 365 · Gazeta do Povo · Achados e Pedidos (Abraji)</li>
+      <li>critério de entrada: dado sistemático + revelação de padrão + baixa cobertura mainstream</li>
+      <li>próxima varredura: segunda, 27 de abril de 2026 (automática, 08h Londres)</li>
     </ul>
-  </div>
-
-  <div class="editorial">
-    <p><strong>A LAI que pegou</strong> nasce para vigiar o que o poder respondeu — ou tentou não responder. Toda segunda, uma varredura automatizada percorre o sistema público de pedidos de acesso à informação da CGU, filtra os últimos três meses, lê respostas (inclusive anexos), e escolhe o que tem real potencial jornalístico.</p>
-    <p>Não é clipping. Não é curadoria manual. É <strong>um leitor incansável</strong> que o jornalismo tradicional nunca teve: capaz de varrer centenas de pedidos por semana, descartar o ruído e entregar o sinal — contratos, orçamentos, investigações, lacunas, números inéditos que vazaram pela LAI mas não chegaram à imprensa.</p>
-    <p>Esta é a edição inaugural. O mecanismo entrou em operação hoje. A partir da próxima segunda, cada edição começará assim: <em>"o que a LAI pegou esta semana."</em></p>
   </div>
 
   <div class="section-head">○ em destaque</div>
 
   <div class="destaque">
-    <div class="kicker">editorial · método</div>
-    <h2>Como um pedido vira pauta</h2>
-    <div class="subtitle">O filtro é simples de descrever e difícil de executar: tem dado inédito? Revela padrão? Expõe lacuna?</div>
+    <div class="kicker">governo federal · transparência</div>
+    <h2>Sigilo é a nova resposta: Lula nega <span class="mark">34%</span> dos pedidos LAI — 6 pontos acima do teto Bolsonaro</h2>
+    <div class="subtitle">Presidente que prometeu revisar sigilos em janeiro de 2023 passou a usar a ferramenta com mais frequência que o antecessor</div>
 
-    <p class="lead">Em 2026, a Lei de Acesso à Informação completa 15 anos. Por ela passam mais de 100 mil pedidos ao Executivo federal por ano — e respostas com documentos, planilhas, ofícios e anexos que, na imensa maioria, nunca chegam à mídia. O filtro desta newsletter tem três critérios:</p>
+    <p class="lead">Em janeiro de 2023, Lula assinou um dos primeiros decretos de seu terceiro mandato para <em>revisar</em> sigilos impostos pelo governo Bolsonaro. Três anos depois, dados compilados pelo próprio Executivo mostram que o atual governo passou a negar mais pedidos de acesso à informação com base em sigilo do que o anterior — quebrando, na prática, a promessa de "transparência radical" da campanha de 2022.</p>
 
-    <p><strong>(1) Dado sistemático e mensurável.</strong> Números específicos, séries temporais, tabelas inéditas. "803 reuniões com o setor da carne em dois anos" vale matéria; "respondemos sua solicitação" não.</p>
+    <p>Entre 2019 e 2022, cerca de <strong>28%</strong> das solicitações via LAI foram negadas com base em algum tipo de sigilo. Sob Lula, esse percentual subiu para <strong>34%</strong>. A CGU anunciou em fevereiro de 2023 os "12 enunciados" para aplicação da Lei de Acesso à Informação — e, mesmo assim, o uso da recusa por sigilo avançou.</p>
 
-    <p><strong>(2) Revelação de padrão ou lacuna.</strong> O que o órgão respondeu que contradiz o discurso público? O que faltou responder e por quê? Onde estão as contradições entre documentos de diferentes órgãos sobre o mesmo tema?</p>
-
-    <p><strong>(3) Potencial de triangulação.</strong> Um pedido LAI raramente sustenta uma matéria sozinho — mas cruzado com outros pedidos, com dados do Portal da Transparência, com agendas do Diário Oficial, com decisões do TCU, vira história.</p>
-
-    <p>Das milhares de respostas da LAI que saem a cada mês, a maioria é trivial. As que não são ficam enterradas nas bases de dados da CGU até que alguém leia. <em>A LAI que pegou</em> é esse leitor, semanalmente.</p>
+    <div class="angulo-box">
+      <b>ângulo de pauta</b>
+      Quais são os temas onde o sigilo mais cresceu? Pedir à CGU o recorte por órgão + categoria de informação. Cruzar com os 12 enunciados de 2023. Entrevistar Manoel Galdino (Transparência Brasil), Bia Barbosa (Coalizão Direitos na Rede) e equipe de Achados e Pedidos (Abraji). <strong>Relevância:</strong> é a matéria que liga promessa de campanha a prática administrativa com dados próprios do governo.
+    </div>
   </div>
 
-  <div class="section-head">○ e mais · pedidos flagrados nesta varredura</div>
+  <div class="section-head">○ e mais · outros achados da semana</div>
 
   <div class="item">
-    <h3>Registros hospitalares de câncer — dados por Estado (INCA)</h3>
-    <div class="orgao">órgão: <b>Ministério da Saúde · INCA</b> · tipo: resposta com anexo PDF</div>
-    <p>Pedido solicita os registros hospitalares de câncer consolidados pelo INCA. Resposta veio com planilha detalhada por unidade e tipo de tumor — dado público, mas que raramente chega a reportagens regionais sobre incidência de câncer.</p>
-    <p class="angulo"><strong>Ângulo de pauta:</strong> comparar incidência por estado vs. acesso a oncologistas pelo SUS · quais cidades têm alta incidência e zero oncologia pública? Planilha RHC serve de base.</p>
-    <a class="link" href="https://buscalai.cgu.gov.br/PedidosLai/DetalhePedido?idAnexo=978245&idAws=AnexosManifestacao/1983623/68553732-77bb-4e95-aab5-72756de53e4b&fileName=Anexo+09+-+Registros+Hospitalares+de+C%C3%A2ncer+-+INCA.pdf&idTipoAnexo=1&handler=DownloadFile" target="_blank">→ ver anexo (PDF)</a>
-  </div>
-
-  <div class="item">
-    <h3>Marco temporal — consulta a pedido sobre demarcação de terras indígenas</h3>
-    <div class="orgao">órgão: <b>Executivo Federal</b> · id do pedido: 6446516</div>
-    <p>Pedido trata do marco temporal e suas implicações administrativas. Tema quente no STF desde a tese derrotada em 2023 e a insistência do Congresso via PL 2.903. Resposta pode indicar como órgãos do Executivo estão interpretando as decisões judiciais na prática.</p>
-    <p class="angulo"><strong>Ângulo:</strong> o que o Executivo responde sobre marco temporal quando não está debaixo do microscópio? · cruzar com decisões recentes do STF e posição da Funai.</p>
-    <a class="link" href="https://buscalai.cgu.gov.br/PedidosLai/DetalhePedido?id=6446516" target="_blank">→ ver pedido</a>
+    <div class="kicker"><b>● CGU</b> · 18 a 26.fev.2026</div>
+    <h3>CGU apagou <span class="mark">28 respostas LAI</span> do ar em fevereiro — só recolocou após denúncia jornalística</h3>
+    <p>Entre 18 e 26 de fevereiro de 2026, ao menos 28 respostas a pedidos de acesso à informação sumiram do site oficial do governo. Todas eram de 2026. A falha foi identificada pela Núcleo Jornalismo via sua ferramenta de monitoramento Legislatech, e as respostas só voltaram depois que a CGU foi formalmente questionada.</p>
+    <p class="angulo"><strong>Ângulo:</strong> quantas respostas LAI somem sem ninguém notar? Criar monitoramento próprio via Legislatech ou scraping periódico · o que havia nas 28 que sumiram? CGU deu explicação oficial? Pedir LAI sobre a LAI.</p>
+    <a class="link" href="https://nucleo.jor.br/curtas/2026-02-26-respostas-de-pedidos-de-acesso-a-informacao-somem-do-site-do-governo/" target="_blank">→ apuração original · núcleo jornalismo</a>
   </div>
 
   <div class="item">
-    <h3>Consulta a registros do MAPA (Ministério da Agricultura)</h3>
-    <div class="orgao">órgão: <b>MAPA</b> · id do pedido: 7019295</div>
-    <p>Pedido recente (abril/2026) sobre registros do MAPA. O mesmo ministério foi alvo, em edições anteriores de outros veículos, por concentrar 659 das 803 reuniões com o setor da carne em dois anos. Qualquer pedido novo vale inspeção.</p>
-    <p class="angulo"><strong>Ângulo:</strong> cruzar com dados de agendas do MAPA · há reuniões recentes com os mesmos atores? Há contratos ou portarias correlatas publicadas no DOU?</p>
-    <a class="link" href="https://buscalai.cgu.gov.br/PedidosLai/DetalhePedido?id=7019295" target="_blank">→ ver pedido</a>
+    <div class="kicker"><b>● CGU</b> · dado consolidado 2023</div>
+    <h3>CGU descumpre prazo legal em <span class="mark">1 a cada 4 recursos</span> da LAI — a lei que ela própria deve fiscalizar</h3>
+    <p>Relatório da Transparência Brasil mostrou que a Controladoria-Geral da União ultrapassou o prazo legal em 25% dos recursos contra negativas de pedidos LAI: demorou mais de 63 dias — o dobro do permitido — para decidir 585 recursos em 2023. A CGU é a instância última de fiscalização da própria LAI.</p>
+    <p class="angulo"><strong>Ângulo:</strong> reproduzir a metodologia da Transparência Brasil para 2025-2026 · pedir LAI diretamente à CGU sobre o atraso médio atualizado · o fiscal da lei é quem mais atrasa — matéria óbvia que nenhum grande veículo fez em 2026.</p>
+    <a class="link" href="https://blog.transparencia.org.br/tag/lai/" target="_blank">→ blog transparência brasil · arquivos LAI</a>
   </div>
 
   <div class="item">
-    <h3>Documentos da concessão de STFC (telefonia fixa) — Telecom e Oi</h3>
-    <div class="orgao">órgão: <b>Anatel</b> · id do pedido: 3600438</div>
-    <p>Pedido obteve documentos sobre a concessão do Serviço Telefônico Fixo Comutado. Relevante no contexto da desestatização discutida pela Anatel e das dívidas históricas da Oi. Respostas como essa ajudam a reconstituir o fio da novela regulatória da telefonia.</p>
-    <p class="angulo"><strong>Ângulo:</strong> o que o Estado sabia e quando sobre a derrocada financeira das concessionárias · pedido pode conter atas e ofícios internos.</p>
-    <a class="link" href="https://buscalai.cgu.gov.br/PedidosLai/DetalhePedido?id=3600438" target="_blank">→ ver pedido</a>
+    <div class="kicker"><b>● governo federal</b> · análise transversal</div>
+    <h3>De compras de armas a dados de servidores: <span class="mark">10 promessas</span> de transparência que Lula fez em 2022 e não cumpriu</h3>
+    <p>Análise publicada em dezembro de 2025 mapeou 10 promessas de campanha feitas por Lula na área de transparência que, três anos depois, permanecem não cumpridas. Entre elas: ampliação de sigilo em dados de servidores públicos, restrição ao acesso a informações sobre compras de armamento, e manutenção de classificações herdadas do governo anterior.</p>
+    <p class="angulo"><strong>Ângulo:</strong> cada promessa quebrada é uma pauta. Montar matrix "promessa × ato × resultado atual" e transformar em reportagem modular — uma por semana, acompanhando o que muda (ou não) até 2026.</p>
+    <a class="link" href="https://www.gazetadopovo.com.br/eleicoes/2026/picanha-transparencia-13-promessas-nao-cumpridas-governo-lula/" target="_blank">→ análise original · gazeta do povo</a>
+  </div>
+
+  <div class="nota-meta">
+    <b>○ nota metodológica · edição inaugural</b>
+    O sistema automatizado que alimenta esta newsletter entra em operação integral na próxima edição (segunda, 27 de abril). O portal Busca LAI (CGU) é uma SPA que exige JavaScript — o trigger semanal tenta quatro estratégias de coleta em cascata (download de dados abertos da CGU, busca indexada, cache Google, fallback em matérias). Quando alguma estratégia entregar conteúdo primário suficiente, os achados deixarão de depender de curadoria de imprensa e passarão a vir direto dos pedidos e respostas do sistema público.
   </div>
 
   <div class="expediente">
     <p>edição #001 · 20.abr.2026 · inaugural</p>
-    <p>gerada automaticamente · próxima varredura: segunda 27.abr.2026, 08h Londres</p>
+    <p>próxima varredura: segunda 27.abr.2026, 08h Londres</p>
     <p>sistema público consultado: busca lai · cgu</p>
   </div>
 
