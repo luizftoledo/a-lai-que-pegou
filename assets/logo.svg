@@ -3,7 +3,7 @@
     <style>
       .a-lai { font-family: 'Fraunces', 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 82px; fill: #1a1410; letter-spacing: -3px; }
       .que-pegou { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-style: italic; font-size: 40px; fill: #1a1410; letter-spacing: -0.5px; }
-      .highlight { fill: #ffc987; }
+      .highlight { fill: #f4a8a0; }
     </style>
   </defs>
   <rect class="highlight" x="62" y="60" width="138" height="24" opacity="0.9"/>
