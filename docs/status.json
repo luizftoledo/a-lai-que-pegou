@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-04-20T08:50:00Z",
+  "last_run": "2026-04-27T08:15:00Z",
   "last_run_status": "success",
-  "last_run_note": "edição inaugural · paleta reformulada (cream + pêssego + azul-petróleo)",
-  "next_run_approx": "2026-04-27T08:00:00+01:00",
+  "last_run_note": "edição #002 · destaque sobre política de assédio sexual na UFPE aprovada só em dez/2025",
+  "next_run_approx": "2026-05-04T08:00:00+01:00",
   "schedule": "semanal · segundas 08:00 Europe/London",
-  "periodo_varredura_3_meses": "2026-01-20 a 2026-04-20",
+  "periodo_varredura_3_meses": "2026-01-27 a 2026-04-27",
   "edicoes": [
     {
       "numero": 1,
@@ -12,6 +12,15 @@
       "file": "edicoes/2026-04-20.html",
       "titulo": "Preço do seu seguro de carro é calculado com dados de 2021",
       "em_destaque": "Reguladora federal admite atraso de 5 anos na base nacional de sinistros",
+      "e_mais": 5,
+      "reportagens_curadas": 4
+    },
+    {
+      "numero": 2,
+      "data": "2026-04-27",
+      "file": "edicoes/2026-04-27.html",
+      "titulo": "UFPE aprovou sua primeira política institucional contra assédio sexual só em dezembro de 2025",
+      "em_destaque": "Universidade federal com 80 anos só formalizou política de enfrentamento ao assédio em 17/12/2025",
       "e_mais": 5,
       "reportagens_curadas": 4
     }

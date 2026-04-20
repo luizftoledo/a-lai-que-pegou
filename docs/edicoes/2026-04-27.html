@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A LAI que pegou · edição #002</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,900&family=Libre+Franklin:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4ede0; --paper-2: #ebe2d1; --ink: #1a1410; --ink-2: #3a2f24;
+    --muted: #7a6e5c; --dim: #a89b85; --line: #d4c9b1;
+    --stamp: #2a4f5f; --highlight: #f4a8a0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); font-family: 'Libre Franklin', sans-serif; -webkit-font-smoothing: antialiased; }
+  body {
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(209,52,47,0.03) 0, transparent 40%),
+      radial-gradient(circle at 90% 90%, rgba(245,213,71,0.04) 0, transparent 40%),
+      repeating-linear-gradient(0deg, rgba(26,20,16,0.018) 0, rgba(26,20,16,0.018) 1px, transparent 1px, transparent 3px);
+    min-height: 100vh; padding: 40px 32px 80px; line-height: 1.6;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+  .back-link {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--muted); text-decoration: none;
+    margin-bottom: 20px; display: inline-block;
+  }
+  .back-link:hover { color: var(--stamp); }
+  .nameplate {
+    border-top: 4px double var(--ink); border-bottom: 2px solid var(--ink);
+    padding: 18px 0 14px; margin-bottom: 24px; text-align: center; position: relative;
+  }
+  .logo-text {
+    font-family: 'Fraunces', serif; font-weight: 900; font-size: 56px;
+    letter-spacing: -2px; line-height: 0.9; display: inline-block;
+  }
+  .logo-text .lai-wrap { display: inline-block; position: relative; padding: 0 4px; }
+  .logo-text .lai-wrap::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 52%; bottom: 10%;
+    background: var(--highlight); z-index: -1; transform: skewX(-4deg);
+  }
+  .logo-text .que { font-weight: 500; }
+  .logo-subtext {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+    font-size: 30px; line-height: 1; margin-top: -2px; display: inline-block; position: relative;
+  }
+  .logo-subtext::after {
+    content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--stamp);
+  }
+  .edition-meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-bottom: 6px;
+  }
+  .edition-meta .num { color: var(--stamp); font-weight: 700; }
+  .varredura {
+    background: var(--paper-2); border: 1px solid var(--line);
+    border-left: 3px solid var(--stamp); padding: 16px 20px; margin: 32px 0;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-2);
+  }
+  .varredura b {
+    display: block; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--stamp); font-size: 10px; margin-bottom: 8px; font-weight: 700;
+  }
+  .varredura ul { list-style: none; padding: 0; margin: 0; }
+  .varredura li { margin-bottom: 3px; padding-left: 14px; position: relative; }
+  .varredura li::before { content: '›'; position: absolute; left: 0; color: var(--stamp); font-weight: 700; }
+  .section-head {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--stamp); font-weight: 700;
+    border-top: 1px solid var(--ink); padding-top: 10px; margin: 48px 0 20px;
+  }
+  .destaque { padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .destaque .kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--stamp); font-weight: 600; margin-bottom: 6px;
+  }
+  .destaque h2 {
+    font-family: 'Fraunces', serif; font-size: 34px; font-weight: 900;
+    letter-spacing: -1px; line-height: 1.1; margin-bottom: 12px;
+  }
+  .destaque h2 .mark { background: var(--highlight); padding: 0 4px; }
+  .destaque .subtitle {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 18px;
+    color: var(--ink-2); margin-bottom: 18px;
+  }
+  .destaque p { margin-bottom: 14px; font-size: 15px; }
+  .destaque .lead { font-size: 18px; font-weight: 500; line-height: 1.55; margin-bottom: 18px; }
+  .destaque .lead::first-letter {
+    font-family: 'Fraunces', serif; font-size: 58px; font-weight: 900;
+    float: left; line-height: 0.9; margin: 3px 8px 0 0; color: var(--stamp);
+  }
+  .quote {
+    border-left: 3px solid var(--stamp); padding: 4px 16px;
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 15px;
+    color: var(--ink-2); margin: 16px 0;
+  }
+  .destaque .angulo-box {
+    background: var(--paper-2); border-left: 3px solid var(--highlight);
+    padding: 14px 18px; margin-top: 18px; font-family: 'Fraunces', serif;
+    font-style: italic; font-size: 15px; color: var(--ink);
+  }
+  .destaque .angulo-box b {
+    display: block; font-family: 'JetBrains Mono', monospace; font-style: normal;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--stamp); margin-bottom: 6px; font-weight: 700;
+  }
+  .ficha {
+    background: var(--paper-2); border: 1px solid var(--line);
+    padding: 10px 14px; margin: 14px 0; font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 10px 16px;
+  }
+  .ficha span b { color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-right: 4px; }
+  .ficha span b::after { content: ':'; }
+  .item { padding: 22px 0; border-bottom: 1px dashed var(--line); }
+  .item:last-child { border-bottom: none; }
+  .item .kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
+  }
+  .item .kicker b { color: var(--stamp); font-weight: 700; }
+  .item h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 800;
+    letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 10px;
+  }
+  .item h3 .mark { background: var(--highlight); padding: 0 3px; }
+  .item p { font-size: 14px; margin-bottom: 8px; color: var(--ink-2); }
+  .item .angulo {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 14px;
+    color: var(--ink); margin-top: 10px; padding-left: 12px;
+    border-left: 2px solid var(--highlight);
+  }
+  .item a.link {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--stamp); text-decoration: none; letter-spacing: 1.5px;
+    text-transform: uppercase; margin-top: 6px; display: inline-block;
+  }
+  .item a.link:hover { text-decoration: underline; }
+  .curadoria {
+    margin-top: 40px; background: var(--paper-2); padding: 26px 28px;
+    border: 1px solid var(--line); border-top: 3px solid var(--ink);
+  }
+  .curadoria h2 {
+    font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800;
+    letter-spacing: -0.5px; margin-bottom: 6px;
+  }
+  .curadoria .sub {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 15px;
+    color: var(--muted); margin-bottom: 18px;
+  }
+  .curadoria .reportagem {
+    border-top: 1px dashed var(--line); padding: 14px 0;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .curadoria .reportagem:first-of-type { border-top: none; padding-top: 4px; }
+  .curadoria .rep-meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .curadoria .rep-meta b { color: var(--stamp); }
+  .curadoria .rep-titulo {
+    font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700;
+    line-height: 1.25; color: var(--ink); text-decoration: none;
+  }
+  .curadoria .rep-titulo:hover { background: var(--highlight); }
+  .curadoria .rep-como {
+    font-size: 13px; color: var(--ink-2); font-style: italic;
+    margin-top: 4px;
+  }
+  .curadoria .rep-como b {
+    font-family: 'JetBrains Mono', monospace; font-style: normal;
+    font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--stamp); margin-right: 6px; font-weight: 700;
+  }
+  .dashboard-embed {
+    margin-top: 40px; padding: 30px 32px; background: var(--ink);
+    color: var(--paper); border: 1px solid var(--ink);
+    position: relative; overflow: hidden;
+  }
+  .dashboard-embed::before {
+    content: ''; position: absolute; top: 0; right: 0;
+    width: 180px; height: 180px; background: var(--highlight);
+    opacity: 0.18; border-radius: 50%;
+    transform: translate(50%, -50%);
+  }
+  .dashboard-embed .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--highlight); margin-bottom: 10px; font-weight: 700;
+    position: relative;
+  }
+  .dashboard-embed h3 {
+    font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800;
+    letter-spacing: -0.5px; margin-bottom: 10px; color: var(--paper);
+    position: relative;
+  }
+  .dashboard-embed p {
+    font-family: 'Fraunces', serif; font-size: 15px; line-height: 1.5;
+    color: var(--paper-2); margin-bottom: 16px; position: relative;
+  }
+  .dashboard-embed a.cta {
+    display: inline-block; padding: 10px 22px; background: var(--highlight);
+    color: var(--ink); font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; text-decoration: none; position: relative;
+    transition: transform 0.1s;
+  }
+  .dashboard-embed a.cta:hover { transform: translateX(3px); }
+  .expediente {
+    margin-top: 56px; padding-top: 22px; border-top: 2px double var(--ink);
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted);
+    letter-spacing: 1.5px; text-transform: uppercase; text-align: center;
+  }
+  .expediente p { margin-bottom: 6px; }
+  .expediente .quem-faz { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--ink-2); letter-spacing: 2px; }
+  .expediente .quem-faz a { color: var(--stamp); text-decoration: none; font-weight: 600; border-bottom: 1px dotted var(--stamp); }
+  .expediente .quem-faz a:hover { color: var(--ink); }
+  .sobre-lai {
+    margin-top: 48px; padding: 28px 32px; background: var(--paper-2);
+    border: 1px solid var(--line); border-left: 3px solid var(--stamp);
+  }
+  .sobre-lai h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700;
+    margin-bottom: 12px; letter-spacing: -0.3px;
+  }
+  .sobre-lai p {
+    font-family: 'Fraunces', serif; font-size: 16px; line-height: 1.55;
+    color: var(--ink); margin-bottom: 10px;
+  }
+  .sobre-lai p strong { background: var(--highlight); padding: 0 3px; font-weight: 600; }
+  .metodologia {
+    margin-top: 24px; padding: 22px 28px; background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .metodologia .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--stamp); margin-bottom: 14px; font-weight: 700;
+  }
+  .metodologia ul { list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--ink-2); }
+  .metodologia li {
+    padding: 6px 0 6px 16px; position: relative; line-height: 1.5;
+  }
+  .metodologia li::before {
+    content: '›'; position: absolute; left: 0; color: var(--stamp); font-weight: 700;
+  }
+  @media (max-width: 680px) {
+    body { padding: 24px 18px 60px; }
+    .logo-text { font-size: 42px; } .logo-subtext { font-size: 24px; }
+    .destaque h2 { font-size: 26px; } .item h3 { font-size: 18px; }
+    .dashboard-embed h3 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-link">← arquivo de edições</a>
+
+  <div class="nameplate">
+    <div class="edition-meta">
+      <span class="num">edição #002</span>
+      <span>segunda · 27 de abril de 2026</span>
+      <span>semanal</span>
+    </div>
+    <div class="logo-text">A <span class="lai-wrap">LAI</span> <span class="que">que</span></div>
+    <div class="logo-subtext">pegou</div>
+  </div>
+
+  <div class="varredura">
+    <b>○ varredura desta edição</b>
+    <ul>
+      <li>varredura: 27 de abril de 2026 · manhã</li>
+      <li>fonte: buscalai.cgu.gov.br (respostas publicadas entre 13 e 17.abr) + curadoria externa</li>
+      <li>ênfase temática: saúde · meio ambiente · educação · lobby indígena</li>
+      <li>pedidos lidos: 28 · aprovados nesta edição: 6</li>
+      <li>próxima varredura automática: segunda, 04 de maio, 08h Londres</li>
+    </ul>
+  </div>
+
+  <div class="section-head">○ em destaque · o mais forte</div>
+
+  <div class="destaque">
+    <div class="kicker">universidade com 80 anos · assédio sexual</div>
+    <h2>UFPE aprovou sua primeira política institucional contra assédio sexual só em <span class="mark">dezembro de 2025</span></h2>
+    <div class="subtitle">Uma das maiores universidades federais do país levou oito décadas para formalizar política de prevenção e enfrentamento ao assédio — e ainda não compila seus próprios números de processos disciplinares</div>
+
+    <p class="lead">A Universidade Federal de Pernambuco — fundada em 1946 e uma das dez maiores federais do Brasil — respondeu em 14 de abril a um pedido que queria saber quantos Processos Administrativos Disciplinares foram abertos entre 2015 e 2025 para apurar casos de assédio ou violência sexual por servidores. Em vez de números, a resposta revelou outra coisa: a UFPE só aprovou sua <strong>Política de Prevenção e Enfrentamento à Prática de Assédio Moral e Sexual e de Discriminação</strong> na Resolução nº 10, de <strong>17 de dezembro de 2025</strong>. O Plano Setorial que criou a política é da Portaria nº 01, de 13 de março de 2025, do próprio gabinete do reitor.</p>
+
+    <p>Para responder quantos processos foram abertos nos dez anos anteriores — quantos viraram advertência, suspensão ou demissão, quantos prescreveram —, a UFPE mandou o cidadão consultar o painel Correição em Dados, da CGU (Controladoria-Geral da União, órgão do governo federal que fiscaliza a LAI). Ou seja: a universidade <strong>não compilou os próprios dados</strong>.</p>
+
+    <div class="quote">"A primeira ação prevista do plano foi a Instituição da Política de Prevenção e Enfrentamento à Prática de Assédio Moral e Sexual e de Discriminação no âmbito da UFPE, através da Resolução nº 10, de 17 de Dezembro de 2025." — resposta da UFPE ao pedido 23546.049743/2026-63</div>
+
+    <div class="ficha">
+      <span><b>protocolo</b> 23546.049743/2026-63</span>
+      <span><b>órgão</b> UFPE</span>
+      <span><b>resposta</b> 14/04/2026</span>
+      <span><b>decisão</b> Acesso Concedido</span>
+    </div>
+
+    <div class="angulo-box">
+      <b>ângulo de pauta</b>
+      O Metrópoles mapeou em reportagem especial 128 atos de assédio em 59 universidades federais — agora sabemos que uma delas, a UFPE, funcionou por quase 80 anos sem política formal. <strong>Perguntas:</strong> quais das outras 68 universidades federais ainda não têm política institucional aprovada? Quantas, como a UFPE, dependem do painel da CGU para contar os próprios processos? <strong>Fontes:</strong> Andifes (associação das reitoras), Associação Nacional de Pós-Graduandos, coletivos feministas universitários e o Ministério Público Federal (que tem acompanhado casos em várias capitais).
+    </div>
+
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10777304" target="_blank">→ ver pedido original</a>
+  </div>
+
+  <div class="section-head">○ saúde · meio ambiente · educação</div>
+
+  <div class="item">
+    <div class="kicker"><b>● saúde</b> · EBSERH / HUMAP-UFMS · respondido 15/04/2026</div>
+    <h3>Hospital universitário do Mato Grosso do Sul tem só <span class="mark">duas enfermeiras</span> para 1.291 atendimentos por ano de feridas e estomias</h3>
+    <p>Uma estudante pediu à EBSERH (estatal federal que administra os 41 hospitais universitários do país) o quadro de enfermeiras estomaterapeutas no HUMAP-UFMS, em Campo Grande. Estomaterapia é a especialidade que cuida de pacientes com bolsas de colostomia, feridas complexas e lesões por pressão — problemas comuns em idosos, diabéticos e pós-cirúrgicos. A resposta: são só <strong>duas enfermeiras especialistas</strong>, com uma técnica, no ambulatório. Em 2025, eles fecharam o ano com 1.291 atendimentos (1.236 de feridas e 55 de estomias). Não há previsão de contratar mais profissionais nem de ampliar o serviço.</p>
+    <p class="angulo"><strong>Ângulo:</strong> cada hospital universitário federal tem o mesmo aperto? Pedir via LAI, em lote, para os 41 HUs o número de estomaterapeutas e o volume anual — é possível montar o primeiro mapa da capacidade SUS para cuidar de feridas crônicas e estomias. Historicamente, esse tipo de paciente chega ao fim do tratamento em casa, sem profissional — e é onde aparecem as infecções hospitalares evitáveis.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10793352" target="_blank">→ ver pedido · 23658.014628/2026-19</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● meio ambiente</b> · ICMBio · respondido 17/04/2026</div>
+    <h3>Portaria que define quem pode multar desmatador no ICMBio é de <span class="mark">2008</span> — e não tem prazo de atualização</h3>
+    <p>Um pesquisador perguntou ao ICMBio (Instituto Chico Mendes, órgão federal que cuida das unidades de conservação — parques, reservas e florestas nacionais) onde consultar a lista atualizada dos agentes autorizados a exercer o poder de polícia ambiental, ou seja, quem pode autuar, embargar e multar quem destrói parque. A resposta: a lista é a Portaria nº 52 de 6 de março de 2008. Ainda do primeiro mandato Lula. "Não há periodicidade específica para atualização da mencionada Portaria", informa a ouvidoria. Ela só é mexida quando alguém entra ou sai do quadro.</p>
+    <p class="angulo"><strong>Ângulo:</strong> com o ICMBio atuando contra desmatamento na Amazônia e Cerrado, quantos agentes ativos ainda constam na portaria de 2008 mas já se aposentaram? Quantos hoje fiscalizam de fato parques e reservas? Peça à CGU o cruzamento entre a Portaria 52/2008 e o cadastro SIAPE (o sistema de pessoal do governo federal). Resultado esperado: estimativa do tamanho real do braço fiscalizador do órgão em 2026.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10770220" target="_blank">→ ver pedido · 02303.009083/2026-61</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● educação</b> · IFBA · respondido 16/04/2026</div>
+    <h3>Campus Juazeiro do IFBA ficou fora do mercado livre de energia porque reitoria <span class="mark">perdeu o prazo</span> de enviar os dados</h3>
+    <p>Um cidadão perguntou ao Instituto Federal da Bahia (uma das 38 redes federais de ensino técnico e tecnológico do país) por que o Campus Juazeiro, no semiárido baiano, não entrou na primeira leva dos 19 campi que migraram para o mercado livre de energia — modalidade em que o consumidor compra direto do gerador, pagando menos. A resposta, em texto franco: o campus "não apresentou as informações requeridas dentro do prazo estabelecido, nem no período de prorrogação concedido". Como havia prazo regulatório para enviar à concessionária COELBA a chamada carta-denúncia (formalizando a migração) — e atraso significaria perder benefício a partir de outubro/2025 — a comissão concluiu a etapa sem Juazeiro.</p>
+    <p class="angulo"><strong>Ângulo:</strong> o projeto OrçaMais do IFBA previa economia pela migração. Quanto o Campus Juazeiro deixou de economizar — e em quanto estudantes e servidores arcam com a diferença em conta de luz num campus no semiárido, onde o ar-condicionado é regra? Pedir aos 19 campi contemplados a economia mensal estimada e cruzar com o orçamento de cada unidade.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10795958" target="_blank">→ ver pedido · 23546.051127/2026-72</a>
+  </div>
+
+  <div class="section-head">○ e mais</div>
+
+  <div class="item">
+    <div class="kicker"><b>● Ministério dos Transportes</b> · respondido 17/04/2026</div>
+    <h3>Em reunião com governo sobre ferrovia no Cerrado, Xavantes entregam <span class="mark">mapa pedindo demarcação</span> da Terra Indígena Marechal Rondon</h3>
+    <p>Um cidadão pediu ao Ministério dos Transportes as atas de duas reuniões com lideranças Xavante sobre a Ferrovia de Integração Centro-Oeste (FICO), obra de R$ 14 bilhões que liga Mato Grosso ao Porto de Santos. O ministério respondeu que só houve uma reunião, em 24 de março de 2026, mas entregou cópia do documento apresentado pelas lideranças naquele encontro: o Mapa das Terras Reivindicadas da TI Marechal Rondon. "Se evidencia como pleito principal a questão da demarcação", admite a resposta. Do lado do governo, estavam subsecretário de Sustentabilidade, Infra S.A (estatal que toca a FICO) e Secretaria Nacional de Transporte Ferroviário.</p>
+    <p class="angulo"><strong>Ângulo:</strong> a FICO é gargalo do agro do Centro-Oeste — soja e milho — e precisa do licenciamento do IBAMA (Instituto Brasileiro do Meio Ambiente). A condicionante socioambiental da obra pode estar sendo usada como moeda para acelerar demarcação que está parada no Ministério dos Povos Indígenas. <strong>Peça:</strong> ata completa da reunião, lista de participantes, e o próprio "pleito Xavante" em PDF (SEI 11138129). Fontes: Funai, CIMI, APIB e Ministério Público Federal em MT.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10750748" target="_blank">→ ver pedido · 50001.078563/2026-19</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● meio ambiente</b> · DNIT · respondido 10/04/2026</div>
+    <h3>Consultora ambiental pede processo da <span class="mark">BR-262 no Pantanal</span> e DNIT libera acesso só por 180 dias — com parte tarjada</h3>
+    <p>Uma empresa de consultoria ambiental pediu ao DNIT (Departamento Nacional de Infraestrutura de Transportes, autarquia federal que gerencia as rodovias federais) cópia integral do processo de contratação da gestão ambiental da BR-262/MS, entre Anastácio e Corumbá — trecho que corta o Pantanal sul-matogrossense e depende de autorização do IBAMA (Autorização de Operação 17863277/2023). O DNIT liberou o acesso via SEI, mas classificou parte do processo como "documento preparatório" e deu prazo de 180 dias, com expiração em 07/10/2026. Na prática: quem precisar discutir as condicionantes ambientais depois dessa data terá de pedir de novo.</p>
+    <p class="angulo"><strong>Ângulo:</strong> o trecho Anastácio–Corumbá atravessa Pantanal e áreas indígenas. As condicionantes de licenciamento são o que garantem — no papel — a mitigação do impacto. Qual o edital vigente (Concorrência nº 456/2025)? Quem ganhou a consultoria? Quanto o governo paga anualmente para "apoio técnico" de uma rodovia que passa pelo maior bioma alagado do mundo?</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10763495" target="_blank">→ ver pedido · 50001.079550/2026-67</a>
+  </div>
+
+  <div class="curadoria">
+    <h2>○ reportagens que usaram a LAI</h2>
+    <div class="sub">o que o jornalismo brasileiro tem feito com a Lei de Acesso nas últimas semanas</div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>metrópoles · especial</b> · 2026</div>
+      <a class="rep-titulo" href="https://www.metropoles.com/materias-especiais/assedio-sexual-universidades" target="_blank">O assédio sexual nos câmpus do Brasil em 128 atos</a>
+      <div class="rep-como"><b>método:</b> pedidos via LAI a 59 universidades e institutos federais permitiram reunir 128 casos de constrangimento e violência sexual em ambiente de ensino superior. A reportagem virou dossiê interativo com mapa por instituição — concorre ao True Story Award 2026.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>tv brasil · ebc</b> · abril/2026</div>
+      <a class="rep-titulo" href="https://www.ebc.com.br/imprensa/2026/caminhos-da-reportagem-expoe-casos-de-trabalho-escravo-domestico-no-brasil-atual" target="_blank">Caminhos da Reportagem expõe casos de trabalho escravo doméstico no Brasil atual</a>
+      <div class="rep-como"><b>método:</b> a produção cruzou a lista de resgatados do MTE (Ministério do Trabalho) obtida via canal público com autos de infração de auditores fiscais. Identificou padrão da exploração no ambiente doméstico — caso ainda pouco fiscalizado.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>tv brasil · agência brasil</b> · abril/2026</div>
+      <a class="rep-titulo" href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-04/reportagem-da-tv-brasil-conquista-2o-lugar-no-premio-mol-de-jornalismo" target="_blank">Reportagem da TV Brasil conquista 2º lugar no Prêmio MOL de Jornalismo</a>
+      <div class="rep-como"><b>método:</b> Prêmio MOL reconhece reportagens que usaram LAI e dados públicos para expor violações de direitos humanos. A premiação de 2026 destaca o uso crescente da LAI para cobertura de minorias — leitura obrigatória para quem pensa em repautas para 2026-2027.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>agência pública</b> · 2025/2026</div>
+      <a class="rep-titulo" href="https://apublica.org/2025/08/criancas-nas-redes-bastidores-e-lobby-na-aprovacao-do-pl-2628/" target="_blank">Dia de lobby: os bastidores da tramitação do PL 2628 que protege crianças nas redes</a>
+      <div class="rep-como"><b>método:</b> pedidos LAI à Câmara dos Deputados por agendas de gabinete revelaram quem foi ao Congresso pressionar contra o projeto. A reportagem é referência metodológica para o uso de agendas como prova documental de lobby — técnica usável em qualquer projeto em tramitação.</div>
+    </div>
+  </div>
+
+  <div class="dashboard-embed">
+    <div class="label">○ ferramenta aberta</div>
+    <h3>explore o banco de pedidos que alimenta esta newsletter</h3>
+    <p>Todas as respostas que viraram matéria — e as que ficaram de fora — estão no dashboard público. Dá para filtrar por órgão, tema, data e decisão. Atualiza toda segunda, junto com a newsletter.</p>
+    <a class="cta" href="https://luizftoledo.github.io/lai-dashboard/" target="_blank">abrir dashboard →</a>
+  </div>
+
+  <div class="sobre-lai">
+    <h3>○ o que é a LAI</h3>
+    <p>A LAI é a <strong>Lei de Acesso à Informação</strong> (Lei 12.527, de 2011), que dá a qualquer cidadão o direito de pedir informações a qualquer órgão público — e obriga o governo a responder em até 20 dias, prorrogáveis por mais 10.</p>
+    <p>Dizem que no Brasil há leis que não pegam. <strong>Essa pegou</strong> — já são mais de 1 milhão de pedidos enviados ao governo federal desde que a lei entrou em vigor em maio de 2012, segundo a Controladoria-Geral da União.</p>
+  </div>
+
+  <div class="metodologia">
+    <div class="label">○ como a gente coleta</div>
+    <ul>
+      <li>Toda segunda de manhã, uma varredura automática entra no Busca LAI (buscalai.cgu.gov.br), sistema público da CGU que reúne pedidos feitos ao governo federal e as respostas dadas.</li>
+      <li>Pega os pedidos mais recentes em 9 temas prioritários: saúde, lobby e agendas, meio ambiente, orçamento, militares, segurança pública, economia, trabalho escravo e educação.</li>
+      <li>Abre cada pedido e lê a resposta oficial na íntegra.</li>
+      <li>Descarta o ruído: agendamento no INSS, valor a receber no BACEN, cadastro de sistema etc.</li>
+      <li>Entram na edição só os que têm dado concreto e potencial de virar pauta.</li>
+      <li>Ao fim, uma curadoria com reportagens brasileiras que usaram a LAI na semana.</li>
+    </ul>
+  </div>
+
+  <div class="expediente">
+    <p>edição #002 · 27.abr.2026 · 28 pedidos lidos · 6 aprovados · 4 reportagens curadas</p>
+    <p>próxima varredura: segunda 04.mai.2026, 08h Londres</p>
+    <p class="quem-faz">○ quem faz · <a href="https://luizftoledo.github.io" target="_blank">luizftoledo.github.io</a> · <a href="https://datafixers.org" target="_blank">datafixers.org</a></p>
+  </div>
+
+</div>
+</body>
+</html>
