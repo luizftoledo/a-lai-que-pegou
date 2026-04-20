@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-04-20T07:25:00Z",
+  "last_run": "2026-04-20T08:00:00Z",
   "last_run_status": "error",
-  "last_run_note": "Playwright indisponível no ambiente (download do Chromium falhou; host externo em allowlist bloqueou fallback HTTP). Coleta não foi executada — nenhuma edição nova gerada nesta varredura.",
+  "last_run_note": "Playwright indisponível no ambiente (CDN da Playwright retornou 403 'Host not in allowlist' ao baixar o Chromium; buscalai.cgu.gov.br também responde 403 a requisições HTTP diretas, então fallback sem navegador headless inviável). Coleta não foi executada — nenhuma edição nova gerada nesta varredura.",
   "next_run_approx": "2026-04-27T08:00:00+01:00",
   "schedule": "semanal · segundas 08:00 Europe/London",
   "periodo_varredura_3_meses": "2026-01-20 a 2026-04-20",
