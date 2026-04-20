@@ -1,16 +1,16 @@
-name: Scrape buscalai
+name: Varredura semanal · coleta + síntese
 
 on:
   schedule:
-    # segunda 06:30 UTC (30 min antes do trigger Anthropic)
+    # segunda 06:30 UTC (07:30 Londres BST / 03:30 BRT)
     - cron: "30 6 * * 1"
-  workflow_dispatch:  # permite rodar manual na aba Actions
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  scrape:
+  scrape-and-synthesize:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,23 +20,26 @@ jobs:
           python-version: "3.11"
           cache: pip
 
-      - name: Instalar Playwright
+      - name: Instalar dependências
         run: |
-          pip install playwright
+          pip install -r requirements.txt
           python -m playwright install chromium
           python -m playwright install-deps chromium
 
-      - name: Rodar scraper dirigido por tema
-        env:
-          OUT_PATH: docs/data/pedidos.json
+      - name: Coletar pedidos LAI (Playwright)
         run: |
           mkdir -p docs/data
           python scripts/coletar_buscalai.py 90 40
           cp /tmp/pedidos_detalhados.json docs/data/pedidos.json
-          echo "Gravado: $(wc -l < docs/data/pedidos.json) linhas"
+          echo "Coletados: $(python3 -c 'import json;print(len(json.load(open(\"docs/data/pedidos.json\"))))') pedidos"
 
-      - name: Commit JSON coletado
+      - name: Sintetizar edição (Claude API)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/synthesize.py
+
+      - name: Commit + push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "scrape: varredura $(date +%Y-%m-%d)"
-          file_pattern: "docs/data/**"
+          commit_message: "edição semanal · $(date +%Y-%m-%d)"
+          file_pattern: "docs/**"
