@@ -20,7 +20,33 @@ Você vai gerar a edição da newsletter "A LAI que pegou" desta semana. Públic
 
 5. **CURADORIA FINAL**: 3-5 reportagens brasileiras com LAI da última semana. Fazer 3 WebSearches (site:nucleo.jor.br LAI, site:apublica.org "Lei de Acesso", "obtidos via LAI" 2026).
 
-6. **DASHBOARD EMBED** (antes do rodapé): box com CTA "abrir dashboard" linkando https://luizftoledo.github.io/lai-dashboard/ — CSS já está no template.
+6. **MONITOR DA LAI** (box com stats + CTA). Antes de gerar a seção, puxe stats frescas do dashboard:
+
+```bash
+curl -sk https://luizftoledo.github.io/lai-dashboard/data/metadata.json | python3 -c "import sys,json; o=json.load(sys.stdin)['overall']; print(o)"
+curl -sk https://luizftoledo.github.io/lai-dashboard/data/report_data.json | python3 -c "import sys,json; r=json.load(sys.stdin); print('top_negador:', sorted([o for o in r['org_ranking'] if o['total_requests']>15000], key=lambda x: -x['denied_rate'])[0])"
+```
+
+Use os números no quadro `.stats-mini` (3 colunas):
+- total de pedidos desde 2012 (formato "1,68 mi")
+- taxa de negação geral (%)
+- órgão com maior taxa de negação entre os de alto volume (nome + %)
+
+Estrutura HTML do bloco, usando o CSS já existente no template:
+```html
+<div class="dashboard-embed">
+  <div class="label">○ ferramenta aberta</div>
+  <h3>Monitor da LAI</h3>
+  <p class="monitor-sub"><em>Veja quem está negando mais o acesso à informação e quem está usando mais o dispositivo de sigilo.</em></p>
+  <div class="stats-mini">
+    <div><div class="stat-num">X,XX mi</div><div class="stat-label">pedidos enviados ao governo federal desde 2012</div></div>
+    <div><div class="stat-num">X,X%</div><div class="stat-label">das respostas são negativas</div></div>
+    <div><div class="stat-num">X,X%</div><div class="stat-label">é a taxa de negação do [ÓRGÃO] — a maior entre órgãos com + de 15 mil pedidos</div></div>
+  </div>
+  <p>Todas as respostas que viraram matéria — e as que ficaram de fora — estão no dashboard público. Dá para filtrar por órgão, tema, data e decisão. Atualiza toda segunda, junto com a newsletter.</p>
+  <a class="cta" href="https://luizftoledo.github.io/lai-dashboard/" target="_blank">abrir dashboard →</a>
+</div>
+```
 
 ## PASSOS
 
