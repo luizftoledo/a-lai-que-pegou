@@ -216,6 +216,9 @@
     text-align: center;
   }
   .expediente p { margin-bottom: 6px; }
+  .expediente .quem-faz { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--ink-2); letter-spacing: 2px; }
+  .expediente .quem-faz a { color: var(--stamp); text-decoration: none; font-weight: 600; border-bottom: 1px dotted var(--stamp); }
+  .expediente .quem-faz a:hover { color: var(--ink); }
 
   @media (max-width: 680px) {
     body { padding: 24px 18px 60px; }
@@ -236,7 +239,6 @@
       <div class="logo-subtext">pegou</div>
     </div>
     <div class="tagline-bottom">pedidos de transparência que o poder tentou esconder — e alguém insistiu.</div>
-    <div class="stamp">lei 12.527</div>
   </div>
 
   <div class="status-bar" id="status-bar">
@@ -255,6 +257,7 @@
   <div class="expediente">
     <p>publicação semanal · curadoria automatizada</p>
     <p>varredura ao vivo do sistema público de pedidos da CGU</p>
+    <p class="quem-faz">○ quem faz · <a href="https://luizftoledo.github.io" target="_blank">luizftoledo.github.io</a> · <a href="https://datafixers.org" target="_blank">datafixers.org</a></p>
   </div>
 
 </div>
