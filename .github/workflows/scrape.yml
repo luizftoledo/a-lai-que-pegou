@@ -1,0 +1,42 @@
+name: Scrape buscalai
+
+on:
+  schedule:
+    # segunda 06:30 UTC (30 min antes do trigger Anthropic)
+    - cron: "30 6 * * 1"
+  workflow_dispatch:  # permite rodar manual na aba Actions
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar Playwright
+        run: |
+          pip install playwright
+          python -m playwright install chromium
+          python -m playwright install-deps chromium
+
+      - name: Rodar scraper dirigido por tema
+        env:
+          OUT_PATH: docs/data/pedidos.json
+        run: |
+          mkdir -p docs/data
+          python scripts/coletar_buscalai.py 90 40
+          cp /tmp/pedidos_detalhados.json docs/data/pedidos.json
+          echo "Gravado: $(wc -l < docs/data/pedidos.json) linhas"
+
+      - name: Commit JSON coletado
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "scrape: varredura $(date +%Y-%m-%d)"
+          file_pattern: "docs/data/**"
