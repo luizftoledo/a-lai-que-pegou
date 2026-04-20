@@ -46,7 +46,7 @@ Estrutura da edição nova: nameplate + varredura + destaque + "saúde/educaçã
 
 Linguagem de cada parágrafo: mastigada. Jornalista cansado precisa entender em 30 segundos.
 
-Escreva em `docs/edicoes/YYYY-MM-DD.html` (data de hoje). Número da edição = próximo em `docs/status.json`.
+Escreva em `docs/edicoes/YYYY-MM-DD.html` usando **a data de HOJE**, obtida via bash `date +%Y-%m-%d`. NÃO use "próxima segunda" nem data futura — use exatamente a data do dia em que este script está rodando. Dentro do HTML (header, varredura, expediente), use também a data de hoje. Número da edição = próximo em `docs/status.json`.
 
 ### 5. Atualizar status.json
 Adicione nova entrada na lista `edicoes` com: numero, data, file, titulo (=lide do destaque, <= 120 chars), em_destaque (resumo 1 linha com número), e_mais (int), reportagens_curadas (int). Atualize `last_run` (ISO UTC agora), `last_run_status="success"`, `last_run_note`, `next_run_approx` (próxima segunda 08h+01:00).

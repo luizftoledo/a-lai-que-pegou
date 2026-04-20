@@ -1,0 +1,76 @@
+========================================
+START 2026-04-20T11:27:23Z
+========================================
+[1/5] git pull
+From https://github.com/luizftoledo/a-lai-que-pegou
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[2/5] scraping buscalai
+[saude:'SUS'] +9
+[saude:'hospital'] +9
+[lobby_agendas:'reuniões'] +9
+[lobby_agendas:'agenda'] +9
+[ambiente:'Ibama'] +9
+[ambiente:'ICMBio'] +9
+[orcamento:'orçamento'] +9
+[orcamento:'contratação'] +9
+[militares:'Exército'] +9
+[militares:'Marinha'] +9
+[seguranca:'Polícia Federal'] +9
+[total URLs] 84
+[1/84] saude :: https://buscalai.cgu.gov.br/busca/10798897
+[2/84] saude :: https://buscalai.cgu.gov.br/busca/10793485
+[3/84] saude :: https://buscalai.cgu.gov.br/busca/10790144
+[4/84] saude :: https://buscalai.cgu.gov.br/busca/10784272
+[5/84] saude :: https://buscalai.cgu.gov.br/busca/10782152
+[6/84] saude :: https://buscalai.cgu.gov.br/busca/10779523
+[7/84] saude :: https://buscalai.cgu.gov.br/busca/10777304
+[8/84] saude :: https://buscalai.cgu.gov.br/busca/10775087
+[9/84] saude :: https://buscalai.cgu.gov.br/busca/10774669
+[10/84] saude :: https://buscalai.cgu.gov.br/busca/10814440
+[11/84] saude :: https://buscalai.cgu.gov.br/busca/10807466
+[12/84] saude :: https://buscalai.cgu.gov.br/busca/10800288
+[13/84] saude :: https://buscalai.cgu.gov.br/busca/10799834
+[14/84] saude :: https://buscalai.cgu.gov.br/busca/10796925
+[15/84] saude :: https://buscalai.cgu.gov.br/busca/10796464
+[16/84] saude :: https://buscalai.cgu.gov.br/busca/10793352
+[17/84] saude :: https://buscalai.cgu.gov.br/busca/10792830
+[18/84] saude :: https://buscalai.cgu.gov.br/busca/10789995
+[19/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10804833
+[20/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10803203
+[21/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10801583
+[22/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10797682
+[23/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10796038
+[24/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10795958
+[25/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10795005
+[26/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10790315
+[27/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10788927
+[28/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10787125
+[29/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10774228
+[30/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10767465
+[31/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10763667
+[32/84] lobby_agendas :: https://buscalai.cgu.gov.br/busca/10750748
+[33/84] ambiente :: https://buscalai.cgu.gov.br/busca/10806986
+[34/84] ambiente :: https://buscalai.cgu.gov.br/busca/10806326
+[35/84] ambiente :: https://buscalai.cgu.gov.br/busca/10787737
+[36/84] ambiente :: https://buscalai.cgu.gov.br/busca/10781698
+[37/84] ambiente :: https://buscalai.cgu.gov.br/busca/10770220
+[38/84] ambiente :: https://buscalai.cgu.gov.br/busca/10763495
+[39/84] ambiente :: https://buscalai.cgu.gov.br/busca/10758227
+[40/84] ambiente :: https://buscalai.cgu.gov.br/busca/10756173
+[fim] 40 pedidos · por tema: {'saude': 18, 'lobby_agendas': 14, 'ambiente': 8}
+[2/5] coletados: 40 pedidos
+[3/5] gerando edição com claude
+edição #002 · UFPE aprovou sua primeira política institucional contra assédio sexual só em dezembro de 2025 · 6 itens · 4 reportagens curadas
+[4/5] commit + push
+[main 1b6e916] edição semanal automática 2026-04-20
+ 2 files changed, 429 insertions(+), 4 deletions(-)
+ create mode 100644 docs/edicoes/2026-04-27.html
+From https://github.com/luizftoledo/a-lai-que-pegou
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+To https://github.com/luizftoledo/a-lai-que-pegou.git
+   d427fba..1b6e916  main -> main
+To https://github.com/luizftoledo/a-lai-que-pegou.git
+   1b6e916..0a0597d  main -> main
+[5/5] DONE 2026-04-20T11:42:47Z
