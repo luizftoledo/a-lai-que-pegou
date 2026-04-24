@@ -66,7 +66,7 @@ Selecione 1 destaque (lide mais forte) + 5 "e mais". Ordene por força. Diversif
 3 WebSearches conforme regra 5. Reúna 3-5 reportagens com título, veículo, data, URL, "como usou".
 
 ### 4. Gerar HTML
-Leia `docs/edicoes/2026-04-20.html` (edição inaugural) como template EXATO. Mantenha TODO o `<style>`, paleta cream + rosa-coral + azul-petróleo, fontes Fraunces + Libre Franklin + JetBrains Mono.
+Leia `docs/edicoes/2026-04-20.html` (edição inaugural) como template EXATO. Mantenha TODO o `<style>`, paleta off-white + mint + teal + ink preto (aliada ao datafixers.org), fontes Fraunces + Inter + JetBrains Mono.
 
 Estrutura da edição nova, nesta ORDEM:
 1. nameplate (logo + data)
