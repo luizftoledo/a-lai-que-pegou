@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A LAI que pegou · edição #003</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fbfbfa; --paper-2: #eff4f3; --ink: #141312; --ink-2: #3a3836;
+    --muted: #6a6864; --dim: #a19e98; --line: #d8dedd;
+    --stamp: #2a7975; --highlight: #b4d7d1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+  body {
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(42,121,117,0.04) 0, transparent 40%),
+      radial-gradient(circle at 90% 90%, rgba(180,215,209,0.12) 0, transparent 40%),
+      repeating-linear-gradient(0deg, rgba(20,19,18,0.016) 0, rgba(20,19,18,0.016) 1px, transparent 1px, transparent 3px);
+    min-height: 100vh; padding: 40px 32px 80px; line-height: 1.6;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+  .back-link {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--muted); text-decoration: none;
+    margin-bottom: 20px; display: inline-block;
+  }
+  .back-link:hover { color: var(--stamp); }
+  .nameplate {
+    border-top: 4px double var(--ink); border-bottom: 2px solid var(--ink);
+    padding: 18px 0 14px; margin-bottom: 24px; text-align: center; position: relative;
+  }
+  .logo-text {
+    font-family: 'Fraunces', serif; font-weight: 900; font-size: 56px;
+    letter-spacing: -2px; line-height: 0.9; display: inline-block;
+  }
+  .logo-text .lai-wrap { display: inline-block; position: relative; padding: 0 4px; }
+  .logo-text .lai-wrap::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 52%; bottom: 10%;
+    background: var(--highlight); z-index: -1; transform: skewX(-4deg);
+  }
+  .logo-text .que { font-weight: 500; }
+  .logo-subtext {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+    font-size: 30px; line-height: 1; margin-top: -2px; display: inline-block; position: relative;
+  }
+  .logo-subtext::after {
+    content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--stamp);
+  }
+  .edition-meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-bottom: 6px;
+  }
+  .edition-meta .num { color: var(--stamp); font-weight: 700; }
+  .varredura {
+    background: var(--paper-2); border: 1px solid var(--line);
+    border-left: 3px solid var(--stamp); padding: 16px 20px; margin: 32px 0;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-2);
+  }
+  .varredura b {
+    display: block; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--stamp); font-size: 10px; margin-bottom: 8px; font-weight: 700;
+  }
+  .varredura ul { list-style: none; padding: 0; margin: 0; }
+  .varredura li { margin-bottom: 3px; padding-left: 14px; position: relative; }
+  .varredura li::before { content: '›'; position: absolute; left: 0; color: var(--stamp); font-weight: 700; }
+  .section-head {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--stamp); font-weight: 700;
+    border-top: 1px solid var(--ink); padding-top: 10px; margin: 48px 0 20px;
+  }
+  .destaque { padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .destaque .kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--stamp); font-weight: 600; margin-bottom: 6px;
+  }
+  .destaque h2 {
+    font-family: 'Fraunces', serif; font-size: 34px; font-weight: 900;
+    letter-spacing: -1px; line-height: 1.1; margin-bottom: 12px;
+  }
+  .destaque h2 .mark { background: var(--highlight); padding: 0 4px; }
+  .destaque .subtitle {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 18px;
+    color: var(--ink-2); margin-bottom: 18px;
+  }
+  .destaque p { margin-bottom: 14px; font-size: 15px; }
+  .destaque .lead { font-size: 18px; font-weight: 500; line-height: 1.55; margin-bottom: 18px; }
+  .destaque .lead::first-letter {
+    font-family: 'Fraunces', serif; font-size: 58px; font-weight: 900;
+    float: left; line-height: 0.9; margin: 3px 8px 0 0; color: var(--stamp);
+  }
+  .quote {
+    border-left: 3px solid var(--stamp); padding: 4px 16px;
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 15px;
+    color: var(--ink-2); margin: 16px 0;
+  }
+  .destaque .angulo-box {
+    background: var(--paper-2); border-left: 3px solid var(--highlight);
+    padding: 14px 18px; margin-top: 18px; font-family: 'Fraunces', serif;
+    font-style: italic; font-size: 15px; color: var(--ink);
+  }
+  .destaque .angulo-box b {
+    display: block; font-family: 'JetBrains Mono', monospace; font-style: normal;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--stamp); margin-bottom: 6px; font-weight: 700;
+  }
+  .ficha {
+    background: var(--paper-2); border: 1px solid var(--line);
+    padding: 10px 14px; margin: 14px 0; font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 10px 16px;
+  }
+  .ficha span b { color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-right: 4px; }
+  .ficha span b::after { content: ':'; }
+  .item { padding: 22px 0; border-bottom: 1px dashed var(--line); }
+  .item:last-child { border-bottom: none; }
+  .item .kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
+  }
+  .item .kicker b { color: var(--stamp); font-weight: 700; }
+  .item h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 800;
+    letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 10px;
+  }
+  .item h3 .mark { background: var(--highlight); padding: 0 3px; }
+  .item p { font-size: 14px; margin-bottom: 8px; color: var(--ink-2); }
+  .item .angulo {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 14px;
+    color: var(--ink); margin-top: 10px; padding-left: 12px;
+    border-left: 2px solid var(--highlight);
+  }
+  .item a.link {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--stamp); text-decoration: none; letter-spacing: 1.5px;
+    text-transform: uppercase; margin-top: 6px; display: inline-block;
+  }
+  .item a.link:hover { text-decoration: underline; }
+  .curadoria {
+    margin-top: 40px; background: var(--paper-2); padding: 26px 28px;
+    border: 1px solid var(--line); border-top: 3px solid var(--ink);
+  }
+  .curadoria h2 {
+    font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800;
+    letter-spacing: -0.5px; margin-bottom: 6px;
+  }
+  .curadoria .sub {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 15px;
+    color: var(--muted); margin-bottom: 18px;
+  }
+  .curadoria .reportagem {
+    border-top: 1px dashed var(--line); padding: 14px 0;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .curadoria .reportagem:first-of-type { border-top: none; padding-top: 4px; }
+  .curadoria .rep-meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .curadoria .rep-meta b { color: var(--stamp); }
+  .curadoria .rep-titulo {
+    font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700;
+    line-height: 1.25; color: var(--ink); text-decoration: none;
+  }
+  .curadoria .rep-titulo:hover { background: var(--highlight); }
+  .curadoria .rep-como {
+    font-size: 13px; color: var(--ink-2); font-style: italic;
+    margin-top: 4px;
+  }
+  .curadoria .rep-como b {
+    font-family: 'JetBrains Mono', monospace; font-style: normal;
+    font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--stamp); margin-right: 6px; font-weight: 700;
+  }
+  .dashboard-embed {
+    margin-top: 40px; padding: 30px 32px; background: var(--ink);
+    color: var(--paper); border: 1px solid var(--ink);
+    position: relative; overflow: hidden;
+  }
+  .dashboard-embed::before {
+    content: ''; position: absolute; top: 0; right: 0;
+    width: 180px; height: 180px; background: var(--highlight);
+    opacity: 0.18; border-radius: 50%;
+    transform: translate(50%, -50%);
+  }
+  .dashboard-embed .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--highlight); margin-bottom: 10px; font-weight: 700;
+    position: relative;
+  }
+  .dashboard-embed h3 {
+    font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800;
+    letter-spacing: -0.5px; margin-bottom: 10px; color: var(--paper);
+    position: relative;
+  }
+  .dashboard-embed p {
+    font-family: 'Fraunces', serif; font-size: 15px; line-height: 1.5;
+    color: var(--paper-2); margin-bottom: 16px; position: relative;
+  }
+  .dashboard-embed a.cta {
+    display: inline-block; padding: 10px 22px; background: var(--highlight);
+    color: var(--ink); font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; text-decoration: none; position: relative;
+    transition: transform 0.1s;
+  }
+  .dashboard-embed a.cta:hover { transform: translateX(3px); }
+  .dashboard-embed .monitor-sub {
+    font-family: 'Fraunces', serif; font-size: 16px; color: var(--ink-2);
+    margin-bottom: 18px;
+  }
+  .dashboard-embed .stats-mini {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    margin: 20px 0; padding: 18px;
+    background: rgba(26, 20, 16, 0.04);
+    border-left: 3px solid var(--stamp);
+  }
+  .dashboard-embed .stat-num {
+    font-family: 'Fraunces', serif; font-size: 32px; font-weight: 800;
+    color: var(--ink); letter-spacing: -1.5px; line-height: 1;
+  }
+  .dashboard-embed .stat-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); margin-top: 6px; line-height: 1.4;
+  }
+  @media (max-width: 680px) {
+    .dashboard-embed .stats-mini { grid-template-columns: 1fr; }
+  }
+  .expediente {
+    margin-top: 56px; padding-top: 22px; border-top: 2px double var(--ink);
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted);
+    letter-spacing: 1.5px; text-transform: uppercase; text-align: center;
+  }
+  .expediente p { margin-bottom: 6px; }
+  .expediente .quem-faz { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--ink-2); letter-spacing: 2px; }
+  .expediente .quem-faz a { color: var(--stamp); text-decoration: none; font-weight: 600; border-bottom: 1px dotted var(--stamp); }
+  .expediente .quem-faz a:hover { color: var(--ink); }
+  .descritivo {
+    padding: 24px 0 28px; border-bottom: 1px solid var(--line);
+    margin-bottom: 20px;
+  }
+  .descritivo p {
+    font-family: 'Fraunces', serif; font-size: 17px; line-height: 1.5;
+    color: var(--ink-2); font-style: italic; max-width: 640px;
+  }
+  .descritivo p strong { font-style: normal; color: var(--ink); font-weight: 600; }
+  .sobre-lai {
+    margin-top: 48px; padding: 28px 32px; background: var(--paper-2);
+    border: 1px solid var(--line); border-left: 3px solid var(--stamp);
+  }
+  .sobre-lai h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700;
+    margin-bottom: 12px; letter-spacing: -0.3px;
+  }
+  .sobre-lai p {
+    font-family: 'Fraunces', serif; font-size: 16px; line-height: 1.55;
+    color: var(--ink); margin-bottom: 10px;
+  }
+  .sobre-lai p strong { background: var(--highlight); padding: 0 3px; font-weight: 600; }
+  .metodologia {
+    margin-top: 24px; padding: 22px 28px; background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .metodologia .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--stamp); margin-bottom: 14px; font-weight: 700;
+  }
+  .metodologia ul { list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--ink-2); }
+  .metodologia li {
+    padding: 6px 0 6px 16px; position: relative; line-height: 1.5;
+  }
+  .metodologia li::before {
+    content: '›'; position: absolute; left: 0; color: var(--stamp); font-weight: 700;
+  }
+  @media (max-width: 680px) {
+    body { padding: 24px 18px 60px; }
+    .logo-text { font-size: 42px; } .logo-subtext { font-size: 24px; }
+    .destaque h2 { font-size: 26px; } .item h3 { font-size: 18px; }
+    .dashboard-embed h3 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-link">← arquivo de edições</a>
+
+  <div class="nameplate">
+    <div class="edition-meta">
+      <span class="num">edição #003</span>
+      <span>sábado · 02 de maio de 2026</span>
+      <span>semanal</span>
+    </div>
+    <div class="logo-text">A <span class="lai-wrap">LAI</span> <span class="que">que</span></div>
+    <div class="logo-subtext">pegou</div>
+  </div>
+
+  <div class="descritivo">
+    <p><strong>A LAI que pegou</strong> é uma newsletter semanal que vasculha o Busca LAI — sistema público da Controladoria-Geral da União com todos os pedidos de acesso à informação feitos ao governo federal. Destacamos o que o governo respondeu, o que tentou esconder, e o que vale virar pauta.</p>
+  </div>
+
+  <div class="section-head">○ em destaque · o mais forte</div>
+
+  <div class="destaque">
+    <div class="kicker">ministério da defesa · agendas oficiais · lobby</div>
+    <h2>Reuniões do ministro da Defesa com a <span class="mark">Embraer Defesa & Segurança</span> e a <span class="mark">Azul Linhas Aéreas</span> em março foram só "cortesia" — sem ata, sem pauta, sem registro de quem pediu</h2>
+    <div class="subtitle">Em três dias, José Mucio recebeu o presidente da Embraer Defesa e o vice-presidente institucional da Azul. Para os dois encontros, o Ministério da Defesa diz que não há documentos.</div>
+
+    <p class="lead">Em duas respostas separadas no dia 30 de abril, o Ministério da Defesa (MD) confirmou que não há ata, pauta, lista de presença, nem identificação de quem solicitou para duas reuniões privadas do ministro <strong>José Mucio Monteiro Filho</strong> com executivos do setor aéreo. Em <strong>23 de março</strong>, das 11h30 às 12h, ele recebeu <strong>João Bosco Costa Junior</strong>, presidente e CEO da Embraer Defesa & Segurança — empresa fornecedora de aeronaves militares, drones e sistemas de defesa para as Forças Armadas. Três dias depois, em <strong>26 de março</strong>, das 14h30 às 15h, foi a vez de <strong>Fabio Barros Franco de Campos</strong>, vice-presidente institucional e corporativo da Azul Linhas Aéreas. Na agenda pública do ministro, "a pauta da reunião não foi informada" para ambos os encontros.</p>
+
+    <p>Os dois pedidos perguntavam, com fundamento na LAI (Lei nº 12.527/2011), pela pauta efetivamente tratada, quem solicitou cada reunião, ata, memória, lista de presença, ofícios e e-mails de encaminhamento, e processo administrativo (SEI ou NUP) associado. Em ambos os casos, o Serviço de Informações ao Cidadão do MD respondeu com <strong>"caráter de cortesia"</strong> e disse que não há mais nada além do que está na agenda eletrônica do governo (eAgendas/CGU) — onde, justamente, "a pauta não foi informada".</p>
+
+    <div class="quote">"A reunião realizada em 23 de março de 2026 com representantes da empresa Embraer Defesa e Segurança teve caráter de cortesia. Informa-se, ainda, que não há outras informações ou documentos além daquelas já disponibilizadas na agenda oficial do Ministro da Defesa." — SIC do Ministério da Defesa</div>
+
+    <div class="ficha">
+      <span><b>protocolo embraer</b> 60110.001338/2026-19</span>
+      <span><b>protocolo azul</b> 60110.001339/2026-55</span>
+      <span><b>órgão</b> Ministério da Defesa</span>
+      <span><b>resposta</b> 30/04/2026</span>
+      <span><b>decisão</b> Informação Inexistente</span>
+    </div>
+
+    <div class="angulo-box">
+      <b>ângulo de pauta</b>
+      A Embraer Defesa & Segurança é a fornecedora dos cargueiros militares KC-390 e tem contratos correntes para drones, aeronaves de patrulha (P-3 Orion) e modernização do A-29 Super Tucano. A Azul opera linhas para destinos onde a Aeronáutica também voa e tem interesse no programa de incentivo à aviação regional. <strong>Perguntas:</strong> qual a soma dos contratos vigentes da Embraer Defesa com o MD em 2026? Quantas reuniões "de cortesia" foram registradas pelo ministro com fornecedores ou potenciais fornecedores nos últimos 12 meses? <strong>Pedidos LAI úteis:</strong> agenda completa de Mucio em 2025–2026 com tipologia (interna, fornecedor, sociedade civil); cópia integral dos contratos correntes da Embraer Defesa via Comprasnet/Portal da Transparência; lista de quem solicitou cada um dos compromissos sem pauta no eAgendas. <strong>Fontes:</strong> Comprasnet, Portal da Transparência, Tribunal de Contas da União (TCU, que fiscaliza gastos públicos) e relatório anual da Embraer no relacionamento com governo.
+    </div>
+
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10834308" target="_blank">→ ver pedido sobre Embraer · 60110.001338/2026-19</a><br>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10834325" target="_blank">→ ver pedido sobre Azul · 60110.001339/2026-55</a>
+  </div>
+
+  <div class="section-head">○ saúde · educação · meio ambiente</div>
+
+  <div class="item">
+    <div class="kicker"><b>● lobby/agendas</b> · Ministério de Minas e Energia · respondido 30/04/2026</div>
+    <h3>Sistema de controle de visitas do Ministério de Minas e Energia "sofreu pane irreversível" e <span class="mark">perdeu cinco anos</span> de registros (2016 a maio/2021)</h3>
+    <p>Um cidadão pediu a planilha completa de quem entrou na portaria do Ministério de Minas e Energia (MME, pasta que decide energia, petróleo e mineração — concentra alto fluxo de lobby corporativo) entre janeiro de 2016 e dezembro de 2022, com nome e empresa representada. O MME entregou o que ainda existe — mas avisou na resposta oficial: o programa NetControl, usado de 2016 até maio de 2021 para registrar acesso ao prédio-sede, "sofreu pane irreversível e foi corrompido, de forma que muitos registros foram perdidos". A planilha cobre, na prática, principalmente o período de meados de 2021 a 2022.</p>
+    <p class="angulo"><strong>Ângulo:</strong> exatamente o intervalo perdido — 2016 a maio de 2021 — é o que cobre as gestões Dilma, Temer e início de Bolsonaro, quando passaram pelo MME a privatização da Eletrobras, a campanha pelo gás natural e os debates do marco do saneamento. Pedir o que sobrou da planilha, abrir o PDF anexado pelo SIC-MME, e cruzar nomes com agendas oficiais dos ministros do período. <strong>Pedido LAI complementar:</strong> contratos do MME com empresas de software de controle de acesso desde 2018 — quanto foi pago, e como o sistema foi substituído.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10858247" target="_blank">→ ver pedido · 48003.012196/2026-29</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● saúde</b> · Anvisa + Ministério da Saúde · respondidos 30/04/2026</div>
+    <h3>Janssen tem registro Anvisa para o <span class="mark">Spravato</span> (esketamina spray nasal) desde 2019; SUS já avalia incorporar antidepressivo no Brasil</h3>
+    <p>O Spravato é um spray nasal de esketamina, derivado da cetamina, indicado para depressão resistente — quadros que não respondem a tratamentos convencionais. Custa cerca de R$ 4 mil a R$ 5 mil por frasco no varejo. Um cidadão perguntou em 26 de abril à Anvisa (reguladora federal de medicamentos e vigilância sanitária) se o produto tem registro no Brasil; a Anvisa confirmou: <strong>registro nº 11236343500</strong>, processo 25351.068398/2019-41, da Janssen-Cilag Farmacêutica. No mesmo dia, o autor pediu ao Ministério da Saúde se há processo em curso para incorporação do Spravato ao SUS — a área técnica do MS respondeu por anexo, indicando que a análise está em andamento.</p>
+    <p class="angulo"><strong>Ângulo:</strong> o Spravato é alvo de polêmica internacional — o programa de saúde do Reino Unido (NHS) recomendou em 2024 NÃO incorporá-lo por relação custo-eficácia ruim. Quanto custaria oferecer o medicamento via SUS para um universo de 5 milhões de brasileiros com depressão resistente? A Conitec (Comissão Nacional de Incorporação de Tecnologias no SUS) tem parecer prévio? Cruzar com o relatório de precificação da CMED (Câmara de Regulação do Mercado de Medicamentos), que está nos PDFs anexados pela Anvisa.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10854017" target="_blank">→ pedido Anvisa · 25072.023928/2026-97</a><br>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10854050" target="_blank">→ pedido MS · 25072.023931/2026-19</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● educação · big tech</b> · UFSM · respondido 27/04/2026</div>
+    <h3>UFSM diz que contrato vigente do <span class="mark">Google Workspace for Education</span> com a universidade é o de número 109/2023 — termo nem aparecia no portal da transparência</h3>
+    <p>Um pesquisador procurou no Portal da UFSM (Universidade Federal de Santa Maria, RS) e no Portal da Transparência o contrato vigente da universidade com o Google Workspace for Education (suíte que inclui Gmail, Google Drive e Classroom para alunos e servidores). Encontrou só os de 2020 e 2021. Pediu o ativo via LAI, e o SIC-UFSM respondeu: o contrato vigente é o número <strong>109/2023</strong> e foi enviado em PDF pelo serviço de informação ao cidadão.</p>
+    <p class="angulo"><strong>Ângulo:</strong> esse caso replica em escala. Toda universidade federal brasileira hospeda e-mail e arquivos institucionais em servidores do Google ou da Microsoft. Pedir, em lote, a 68 universidades federais o contrato vigente de "Google for Education" e "Microsoft 365 for Education" — quantas pagam, quanto pagam, e qual o cronograma de revisão? Reportagem possível: o tamanho da dependência da rede federal de ensino superior do Brasil em duas big techs estrangeiras. <strong>Atalho:</strong> pedido único protocolado para todas as IFES via Achados e Pedidos (Abraji/Transparência Brasil).</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10838177" target="_blank">→ ver pedido · 23546.054390/2026-13</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● meio ambiente</b> · ICMBio · respondido 29/04/2026</div>
+    <h3>Empresa de pescado <span class="mark">Prime Seafood</span>, com 19 CNPJs em 9 estados, é alvo de pedido sobre autos de infração ambiental no ICMBio</h3>
+    <p>Uma advogada climática (OAB/PA) pediu ao ICMBio (Instituto Chico Mendes de Conservação da Biodiversidade, órgão federal que fiscaliza unidades de conservação e algumas atividades de pesca) o levantamento detalhado de autos de infração, processos administrativos e débitos vinculados a uma matriz de pescados e suas 18 filiais — Prime Seafood Ltda. As filiais cobrem nove estados: PE, BA, PB, SP, CE, PI, RN, PA, ES e AP. O pedido pede separação por CNPJ, descrição da infração, situação atual (recurso, quitado, em aberto) e valores atualizados. O ICMBio respondeu por anexo SEI.</p>
+    <p class="angulo"><strong>Ângulo:</strong> Prime Seafood é uma das maiores redes de varejo de pescado do Norte e Nordeste — pedir o anexo SEI 023339812 e cruzar com o IBAMA (que tem competência paralela em fiscalização de pesca, especialmente espécies ameaçadas) e com a SAP/MPA (Secretaria de Aquicultura e Pesca). Quantos autos? Por quê? Há filiais reincidentes? Pode revelar irregularidades de cadeia produtiva — pesca de espécies em defeso, importação de peixe ilegal, ou descarte impróprio.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10858756" target="_blank">→ ver pedido · 02303.010586/2026-89</a>
+  </div>
+
+  <div class="section-head">○ e mais</div>
+
+  <div class="item">
+    <div class="kicker"><b>● saúde · trabalho</b> · INSS · respondido 29/04/2026</div>
+    <h3>Dados Abertos do INSS têm registro de cada acidente de trabalho desde julho de 2018, com <span class="mark">CBO, CID-10 e parte do corpo atingida</span></h3>
+    <p>Uma estudante pediu ao INSS (autarquia que paga aposentadorias, auxílio-doença e benefícios por acidente de trabalho) os acidentes em hospitais nos últimos cinco anos. O órgão apontou os Dados Abertos: o conjunto "Comunicações de Acidente de Trabalho" cobre julho/2018 em diante e detalha agente causador, data, código e nome da CBO (ocupação), CID-10 (código da lesão), CNAE (setor do empregador), município do acidente, sexo, parte do corpo atingida, espécie do benefício, data do despacho e — quando ocorre — óbito.</p>
+    <p class="angulo"><strong>Ângulo:</strong> filtre o setor da saúde (CNAE 86) e cruze por especialidade. Profissional da saúde tem altíssima exposição a perfurocortantes, contaminação biológica e agressões. Dá série temporal por estado, por tipo de hospital (público/privado), por gênero — e identifica os agentes de adoecimento mais comuns. <strong>Atalho:</strong> baixar direto em <a href="https://dados.gov.br/dados/conjuntos-dados/comunicacoes-de-acidente-de-trabalho-cat-plano-de-dados-abertos-jun-2023-a-jun-2025" target="_blank">dados.gov.br</a>; quando o assunto pedir, pode ser combinado com microdados da DataSUS (notificações compulsórias).</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10862223" target="_blank">→ ver pedido · 36777.139233/2026-13</a>
+  </div>
+
+  <div class="curadoria">
+    <h2>○ reportagens que usaram a LAI</h2>
+    <div class="sub">o que o jornalismo brasileiro tem feito com a Lei de Acesso nas últimas semanas</div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>metrópoles · investigação</b> · abril/2026</div>
+      <a class="rep-titulo" href="https://www.metropoles.com/distrito-federal/na-mira/df-dobra-casos-racismo-em-8-anos" target="_blank">"Brasília só tem branco": DF dobra casos de racismo em apenas 8 anos</a>
+      <div class="rep-como"><b>método:</b> pedido de LAI à Polícia Civil do Distrito Federal cobrindo registros de janeiro de 2017 a 23 de março de 2026. A reportagem mostra que casos de injúria racial saltaram de 431 (2017) para 870 (2025), alta de 101,8%; intolerância religiosa cresceu 356% no mesmo período. Modelo replicável para qualquer estado: pedir séries de boletins por tipo penal à Polícia Civil ou Secretaria de Segurança.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>núcleo · curtas</b> · 26.fev/23.mar.2026</div>
+      <a class="rep-titulo" href="https://nucleo.jor.br/curtas/2026-02-26-respostas-de-pedidos-de-acesso-a-informacao-somem-do-site-do-governo/" target="_blank">Respostas de pedidos de acesso à informação 'somem' do site do governo</a>
+      <div class="rep-como"><b>método:</b> Sofia Costa, do Núcleo, identificou via Legislatech (ferramenta própria de monitoramento) que pelo menos 28 respostas LAI desapareceram do Busca LAI da CGU. Após o contato da redação, em 23 de março a CGU corrigiu a falha — o que prova que o monitoramento contínuo de uma ferramenta pública por um veículo independente serve de freio a falhas (deliberadas ou não) na transparência.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>tribuna de jundiaí · política</b> · 11.jan.2026</div>
+      <a class="rep-titulo" href="https://tribunadejundiai.com.br/politica/governo-lula-amplia-uso-sigilo-negar-acesso-informacoes-lai/" target="_blank">Governo Lula amplia uso de sigilo e barra um terço dos pedidos via Lei de Acesso</a>
+      <div class="rep-como"><b>método:</b> Rafaela Ferreira fez levantamento de pedidos rejeitados por ministérios e órgãos federais nos três anos do governo Lula. Resultado: 34% das negativas usam algum tipo de sigilo como justificativa, contra 28% no governo Bolsonaro. A reportagem inclui contraponto da CGU (que contesta o cálculo) — boa referência metodológica para quem for fazer leitura crítica das negativas no painel da Controladoria.</div>
+    </div>
+  </div>
+
+  <div class="dashboard-embed">
+    <div class="label">○ ferramenta aberta</div>
+    <h3>Monitor da LAI</h3>
+    <p class="monitor-sub"><em>Veja quem está negando mais o acesso à informação e quem está usando mais o dispositivo de sigilo.</em></p>
+
+    <div class="stats-mini">
+      <div>
+        <div class="stat-num">1,69 mi</div>
+        <div class="stat-label">pedidos enviados ao governo federal desde 2012</div>
+      </div>
+      <div>
+        <div class="stat-num">7,9%</div>
+        <div class="stat-label">das respostas são negativas</div>
+      </div>
+      <div>
+        <div class="stat-num">43,0%</div>
+        <div class="stat-label">é a taxa de negação do Banco do Brasil — a maior entre órgãos com + de 15 mil pedidos</div>
+      </div>
+    </div>
+
+    <p>Todas as respostas que viraram matéria — e as que ficaram de fora — estão no dashboard público. Dá para filtrar por órgão, tema, data e decisão. Atualiza toda segunda, junto com a newsletter.</p>
+    <a class="cta" href="https://luizftoledo.github.io/lai-dashboard/" target="_blank">abrir dashboard →</a>
+  </div>
+
+  <div class="sobre-lai">
+    <h3>○ o que é a LAI</h3>
+    <p>A LAI é a <strong>Lei de Acesso à Informação</strong> (Lei 12.527, de 2011), que dá a qualquer cidadão o direito de pedir informações a qualquer órgão público — e obriga o governo a responder em até 20 dias, prorrogáveis por mais 10.</p>
+    <p>Dizem que no Brasil há leis que não pegam. <strong>Essa pegou</strong> — são 1,69 milhão de pedidos enviados ao governo federal desde que a lei entrou em vigor em maio de 2012, segundo a Controladoria-Geral da União. Sete em cada dez são respondidos; 8% recebem negativa direta.</p>
+  </div>
+
+  <div class="metodologia">
+    <div class="label">○ como a gente coleta</div>
+    <ul>
+      <li>Toda segunda de manhã, uma varredura automática entra no Busca LAI (buscalai.cgu.gov.br), sistema público da CGU que reúne pedidos feitos ao governo federal e as respostas dadas.</li>
+      <li>Pega os pedidos mais recentes em 9 temas prioritários: saúde, lobby e agendas, meio ambiente, orçamento, militares, segurança pública, economia, trabalho escravo e educação.</li>
+      <li>Abre cada pedido e lê a resposta oficial na íntegra.</li>
+      <li>Descarta o ruído: agendamento no INSS, valor a receber no BACEN, cadastro de sistema etc.</li>
+      <li>Entram na edição só os que têm dado concreto e potencial de virar pauta.</li>
+      <li>Ao fim, uma curadoria com reportagens brasileiras que usaram a LAI na semana.</li>
+    </ul>
+  </div>
+
+  <div class="varredura">
+    <b>○ varredura desta edição</b>
+    <ul>
+      <li>varredura: 02 de maio de 2026 · manhã (edição publicada fora do ciclo automático)</li>
+      <li>fonte: buscalai.cgu.gov.br (respostas publicadas entre 23 e 30.abr) + curadoria externa</li>
+      <li>ênfase temática: lobby (Defesa, MME) · saúde (Spravato/SUS) · educação (Google nas IFES) · meio ambiente (Prime Seafood) · trabalho</li>
+      <li>pedidos lidos: 40 · aprovados nesta edição: 6</li>
+      <li>próxima varredura automática: segunda, 04 de maio, 08h Londres</li>
+    </ul>
+  </div>
+
+  <div class="expediente">
+    <p>edição #003 · 02.mai.2026 · 40 pedidos lidos · 6 aprovados · 3 reportagens curadas</p>
+    <p>próxima varredura: segunda 04.mai.2026, 08h Londres</p>
+    <p class="quem-faz">○ quem faz · <a href="https://luizftoledo.github.io" target="_blank">luizftoledo.github.io</a> · <a href="https://datafixers.org" target="_blank">datafixers.org</a></p>
+  </div>
+
+</div>
+</body>
+</html>

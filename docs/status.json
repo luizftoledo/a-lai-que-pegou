@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-04-27T08:15:00Z",
+  "last_run": "2026-05-02T11:00:00Z",
   "last_run_status": "success",
-  "last_run_note": "edição #002 · destaque sobre política de assédio sexual na UFPE aprovada só em dez/2025",
+  "last_run_note": "edição #003 · destaque sobre reuniões 'de cortesia' do ministro da Defesa com Embraer Defesa e Azul Linhas Aéreas em março",
   "next_run_approx": "2026-05-04T08:00:00+01:00",
   "schedule": "semanal · segundas 08:00 Europe/London",
-  "periodo_varredura_3_meses": "2026-01-27 a 2026-04-27",
+  "periodo_varredura_3_meses": "2026-02-02 a 2026-05-02",
   "edicoes": [
     {
       "numero": 1,
@@ -23,6 +23,15 @@
       "em_destaque": "Universidade federal com 80 anos só formalizou política de enfrentamento ao assédio em 17/12/2025",
       "e_mais": 5,
       "reportagens_curadas": 4
+    },
+    {
+      "numero": 3,
+      "data": "2026-05-02",
+      "file": "edicoes/2026-05-02.html",
+      "titulo": "Reuniões do ministro Mucio com Embraer Defesa e Azul Linhas Aéreas em março foram só 'cortesia' — sem ata nem pauta",
+      "em_destaque": "Em três dias, José Mucio recebeu CEO da Embraer Defesa e VP da Azul; SIC do MD diz que não há ata, pauta ou registro de quem pediu",
+      "e_mais": 5,
+      "reportagens_curadas": 3
     }
   ]
 }
