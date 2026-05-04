@@ -1,10 +1,10 @@
 {
-  "last_run": "2026-05-02T11:00:00Z",
+  "last_run": "2026-05-04T12:25:00Z",
   "last_run_status": "success",
-  "last_run_note": "edição #003 · destaque sobre reuniões 'de cortesia' do ministro da Defesa com Embraer Defesa e Azul Linhas Aéreas em março",
-  "next_run_approx": "2026-05-04T08:00:00+01:00",
+  "last_run_note": "edição #004 · destaque sobre normas de IA na integridade acadêmica em 3 universidades federais (UFU, UFOP, UFES); UFOP aprovou em dezembro/2025, UFES tem proposta parada há 11 meses",
+  "next_run_approx": "2026-05-11T08:00:00+01:00",
   "schedule": "semanal · segundas 08:00 Europe/London",
-  "periodo_varredura_3_meses": "2026-02-02 a 2026-05-02",
+  "periodo_varredura_3_meses": "2026-02-04 a 2026-05-04",
   "edicoes": [
     {
       "numero": 1,
@@ -30,6 +30,15 @@
       "file": "edicoes/2026-05-02.html",
       "titulo": "Reuniões do ministro Mucio com Embraer Defesa e Azul Linhas Aéreas em março foram só 'cortesia' — sem ata nem pauta",
       "em_destaque": "Em três dias, José Mucio recebeu CEO da Embraer Defesa e VP da Azul; SIC do MD diz que não há ata, pauta ou registro de quem pediu",
+      "e_mais": 5,
+      "reportagens_curadas": 3
+    },
+    {
+      "numero": 4,
+      "data": "2026-05-04",
+      "file": "edicoes/2026-05-04.html",
+      "titulo": "Três universidades federais formalizaram em 2025 as primeiras normas próprias para uso de IA na integridade acadêmica",
+      "em_destaque": "UFU, UFOP e UFES respondem em paralelo: UFOP aprovou Resolução CONPEP 144 em 05.dez.2025, UFU criou comissão e guia ético, UFES tem proposta parada há 11 meses",
       "e_mais": 5,
       "reportagens_curadas": 3
     }

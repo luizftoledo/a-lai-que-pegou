@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A LAI que pegou · edição #004</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,800;0,900;1,400;1,600;1,900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fbfbfa; --paper-2: #eff4f3; --ink: #141312; --ink-2: #3a3836;
+    --muted: #6a6864; --dim: #a19e98; --line: #d8dedd;
+    --stamp: #2a7975; --highlight: #b4d7d1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+  body {
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(42,121,117,0.04) 0, transparent 40%),
+      radial-gradient(circle at 90% 90%, rgba(180,215,209,0.12) 0, transparent 40%),
+      repeating-linear-gradient(0deg, rgba(20,19,18,0.016) 0, rgba(20,19,18,0.016) 1px, transparent 1px, transparent 3px);
+    min-height: 100vh; padding: 40px 32px 80px; line-height: 1.6;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+  .back-link {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--muted); text-decoration: none;
+    margin-bottom: 20px; display: inline-block;
+  }
+  .back-link:hover { color: var(--stamp); }
+  .nameplate {
+    border-top: 4px double var(--ink); border-bottom: 2px solid var(--ink);
+    padding: 18px 0 14px; margin-bottom: 24px; text-align: center; position: relative;
+  }
+  .logo-text {
+    font-family: 'Fraunces', serif; font-weight: 900; font-size: 56px;
+    letter-spacing: -2px; line-height: 0.9; display: inline-block;
+  }
+  .logo-text .lai-wrap { display: inline-block; position: relative; padding: 0 4px; }
+  .logo-text .lai-wrap::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 52%; bottom: 10%;
+    background: var(--highlight); z-index: -1; transform: skewX(-4deg);
+  }
+  .logo-text .que { font-weight: 500; }
+  .logo-subtext {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+    font-size: 30px; line-height: 1; margin-top: -2px; display: inline-block; position: relative;
+  }
+  .logo-subtext::after {
+    content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--stamp);
+  }
+  .edition-meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-bottom: 6px;
+  }
+  .edition-meta .num { color: var(--stamp); font-weight: 700; }
+  .varredura {
+    background: var(--paper-2); border: 1px solid var(--line);
+    border-left: 3px solid var(--stamp); padding: 16px 20px; margin: 32px 0;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-2);
+  }
+  .varredura b {
+    display: block; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--stamp); font-size: 10px; margin-bottom: 8px; font-weight: 700;
+  }
+  .varredura ul { list-style: none; padding: 0; margin: 0; }
+  .varredura li { margin-bottom: 3px; padding-left: 14px; position: relative; }
+  .varredura li::before { content: '›'; position: absolute; left: 0; color: var(--stamp); font-weight: 700; }
+  .section-head {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--stamp); font-weight: 700;
+    border-top: 1px solid var(--ink); padding-top: 10px; margin: 48px 0 20px;
+  }
+  .destaque { padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .destaque .kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--stamp); font-weight: 600; margin-bottom: 6px;
+  }
+  .destaque h2 {
+    font-family: 'Fraunces', serif; font-size: 34px; font-weight: 900;
+    letter-spacing: -1px; line-height: 1.1; margin-bottom: 12px;
+  }
+  .destaque h2 .mark { background: var(--highlight); padding: 0 4px; }
+  .destaque .subtitle {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 18px;
+    color: var(--ink-2); margin-bottom: 18px;
+  }
+  .destaque p { margin-bottom: 14px; font-size: 15px; }
+  .destaque .lead { font-size: 18px; font-weight: 500; line-height: 1.55; margin-bottom: 18px; }
+  .destaque .lead::first-letter {
+    font-family: 'Fraunces', serif; font-size: 58px; font-weight: 900;
+    float: left; line-height: 0.9; margin: 3px 8px 0 0; color: var(--stamp);
+  }
+  .quote {
+    border-left: 3px solid var(--stamp); padding: 4px 16px;
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 15px;
+    color: var(--ink-2); margin: 16px 0;
+  }
+  .destaque .angulo-box {
+    background: var(--paper-2); border-left: 3px solid var(--highlight);
+    padding: 14px 18px; margin-top: 18px; font-family: 'Fraunces', serif;
+    font-style: italic; font-size: 15px; color: var(--ink);
+  }
+  .destaque .angulo-box b {
+    display: block; font-family: 'JetBrains Mono', monospace; font-style: normal;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--stamp); margin-bottom: 6px; font-weight: 700;
+  }
+  .ficha {
+    background: var(--paper-2); border: 1px solid var(--line);
+    padding: 10px 14px; margin: 14px 0; font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 10px 16px;
+  }
+  .ficha span b { color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-right: 4px; }
+  .ficha span b::after { content: ':'; }
+  .item { padding: 22px 0; border-bottom: 1px dashed var(--line); }
+  .item:last-child { border-bottom: none; }
+  .item .kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
+  }
+  .item .kicker b { color: var(--stamp); font-weight: 700; }
+  .item h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 800;
+    letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 10px;
+  }
+  .item h3 .mark { background: var(--highlight); padding: 0 3px; }
+  .item p { font-size: 14px; margin-bottom: 8px; color: var(--ink-2); }
+  .item .angulo {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 14px;
+    color: var(--ink); margin-top: 10px; padding-left: 12px;
+    border-left: 2px solid var(--highlight);
+  }
+  .item a.link {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--stamp); text-decoration: none; letter-spacing: 1.5px;
+    text-transform: uppercase; margin-top: 6px; display: inline-block;
+  }
+  .item a.link:hover { text-decoration: underline; }
+  .curadoria {
+    margin-top: 40px; background: var(--paper-2); padding: 26px 28px;
+    border: 1px solid var(--line); border-top: 3px solid var(--ink);
+  }
+  .curadoria h2 {
+    font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800;
+    letter-spacing: -0.5px; margin-bottom: 6px;
+  }
+  .curadoria .sub {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 15px;
+    color: var(--muted); margin-bottom: 18px;
+  }
+  .curadoria .reportagem {
+    border-top: 1px dashed var(--line); padding: 14px 0;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .curadoria .reportagem:first-of-type { border-top: none; padding-top: 4px; }
+  .curadoria .rep-meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .curadoria .rep-meta b { color: var(--stamp); }
+  .curadoria .rep-titulo {
+    font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700;
+    line-height: 1.25; color: var(--ink); text-decoration: none;
+  }
+  .curadoria .rep-titulo:hover { background: var(--highlight); }
+  .curadoria .rep-como {
+    font-size: 13px; color: var(--ink-2); font-style: italic;
+    margin-top: 4px;
+  }
+  .curadoria .rep-como b {
+    font-family: 'JetBrains Mono', monospace; font-style: normal;
+    font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--stamp); margin-right: 6px; font-weight: 700;
+  }
+  .dashboard-embed {
+    margin-top: 40px; padding: 30px 32px; background: var(--ink);
+    color: var(--paper); border: 1px solid var(--ink);
+    position: relative; overflow: hidden;
+  }
+  .dashboard-embed::before {
+    content: ''; position: absolute; top: 0; right: 0;
+    width: 180px; height: 180px; background: var(--highlight);
+    opacity: 0.18; border-radius: 50%;
+    transform: translate(50%, -50%);
+  }
+  .dashboard-embed .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--highlight); margin-bottom: 10px; font-weight: 700;
+    position: relative;
+  }
+  .dashboard-embed h3 {
+    font-family: 'Fraunces', serif; font-size: 26px; font-weight: 800;
+    letter-spacing: -0.5px; margin-bottom: 10px; color: var(--paper);
+    position: relative;
+  }
+  .dashboard-embed p {
+    font-family: 'Fraunces', serif; font-size: 15px; line-height: 1.5;
+    color: var(--paper-2); margin-bottom: 16px; position: relative;
+  }
+  .dashboard-embed a.cta {
+    display: inline-block; padding: 10px 22px; background: var(--highlight);
+    color: var(--ink); font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; text-decoration: none; position: relative;
+    transition: transform 0.1s;
+  }
+  .dashboard-embed a.cta:hover { transform: translateX(3px); }
+  .dashboard-embed .monitor-sub {
+    font-family: 'Fraunces', serif; font-size: 16px; color: var(--ink-2);
+    margin-bottom: 18px;
+  }
+  .dashboard-embed .stats-mini {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    margin: 20px 0; padding: 18px;
+    background: rgba(26, 20, 16, 0.04);
+    border-left: 3px solid var(--stamp);
+  }
+  .dashboard-embed .stat-num {
+    font-family: 'Fraunces', serif; font-size: 32px; font-weight: 800;
+    color: var(--ink); letter-spacing: -1.5px; line-height: 1;
+  }
+  .dashboard-embed .stat-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); margin-top: 6px; line-height: 1.4;
+  }
+  @media (max-width: 680px) {
+    .dashboard-embed .stats-mini { grid-template-columns: 1fr; }
+  }
+  .expediente {
+    margin-top: 56px; padding-top: 22px; border-top: 2px double var(--ink);
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted);
+    letter-spacing: 1.5px; text-transform: uppercase; text-align: center;
+  }
+  .expediente p { margin-bottom: 6px; }
+  .expediente .quem-faz { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--ink-2); letter-spacing: 2px; }
+  .expediente .quem-faz a { color: var(--stamp); text-decoration: none; font-weight: 600; border-bottom: 1px dotted var(--stamp); }
+  .expediente .quem-faz a:hover { color: var(--ink); }
+  .descritivo {
+    padding: 24px 0 28px; border-bottom: 1px solid var(--line);
+    margin-bottom: 20px;
+  }
+  .descritivo p {
+    font-family: 'Fraunces', serif; font-size: 17px; line-height: 1.5;
+    color: var(--ink-2); font-style: italic; max-width: 640px;
+  }
+  .descritivo p strong { font-style: normal; color: var(--ink); font-weight: 600; }
+  .sobre-lai {
+    margin-top: 48px; padding: 28px 32px; background: var(--paper-2);
+    border: 1px solid var(--line); border-left: 3px solid var(--stamp);
+  }
+  .sobre-lai h3 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700;
+    margin-bottom: 12px; letter-spacing: -0.3px;
+  }
+  .sobre-lai p {
+    font-family: 'Fraunces', serif; font-size: 16px; line-height: 1.55;
+    color: var(--ink); margin-bottom: 10px;
+  }
+  .sobre-lai p strong { background: var(--highlight); padding: 0 3px; font-weight: 600; }
+  .metodologia {
+    margin-top: 24px; padding: 22px 28px; background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .metodologia .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--stamp); margin-bottom: 14px; font-weight: 700;
+  }
+  .metodologia ul { list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--ink-2); }
+  .metodologia li {
+    padding: 6px 0 6px 16px; position: relative; line-height: 1.5;
+  }
+  .metodologia li::before {
+    content: '›'; position: absolute; left: 0; color: var(--stamp); font-weight: 700;
+  }
+  @media (max-width: 680px) {
+    body { padding: 24px 18px 60px; }
+    .logo-text { font-size: 42px; } .logo-subtext { font-size: 24px; }
+    .destaque h2 { font-size: 26px; } .item h3 { font-size: 18px; }
+    .dashboard-embed h3 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-link">← arquivo de edições</a>
+
+  <div class="nameplate">
+    <div class="edition-meta">
+      <span class="num">edição #004</span>
+      <span>segunda · 04 de maio de 2026</span>
+      <span>semanal</span>
+    </div>
+    <div class="logo-text">A <span class="lai-wrap">LAI</span> <span class="que">que</span></div>
+    <div class="logo-subtext">pegou</div>
+  </div>
+
+  <div class="descritivo">
+    <p><strong>A LAI que pegou</strong> é uma newsletter semanal que vasculha o Busca LAI — sistema público da Controladoria-Geral da União com todos os pedidos de acesso à informação feitos ao governo federal. Destacamos o que o governo respondeu, o que tentou esconder, e o que vale virar pauta.</p>
+  </div>
+
+  <div class="section-head">○ em destaque · o mais forte</div>
+
+  <div class="destaque">
+    <div class="kicker">universidades federais · IA · integridade acadêmica</div>
+    <h2>Três universidades federais formalizaram em <span class="mark">2025</span> as primeiras normas próprias para uso de IA — UFOP aprovou em dezembro, UFES tem proposta parada há quase um ano</h2>
+    <div class="subtitle">Mesmo pedido enviado a UFU, UFOP e UFES no fim de abril traz três fotografias diferentes do enfrentamento da inteligência artificial pelas universidades públicas</div>
+
+    <p class="lead">Em três respostas no fim de abril, três universidades federais — Uberlândia (MG), Ouro Preto (MG) e Espírito Santo — confirmaram, com base na LAI (Lei de Acesso à Informação, nº 12.527/2011), que cada uma já tem ou está construindo normas próprias para o uso de inteligência artificial na integridade acadêmica. <strong>UFU</strong> publicou em 2025 o "Guia de Princípios para o Uso Ético e Responsável de Inteligência Artificial", produto de uma comissão criada pela portaria nº 3753, de 5 de junho de 2025; <strong>UFOP</strong> aprovou em 5 de dezembro de 2025 a Resolução CONPEP nº 144, do Conselho Superior de Pesquisa e Pós-Graduação; <strong>UFES</strong> diz que sua Superintendência de Tecnologia da Informação submeteu uma "Política Institucional para o Uso de Inteligência Artificial" em 11 de junho de 2025 — <strong>quase 11 meses depois, ainda em análise</strong> nas instâncias superiores.</p>
+
+    <p>O pedido foi protocolado em 28 de abril por João Marcos Heggler, com base nos arts. 11 e 12 do Decreto 7.724/2012 (que regulamenta a LAI), e enviado em paralelo às três universidades. Cada SIC (Serviço de Informação ao Cidadão) respondeu separadamente — em UFU veio acompanhado de relatório técnico com diagnóstico aplicado à comunidade universitária; em UFOP veio o anexo normativo (resolução + apêndice); em UFES, só a justificativa do passo anterior, sem prazo para conclusão.</p>
+
+    <div class="quote">"A iniciativa foi motivada pelo crescente uso de soluções de inteligência artificial nas atividades acadêmicas e administrativas, além da necessidade de alinhar a Universidade à Estratégia Brasileira de Inteligência Artificial (EBIA), à Lei Geral de Proteção de Dados (LGPD), ao Marco Civil da Internet, às diretrizes da UNESCO e, sobretudo, aos princípios constitucionais que regem a administração pública." — STI/UFES, em resposta de 30/04/2026</div>
+
+    <div class="ficha">
+      <span><b>protocolo UFU</b> 23546.056885/2026-87</span>
+      <span><b>protocolo UFOP</b> 23546.056883/2026-98</span>
+      <span><b>protocolo UFES</b> 23546.056776/2026-60</span>
+      <span><b>respostas</b> 29 e 30/04/2026</span>
+      <span><b>decisão</b> Acesso Concedido (todas)</span>
+    </div>
+
+    <div class="angulo-box">
+      <b>ângulo de pauta</b>
+      O Brasil tem 68 universidades federais. Esse mesmo pedido protocolado em paralelo a todas — usando a plataforma Achados e Pedidos (Abraji + Transparência Brasil), que permite enviar uma única demanda a múltiplos órgãos — produziria, em 20 dias, um mapa nacional de quais IFES já têm normas próprias para IA, quais estão em fase de proposta e quais não têm nada. <strong>Cruzar com:</strong> dados de uso de ferramentas como ChatGPT/Claude/Copilot por estudantes (pesquisas Cetic.br), processos disciplinares por uso indevido (ouvidorias) e adesão a ferramentas pagas via Termo de Cooperação. <strong>Pauta investigativa:</strong> a UFES descreve a proposta como em análise nas "instâncias superiores" há 11 meses — pedir o trâmite completo do processo SEI 23068.032109/2025-93, ato a ato, mostra onde a política institucional está travada e por quem.
+    </div>
+
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10868919" target="_blank">→ pedido UFU · 23546.056885/2026-87</a><br>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10868894" target="_blank">→ pedido UFOP · 23546.056883/2026-98</a><br>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10868311" target="_blank">→ pedido UFES · 23546.056776/2026-60</a>
+  </div>
+
+  <div class="section-head">○ saúde · gestão pública · meio ambiente</div>
+
+  <div class="item">
+    <div class="kicker"><b>● saúde</b> · Anvisa · respondido 29/04/2026</div>
+    <h3>Anvisa libera os pareceres da CMED sobre o preço da vacina pneumocócica <span class="mark">Prevenar 20</span>, da Pfizer</h3>
+    <p>Um cidadão pediu à Anvisa (Agência Nacional de Vigilância Sanitária, reguladora federal de medicamentos e vigilância sanitária) cópias integrais dos pareceres técnicos da Secretaria-Executiva da CMED — Câmara de Regulação do Mercado de Medicamentos, órgão interministerial que autoriza o preço de qualquer remédio novo no Brasil — sobre o "Dossiê de preço" da Prevenar 20, vacina pneumocócica 20-valente conjugada da Pfizer. A Anvisa anexou os dois pareceres da SCMED em PDF (protocolo SAT nº 2026097943).</p>
+    <p class="angulo"><strong>Ângulo:</strong> a Prevenar 20 é a sucessora da Prevenar 13, ampliando de 13 para 20 sorotipos do pneumococo. O parecer técnico da CMED é o documento que define o teto de preço de venda no Brasil — comparar o teto autorizado aqui com o preço público registrado em sistemas como o NHS britânico, o Medicare americano ou o Cofepris mexicano. Se a Conitec (Comissão Nacional de Incorporação de Tecnologias no SUS) tiver parecer prévio, dá pra reconstruir o passo a passo da decisão de incorporação (ou da não incorporação). <strong>Pauta complementar:</strong> pedir à PNI (Programa Nacional de Imunizações, do Ministério da Saúde) qual a cobertura atual da Prevenar 13 em crianças e quanto custaria substituir pela Prevenar 20 nos imunizantes do calendário do SUS.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10859985" target="_blank">→ ver pedido · 25072.024107/2026-78</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● gestão pública · conflito de interesse</b> · UFF · respondido 30/04/2026</div>
+    <h3>Universidade Federal Fluminense mantém só <span class="mark">3 servidores</span> para fiscalizar acúmulo de cargos — não há rotina periódica, só checagem na posse, na aposentadoria ou após denúncia</h3>
+    <p>Em resposta a uma pesquisa de mestrado da UFSJ sobre governança em universidades federais, a UFF (Universidade Federal Fluminense) detalhou como controla acúmulo de vínculos públicos e privados de seus mais de 7 mil servidores. Tem um Setor de Análise de Acumulações (SAA/SAG), com <strong>apenas três servidores</strong>, vinculado à Pró-Reitoria de Gestão de Pessoas. A verificação acontece em três momentos: na posse, na aposentadoria e quando chega denúncia (via Ouvidoria) ou indício pelos sistemas e-Pessoal (TCU) e e-Aud (CGU). Não há recadastramento periódico. A UFF informou ainda que não tem normativo interno depois da Emenda Constitucional 138/2025 — segue só a Constituição, a Lei 12.772/2012 e a Instrução Normativa SGP/MGI nº 30/2025 do Ministério da Gestão.</p>
+    <p class="angulo"><strong>Ângulo:</strong> a IN 30/2025 (Instrução Normativa do Ministério da Gestão) exige que chefias atestem, por escrito, ausência de prejuízo quando a soma das jornadas de um servidor passar de 60 horas semanais — mas a UFF não tem um sistema próprio para isso, faz caso a caso. <strong>Replicar:</strong> mandar o mesmo pedido para as 67 outras universidades federais via Achados e Pedidos. Cruzar quantos servidores cada IFES dedica ao tema com o número total de docentes em dedicação exclusiva. Reportagem possível: o Brasil paga DE (dedicação exclusiva) a quase 90 mil professores federais — quem fiscaliza, quantas pessoas e com que frequência?</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10845100" target="_blank">→ ver pedido · 23546.054903/2026-96</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● educação · sigilo</b> · UFAL · respondido 30/04/2026</div>
+    <h3>UFAL nega gravação de reunião pedida em apuração de assédio: secretária guardava o arquivo em <span class="mark">conta pessoal do Microsoft Teams</span>, fora do acervo institucional</h3>
+    <p>Um interessado pediu à UFAL (Universidade Federal de Alagoas) a gravação de uma reunião do colegiado do PPGAS — Programa de Pós-Graduação em Antropologia Social, vinculado ao Instituto de Ciências Sociais — realizada em 15/04/2026 por videoconferência. O objetivo do pedido era avaliar uma possível prática de assédio moral. A UFAL negou. Justificativa oficial: a secretária administrativa do PPGAS grava as reuniões, "por motivo de precisão de redação da Ata", usando seu e-mail institucional (secretaria.ppgas@ics.ufal.br), mas <strong>todas as gravações ficam arquivadas em conta pessoal de acesso da própria funcionária</strong>, não em drive ou ambiente digital institucional. Logo, "não disponibilizamos essas gravações, nem é possível fornecer acesso para ninguém, por não serem objeto de acervo ou arquivo do PPGAS".</p>
+    <div class="quote">"Apesar de utilizar seu email institucional, todas as gravações realizadas, através do Microsoft Teams, são arquivadas em conta de acesso pessoal da referida funcionária, não havendo armazenamento digital deste material em drive ou ambiente digital institucional." — Equipe de Ouvidoria da UFAL</div>
+    <p class="angulo"><strong>Ângulo:</strong> o caso revela uma falha estrutural de governança documental que deve se repetir em centenas de universidades, escolas, conselhos e órgãos públicos: o trabalho institucional acaba arquivado em contas pessoais de Google e Microsoft de funcionários, fora do alcance da LAI. <strong>Pauta:</strong> testar com a Universidade do seu estado se há política formal sobre conservação de gravações administrativas; pedir à CGU se já se manifestou sobre acervo digital institucional vs. conta pessoal de servidor; cruzar com a LGPD (Lei Geral de Proteção de Dados) — guardar dado de cidadão em conta pessoal de servidor é regular?</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10868950" target="_blank">→ ver pedido · 23546.056890/2026-90</a>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><b>● preservação · acervo</b> · UnB / Biblioteca Central · respondido 30/04/2026</div>
+    <h3>Biblioteca Central da UnB só formalizou <span class="mark">Plano de Contingência</span> contra incêndios e enchentes em 2020 — atualização veio em 2025</h3>
+    <p>Um pesquisador pediu à UnB (Universidade de Brasília) o Plano de Contingência ou de Prevenção de Desastres documentado da Biblioteca Central, que abriga acervo físico de livros, obras raras e coleções especiais. A UnB respondeu que existe — mas a primeira versão é de <strong>2020</strong>, oito anos depois de a LAI estar em vigor. A versão atual foi atualizada em 2025 e está disponível no repositório administrativo da própria BCE (repositorioadm.unb.br). O plano descreve protocolos para sinistros como incêndios e inundações no acervo.</p>
+    <p class="angulo"><strong>Ângulo:</strong> o incêndio do Museu Nacional da UFRJ em 2018 e o da Cinemateca Brasileira em 2021 expuseram a fragilidade do acervo cultural brasileiro. Pedir LAI à Biblioteca Nacional, ao Iphan, ao IBRAM (Instituto Brasileiro de Museus) e às bibliotecas centrais das outras 67 universidades federais sobre a existência (e a data da primeira versão) de planos de contingência — a leitura cruzada permite mostrar quantos órgãos federais responsáveis por acervo crítico só formalizaram a proteção depois do ocorrido em 2018. <strong>Atalho:</strong> baixar o plano da BCE/UnB e usar como benchmark para confrontar respostas vagas de outras instituições.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10872623" target="_blank">→ ver pedido · 23546.057170/2026-41</a>
+  </div>
+
+  <div class="section-head">○ e mais</div>
+
+  <div class="item">
+    <div class="kicker"><b>● meio ambiente · petróleo e gás</b> · Ibama · respondidos 30/04/2026</div>
+    <h3>Ibama abre dois processos de licenciamento ambiental do setor de petróleo via SEI: um com janela de visualização até 2029, outro até <span class="mark">2053</span></h3>
+    <p>O Ibama (Instituto Brasileiro do Meio Ambiente, autarquia federal que faz fiscalização ambiental e licenciamento de empreendimentos) concedeu, no mesmo dia (30 de abril), acesso externo via SEI a dois processos antigos de licenciamento ambiental do setor de petróleo e gás: o <strong>02022.001025/2014-10</strong>, com prazo de visualização até 20/01/2029 (5 anos), e o <strong>02022.000967/2014-72</strong>, com prazo até <strong>20/01/2053 — 29 anos</strong> de janela. Os pedidos, separados, vieram do mesmo dia (22 de abril) e mesmo subassunto, mas a Diretoria de Licenciamento Ambiental atribuiu prazos completamente diferentes para a mesma natureza de documento.</p>
+    <p class="angulo"><strong>Ângulo:</strong> por que dois processos do mesmo setor, do mesmo ano (2014), de licenciamento ambiental de petróleo e gás recebem janelas de visualização tão díspares — uma de 5 anos, outra de quase três décadas? Não há critério publicado pelo Ibama para definir prazo de acesso externo via SEI a processo de licenciamento. <strong>Pedido LAI complementar:</strong> qual é a regra interna da Diretoria de Licenciamento Ambiental para definir o prazo de visualização externo concedido em respostas LAI a processos arquivados? Há despacho? Há portaria? Cruzar com a Política de Gestão Documental do Ibama.</p>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10833161" target="_blank">→ ver pedido (5 anos) · 02303.010201/2026-83</a><br>
+    <a class="link" href="https://buscalai.cgu.gov.br/busca/10833139" target="_blank">→ ver pedido (29 anos) · 02303.010199/2026-42</a>
+  </div>
+
+  <div class="curadoria">
+    <h2>○ reportagens que usaram a LAI</h2>
+    <div class="sub">o que o jornalismo brasileiro tem feito com a Lei de Acesso nas últimas semanas</div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>abraji · projeto especial</b> · 2026</div>
+      <a class="rep-titulo" href="https://abraji.org.br/noticias/linha-do-tempo-inedita-mapeia-conflitos-e-consensos-entre-transparencia-e-protecao-de-dados" target="_blank">Linha do tempo inédita mapeia conflitos e consensos entre transparência e proteção de dados</a>
+      <div class="rep-como"><b>método:</b> projeto coordenado por Abraji, Open Knowledge Brasil, Transparência Brasil, Transparency International e Artigo 19. Reúne marcos normativos, decisões administrativas, estudos acadêmicos e casos emblemáticos que moldaram a aplicação da LAI e da LGPD no Brasil. Útil para quem precisa fundamentar pedidos: mostra onde a LGPD vem sendo invocada, indevidamente, para limitar transparência sob alegação genérica de proteção de dados.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>núcleo · curtas</b> · 26.fev/23.mar.2026</div>
+      <a class="rep-titulo" href="https://nucleo.jor.br/curtas/2026-02-26-respostas-de-pedidos-de-acesso-a-informacao-somem-do-site-do-governo/" target="_blank">Respostas de pedidos de acesso à informação 'somem' do site do governo</a>
+      <div class="rep-como"><b>método:</b> Sofia Costa, do Núcleo, identificou via Legislatech (ferramenta própria de monitoramento) que pelo menos 28 respostas LAI desapareceram do Busca LAI da CGU. Após contato da redação, em 23 de março a CGU corrigiu a falha — prova que o monitoramento contínuo de uma ferramenta pública por veículo independente funciona como freio a falhas (deliberadas ou não) na transparência.</div>
+    </div>
+
+    <div class="reportagem">
+      <div class="rep-meta"><b>núcleo · institucional</b> · 23.mar.2026</div>
+      <a class="rep-titulo" href="https://nucleo.jor.br/institucional/2026-03-23-apos-materia-do-nucleo-cgu-corrige-falha-do-sistema-busca-lai/" target="_blank">Após matéria do Núcleo, CGU corrige falha do sistema Busca LAI</a>
+      <div class="rep-como"><b>método:</b> desdobramento direto da reportagem anterior. A CGU implementou correção técnica no Busca LAI depois de ter sido formalmente questionada. Demonstra ciclo completo do controle social: monitoramento → reportagem → correção administrativa pública.</div>
+    </div>
+  </div>
+
+  <div class="dashboard-embed">
+    <div class="label">○ ferramenta aberta</div>
+    <h3>Monitor da LAI</h3>
+    <p class="monitor-sub"><em>Veja quem está negando mais o acesso à informação e quem está usando mais o dispositivo de sigilo.</em></p>
+
+    <div class="stats-mini">
+      <div>
+        <div class="stat-num">1,69 mi</div>
+        <div class="stat-label">pedidos enviados ao governo federal desde 2012</div>
+      </div>
+      <div>
+        <div class="stat-num">7,9%</div>
+        <div class="stat-label">das respostas são negativas</div>
+      </div>
+      <div>
+        <div class="stat-num">43,0%</div>
+        <div class="stat-label">é a taxa de negação do Banco do Brasil — a maior entre órgãos com + de 15 mil pedidos</div>
+      </div>
+    </div>
+
+    <p>Todas as respostas que viraram matéria — e as que ficaram de fora — estão no dashboard público. Dá para filtrar por órgão, tema, data e decisão. Atualiza toda segunda, junto com a newsletter.</p>
+    <a class="cta" href="https://luizftoledo.github.io/lai-dashboard/" target="_blank">abrir dashboard →</a>
+  </div>
+
+  <div class="sobre-lai">
+    <h3>○ o que é a LAI</h3>
+    <p>A LAI é a <strong>Lei de Acesso à Informação</strong> (Lei 12.527, de 2011), que dá a qualquer cidadão o direito de pedir informações a qualquer órgão público — e obriga o governo a responder em até 20 dias, prorrogáveis por mais 10.</p>
+    <p>Dizem que no Brasil há leis que não pegam. <strong>Essa pegou</strong> — são 1,69 milhão de pedidos enviados ao governo federal desde que a lei entrou em vigor em maio de 2012, segundo a Controladoria-Geral da União. Sete em cada dez são respondidos; 8% recebem negativa direta.</p>
+  </div>
+
+  <div class="metodologia">
+    <div class="label">○ como a gente coleta</div>
+    <ul>
+      <li>Toda segunda de manhã, uma varredura automática entra no Busca LAI (buscalai.cgu.gov.br), sistema público da CGU que reúne pedidos feitos ao governo federal e as respostas dadas.</li>
+      <li>Pega os pedidos mais recentes em 9 temas prioritários: saúde, lobby e agendas, meio ambiente, orçamento, militares, segurança pública, economia, trabalho escravo e educação.</li>
+      <li>Abre cada pedido e lê a resposta oficial na íntegra.</li>
+      <li>Descarta o ruído: agendamento no INSS, valor a receber no BACEN, cadastro de sistema etc.</li>
+      <li>Entram na edição só os que têm dado concreto e potencial de virar pauta.</li>
+      <li>Ao fim, uma curadoria com reportagens brasileiras que usaram a LAI na semana.</li>
+    </ul>
+  </div>
+
+  <div class="varredura">
+    <b>○ varredura desta edição</b>
+    <ul>
+      <li>varredura: 04 de maio de 2026 · manhã (09h Londres)</li>
+      <li>fonte: buscalai.cgu.gov.br (respostas publicadas entre 23 e 30.abr) + curadoria externa</li>
+      <li>ênfase temática: educação · IA nas universidades federais · gestão pública · saúde · meio ambiente</li>
+      <li>pedidos lidos: 40 · aprovados nesta edição: 6</li>
+      <li>próxima varredura automática: segunda, 11 de maio, 08h Londres</li>
+    </ul>
+  </div>
+
+  <div class="expediente">
+    <p>edição #004 · 04.mai.2026 · 40 pedidos lidos · 6 aprovados · 3 reportagens curadas</p>
+    <p>próxima varredura: segunda 11.mai.2026, 08h Londres</p>
+    <p class="quem-faz">○ quem faz · <a href="https://luizftoledo.github.io" target="_blank">luizftoledo.github.io</a> · <a href="https://datafixers.org" target="_blank">datafixers.org</a></p>
+  </div>
+
+</div>
+</body>
+</html>
