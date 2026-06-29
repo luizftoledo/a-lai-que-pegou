@@ -1,0 +1,7 @@
+{
+  "last_run": "2026-06-29",
+  "last_run_status": "warning",
+  "next_edition_number": 10,
+  "pedidos_count": 0,
+  "reason": "pedidos.json com 0 itens (mínimo exigido: 5). Última varredura útil em 2026-06-15 esvaziou o arquivo; varreduras subsequentes não trouxeram novos pedidos. Edição não gerada nesta semana — verificar scraper upstream."
+}
