@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-07-20",
+  "last_run": "2026-07-27",
   "last_run_status": "warning",
   "next_edition_number": 10,
   "pedidos_count": 0,
-  "reason": "pedidos.json com 0 itens (mínimo exigido: 5). Quinta semana consecutiva sem pedidos novos: última varredura útil foi 2026-06-15 e as subsequentes (22.jun, 29.jun, 06.jul, 13.jul, 20.jul) devolveram lista vazia. Última edição publicada foi #009 em 29.mai.2026. Edição não gerada — necessário investigar o scraper upstream (docs/data/pedidos.json)."
+  "reason": "pedidos.json com 0 itens (mínimo exigido: 5). Sexta semana consecutiva sem pedidos novos: última varredura útil foi 2026-06-15 e as subsequentes (22.jun, 29.jun, 06.jul, 13.jul, 20.jul, 27.jul) devolveram lista vazia. Última edição publicada foi #009 em 29.mai.2026. Edição não gerada — scraper upstream continua quebrado, requer investigação manual urgente (docs/data/pedidos.json)."
 }
