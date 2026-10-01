@@ -1,26 +1,64 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>A LAI que pegou</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#f8faf8;color:#18332e;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:760px;margin:auto;padding:34px 22px 70px}
-header{border-top:5px solid #237b70;padding:18px 0 28px;border-bottom:1px solid #c9d8d2}.brand{font:700 40px/1.05 Georgia,serif;letter-spacing:-1.5px}.eyebrow{color:#356f68;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-h1,h2{font-family:Georgia,serif;line-height:1.2}h1{font-size:clamp(27px,5vw,38px);margin:28px 0 10px}h2{font-size:24px;margin:8px 0}a{color:#176d62;text-decoration:underline;text-underline-offset:3px}
-.intro{font-size:19px;color:#34554f}.notice{background:#fff4db;border-left:4px solid #b48125;padding:14px 18px;margin:26px 0}.card{padding:22px 0;border-bottom:1px solid #c9d8d2}.card:first-child{border-top:3px solid #237b70}.muted{color:#58736c;font-size:14px}
-.cover{margin:24px 0 10px;background:#f3f1e9;border:1px solid #d5d3ca;overflow:hidden}.cover img{display:block;width:100%;height:auto}.cover figcaption{padding:4px 12px 9px;color:#6a6c68;font:11px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-align:right;letter-spacing:.04em}
-section{margin-top:45px}footer{border-top:1px solid #c9d8d2;margin-top:50px;padding-top:18px;color:#58736c;font-size:13px}
-</style></head><body><div class="wrap"><header><div class="eyebrow">Newsletter de pistas para jornalistas</div><div class="brand">A LAI que pegou</div></header>
-<figure class="cover"><img src="assets/capa-lai.gif" width="768" height="336" alt="Ilustração animada em pixel art: um jornalista envia um pedido de acesso à informação pelo notebook; o pedido passa por uma plataforma on-line e chega à Controladoria-Geral da União, onde servidores o recebem." style="image-rendering:pixelated"></figure>
-<main><h1>O que as respostas à LAI revelam</h1><p class="intro">Pedidos respondidos pelo governo federal, documentos que merecem uma apuração e precedentes que ajudam a abrir outras portas.</p>
-<div id="notice" class="notice" hidden></div><section><div class="eyebrow">Arquivo</div><div id="edicoes" aria-live="polite">Carregando edições…</div></section>
-<section><h2>Como fazemos</h2><p>A cada rodada, consultamos o BuscaLAI, a base de precedentes da CGU e os dados abertos de pedidos. Lemos a resposta oficial e os anexos relevantes antes de selecionar uma história. Cada item traz a íntegra, uma explicação do interesse público e uma pista concreta para a próxima apuração.</p><p>A revisão é semanal, às segundas-feiras. Se uma fonte não permitir confirmar os documentos, a edição espera; o arquivo publicado continua disponível.</p></section></main>
-<footer>Projeto experimental de Luiz Fernando Toledo · <a href="https://buscalai.cgu.gov.br/">BuscaLAI</a> · <a href="https://www.gov.br/cgu/pt-br/acesso-a-informacao/dados-abertos/arquivos/busca-de-precedentes">Busca Precedentes</a> · <a href="https://falabr.cgu.gov.br/web/dadosabertoslai">Dados abertos LAI</a></footer></div>
+<meta name="description" content="Newsletter semanal de pistas para jornalistas: o que as respostas à Lei de Acesso à Informação revelam.">
+<meta property="og:title" content="A LAI que pegou"><meta property="og:description" content="O que as respostas à LAI revelam. Pistas semanais para jornalistas."><meta property="og:image" content="https://luizftoledo.github.io/a-lai-que-pegou/assets/capa-lai.gif">
+<meta name="theme-color" content="#0d2c27">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=2">
+</head><body>
+<div class="topbar"><div class="container"><a class="logo" href="./"><span class="logo-mark" aria-hidden="true"></span>A LAI que pegou</a>
+<nav class="nav"><a href="#arquivo">Edições</a><a class="hide-sm" href="#como">Como fazemos</a></nav></div></div>
+
+<header class="hero"><div class="container"><div class="hero-grid">
+<div><span class="chip"><span class="dot"></span>Newsletter semanal · pistas para jornalistas</span>
+<h1>O que as respostas à LAI <em>revelam</em></h1>
+<p class="lede">Pedidos respondidos pelo governo federal, documentos que merecem uma apuração e precedentes que ajudam a abrir outras portas.</p></div>
+</div>
+<figure class="cover"><img src="assets/capa-lai.gif" width="768" height="336" alt="Ilustração animada em pixel art: um jornalista envia um pedido de acesso à informação pelo notebook; o pedido passa por uma plataforma on-line e chega à Controladoria-Geral da União, onde servidores o recebem."></figure>
+</div></header>
+
+<main class="container">
+<div id="notice" class="notice" hidden></div>
+
+<section class="section" id="arquivo">
+<div class="section-head"><div><div class="kicker">Arquivo</div><h2>Edições</h2></div></div>
+<div id="edicoes" class="editions" aria-live="polite"><p class="loading">Carregando edições…</p></div>
+</section>
+
+<section class="section" id="como">
+<div class="section-head"><div><div class="kicker">Método</div><h2>Como fazemos</h2></div></div>
+<div class="steps">
+<div class="step"><div class="n">1</div><h3>Consultamos as bases</h3><p>A cada rodada, buscamos no BuscaLAI, na base de precedentes da CGU e nos dados abertos de pedidos.</p></div>
+<div class="step"><div class="n">2</div><h3>Lemos a íntegra</h3><p>Lemos a resposta oficial e os anexos relevantes antes de selecionar uma história.</p></div>
+<div class="step"><div class="n">3</div><h3>Entregamos a pista</h3><p>Cada item traz a íntegra, uma explicação do interesse público e uma pista concreta para a próxima apuração.</p></div>
+</div>
+<p class="note">A revisão é semanal, às segundas-feiras. Se uma fonte não permitir confirmar os documentos, a edição espera; o arquivo publicado continua disponível.</p>
+</section>
+</main>
+
+<footer><div class="container">
+<span>Projeto experimental de <a href="https://luizftoledo.github.io/">Luiz Fernando Toledo</a></span>
+<div class="sources"><a href="https://buscalai.cgu.gov.br/">BuscaLAI</a><a href="https://www.gov.br/cgu/pt-br/acesso-a-informacao/dados-abertos/arquivos/busca-de-precedentes">Busca Precedentes</a><a href="https://falabr.cgu.gov.br/web/dadosabertoslai">Dados abertos LAI</a></div>
+</div></footer>
 <script>
+function fmt(d){const [y,m,dd]=d.split('-');return `${dd}/${m}/${y}`}
 fetch('status.json?'+Date.now()).then(r=>{if(!r.ok)throw Error('status indisponível');return r.json()}).then(s=>{
  const entries=[...(s.edicoes||[])].sort((a,b)=>b.data.localeCompare(a.data));
  const box=document.getElementById('edicoes');box.textContent='';
  if(!entries.length){box.textContent='Nenhuma edição publicada.';return}
- for(const e of entries){const c=document.createElement('article');c.className='card';const d=document.createElement('div');d.className='eyebrow';d.textContent=`Edição ${String(e.numero).padStart(2,'0')} · ${e.data}`;const h=document.createElement('h2');const a=document.createElement('a');a.href=e.file;a.textContent=e.titulo;h.append(a);const p=document.createElement('p');p.className='muted';p.textContent=e.em_destaque||'';c.append(d,h,p);box.append(c)}
+ entries.forEach((e,i)=>{
+  const c=document.createElement('article');c.className='edition'+(i===0?' latest':'');
+  const meta=document.createElement('div');meta.className='meta';
+  const n=document.createElement('span');n.className='num';n.textContent='Nº '+String(e.numero).padStart(2,'0');
+  const d=document.createElement('span');d.textContent=fmt(e.data);meta.append(n,d);
+  if(i===0){const b=document.createElement('span');b.className='badge-new';b.textContent='Mais recente';meta.append(b)}
+  const h=document.createElement('h3');const a=document.createElement('a');a.href=e.file;a.textContent=e.titulo;h.append(a);
+  const p=document.createElement('p');p.textContent=e.em_destaque||'';
+  const go=document.createElement('span');go.className='go';go.textContent='Ler edição →';
+  c.append(meta,h,p,go);box.append(c)});
  const last=entries[0].data;const age=(Date.now()-new Date(last+'T12:00:00Z'))/86400000;
- if(age>8){const n=document.getElementById('notice');n.hidden=false;n.textContent=`Última edição publicada em ${last}. A retomada da coleta está em andamento; as edições anteriores permanecem no arquivo.`}
+ if(age>8){const n=document.getElementById('notice');n.hidden=false;n.textContent=`Última edição publicada em ${fmt(last)}. A retomada da coleta está em andamento; as edições anteriores permanecem no arquivo.`}
 }).catch(()=>{document.getElementById('edicoes').textContent='Não foi possível carregar o arquivo agora.'});
 </script></body></html>
