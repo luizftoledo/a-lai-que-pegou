@@ -10,13 +10,13 @@ Informação, publicada em https://luizftoledo.github.io/a-lai-que-pegou/.
 3. Ler as decisões integrais antes de explicar um precedente. Descrever o que foi decidido e como usar a tese em outro pedido, sem transformar caso específico em regra geral.
 4. Registrar cerca de seis achados, podendo publicar menos quando a verificação não sustentar seis. Registrar pelo menos um precedente. Guardar evidência, protocolo e link em `issues/AAAA-MM-DD.json`.
 5. `python3 scripts/publish.py issues/AAAA-MM-DD.json` valida o registro e gera a página e a versão para e-mail. Rever os dois arquivos gerados antes de `git push origin main`.
-6. Confirmar que a edição responde no endereço público. Só então enviar o e-mail com `LAI_RECIPIENT=<endereço escolhido> python3 scripts/send_issue.py AAAA-MM-DD`.
+6. Confirmar que a edição responde no endereço público. Só então compor a mesma edição com títulos, seções e links no Mail deste Mac, enviar para `lta2119@columbia.edu`, conferir a pasta Enviados e registrar `outbox/AAAA-MM-DD.sent`. Antes de repetir uma tentativa incerta, conferir Enviados para evitar cópia duplicada.
 
 Não há publicação automática a partir de resumos de busca. Uma falha de fonte
 encerra a rodada com registro de erro e sem alterar a última edição válida.
 
 ## Frequência
 
-Revisão diária de 1º a 7 de outubro de 2026. A partir de 8 de outubro, revisão
+Revisão diária de 1º a 7 de outubro de 2026. A partir de 12 de outubro, revisão
 às segundas-feiras. O agendamento editorial é gerenciado no Codex; o antigo
 `launchd` e a coleta semanal por GitHub Actions foram desativados.
