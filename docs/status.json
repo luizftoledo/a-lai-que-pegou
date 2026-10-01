@@ -2,8 +2,8 @@
   "last_run": "2026-10-01T11:33:17.272353+00:00",
   "last_run_status": "success",
   "last_run_note": "3 pedidos e 1 precedentes verificados",
-  "next_run_approx": "2026-10-02T08:00:00+01:00",
-  "schedule": "diária de 1º a 7/10/2026; depois semanal, às segundas 08:00 Europe/London",
+  "next_run_approx": "2026-10-05T08:00:00+01:00",
+  "schedule": "semanal, às segundas 08:00 Europe/London, desde 05/10/2026",
   "edicoes": [
     {
       "numero": 1,
