@@ -1,3 +1,5 @@
 .DS_Store
+outbox/
+__pycache__/
 __pycache__/
 .env

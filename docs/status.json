@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-05-29T07:10:00Z",
-  "last_run_status": "success",
-  "last_run_note": "edição #009 · destaque sobre a SUSEP admitir que suspendeu a atualização das bases públicas de seguros durante a migração para o SRO 3.0 e citar o Acórdão 1087/2026-TCU para limitar pedidos via LAI",
-  "next_run_approx": "2026-06-01T08:00:00+01:00",
+  "last_run": "2026-10-01T10:10:28.267357+00:00",
+  "last_run_status": "paused",
+  "last_run_note": "Retomada em preparação; BuscaLAI bloqueou consultas públicas (403), links do CSV de precedentes redirecionam para migração e base de pedidos disponível está datada de 15/09/2026.",
+  "next_run_approx": "2026-10-02T08:00:00+01:00",
   "schedule": "semanal · segundas 08:00 Europe/London",
   "periodo_varredura_3_meses": "2026-02-24 a 2026-05-24",
   "edicoes": [
