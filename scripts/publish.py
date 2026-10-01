@@ -47,6 +47,8 @@ def validate(issue):
         for field in ("headline", "decision", "helps_with", "source_url", "protocol", "decision_date", "evidence"):
             assert str(p.get(field, "")).strip(), f"Missing {field} in precedent"
         assert official(p["source_url"], ("cgu.gov.br", "gov.br"))
+        if p.get("document_url"):
+            assert official(p["document_url"], ("cgu.gov.br", "gov.br"))
         date.fromisoformat(p["decision_date"])
 
 
@@ -65,10 +67,12 @@ def render(issue):
 </article>''')
     precedents = []
     for p in issue["precedents"]:
+        document = (f'<p class="source"><a href="{clean(p["document_url"])}">Ler parecer original (PDF) →</a></p>'
+                    if p.get("document_url") else "")
         precedents.append(f'''<article class="precedent"><div class="eyebrow">DECISÃO · {clean(p['decision_date'])}</div>
 <h3>{clean(p['headline'])}</h3><p><strong>O que ficou decidido:</strong> {clean(p['decision'])}</p>
 <p><strong>Como usar em outro pedido:</strong> {clean(p['helps_with'])}</p>
-<p class="source"><a href="{clean(p['source_url'])}">Ler a decisão →</a> <span>Protocolo {clean(p['protocol'])}</span></p></article>''')
+<p class="source"><a href="{clean(p['source_url'])}">Ler a decisão →</a> <span>Protocolo {clean(p['protocol'])}</span></p>{document}</article>''')
     page = f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{clean(issue['headline'])} · A LAI que pegou</title><style>
 *{{box-sizing:border-box}}body{{margin:0;background:#f8faf8;color:#18332e;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}
@@ -83,12 +87,16 @@ footer{{border-top:1px solid #c9d8d2;margin-top:50px;padding-top:18px;color:#587
 <main><h1>{clean(issue['headline'])}</h1><p class="deck">{clean(issue['deck'])}</p>
 {''.join(cards)}<section><h2>Precedentes que ajudam em outros pedidos</h2><p>Decisões em recurso da CGU ou da Comissão Mista de Reavaliação de Informações.</p>{''.join(precedents)}</section></main>
 <footer>Curadoria de respostas públicas à Lei de Acesso à Informação. Cada achado aponta para o documento oficial. A seleção indica caminhos de apuração; confirmação adicional com órgãos e pessoas citadas cabe à reportagem. <a href="../index.html">Todas as edições</a>.</footer></div></body></html>'''
-    lines = ["A LAI que pegou", f"Edição de {date_label}", "", issue["headline"], issue["deck"], ""]
+    lines = ["A LAI que pegou", f"Edição de {date_label}", "", issue["headline"], issue["deck"],
+             "", "Edição na web: https://luizftoledo.github.io/a-lai-que-pegou/edicoes/" + issue["date"] + ".html", ""]
     for item in issue["items"]:
         lines += [item["headline"], item["summary"], "Por que agora: " + item["why_now"], "Pista para apuração: " + item["pitch"], "Íntegra: " + item["source_url"], ""]
     lines += ["PRECEDENTES QUE AJUDAM EM OUTROS PEDIDOS", ""]
     for p in issue["precedents"]:
-        lines += [p["headline"], "Decisão: " + p["decision"], "Como usar: " + p["helps_with"], "Íntegra: " + p["source_url"], ""]
+        lines += [p["headline"], "Decisão: " + p["decision"], "Como usar: " + p["helps_with"], "Íntegra: " + p["source_url"]]
+        if p.get("document_url"):
+            lines += ["Parecer (PDF): " + p["document_url"]]
+        lines += [""]
     return page, "\n".join(lines)
 
 

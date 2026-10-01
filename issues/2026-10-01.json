@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-01",
+  "headline": "Coaf nega até a contagem de relatórios sobre o Banco Master",
+  "deck": "A resposta de 30 de setembro mantém sob sigilo quantidade, datas e destinatários de relatórios de inteligência financeira. Nesta edição: a negativa sobre documentos técnicos de fungicidas, a íntegra de um estudo dos portos e um precedente para cobrar processos não localizados.",
+  "items": [
+    {
+      "topic": "Banco Master · transparência",
+      "headline": "Coaf nega até a contagem de relatórios sobre o Banco Master",
+      "summary": "Um pedido solicitou apenas metadados de relatórios de inteligência financeira sobre o Banco Master e pessoas vinculadas: quantidade, datas, órgãos destinatários e origem da demanda. Em 30 de setembro, o Coaf negou todos os itens. A resposta sustenta que a divulgação individualizada revelaria a existência e o fluxo de atividades específicas de inteligência. A negativa não informa quantos relatórios existem.",
+      "why_now": "O caso Master segue no noticiário e parte de um relatório do Coaf foi tornada pública em processo no STF em setembro. O órgão afirma que essa publicidade judicial não torna públicos os demais registros sob sua custódia.",
+      "pitch": "Acompanhar eventual recurso contra a negativa e confrontar a fundamentação com a publicidade já determinada pelo STF; pedir ao Coaf dados agregados sobre sua atividade, sem associá-los a pessoas ou instituições específicas.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11731868",
+      "protocol": "08225.002885/2026-04",
+      "response_date": "2026-09-30",
+      "evidence": "A resposta diz que 'quantidade, datas de produção e difusão, órgãos destinatários e circunstâncias de sua produção' estão ligados à atividade de inteligência financeira; conclui: 'indefere-se o acesso às informações solicitadas'.",
+      "attachment_review": "O registro público não apresenta anexo da resposta. Pedido, decisão e fundamentação foram lidos na íntegra na página do InformaBR."
+    },
+    {
+      "topic": "agrotóxicos · regulação",
+      "headline": "Agricultura recusa documentos que explicam mudança no uso de três fungicidas",
+      "summary": "O Ministério da Agricultura negou acesso a requerimentos, justificativas, pareceres, notas técnicas e dados de ensaios relacionados à retirada da indicação de 'quebramento das hastes' da soja para os fungicidas Alade, Mitrion e Elatus. Invocou proteção de informações comerciais e regulatórias e afirmou que tarjar trechos protegidos deixaria apenas dados formais já publicados. A resposta não revela a razão técnica da mudança.",
+      "why_now": "A resposta saiu em 25 de setembro e recoloca uma pergunta concreta para a cobertura do controle de doenças da soja: qual evidência embasou a alteração da recomendação de uso?",
+      "pitch": "Localizar o ato público que alterou as indicações, ouvir Mapa, fabricante e pesquisadores independentes sobre o efeito prático e recorrer da negativa pedindo segregação de informações técnicas não protegidas.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11632503",
+      "protocol": "21210.009754/2026-77",
+      "response_date": "2026-09-25",
+      "evidence": "O Mapa afirma que os documentos integram 'a instrução técnico-regulatória de processos relacionados ao registro de agrotóxicos e às alterações de suas recomendações de uso' e nega acesso parcial porque o tarjamento deixaria apenas informação formal ou já publicada.",
+      "attachment_review": "Não há anexo disponibilizado na resposta pública; a justificativa do órgão foi lida integralmente no InformaBR."
+    },
+    {
+      "topic": "portos · clima",
+      "headline": "Pedido libera estudo completo sobre riscos dos portos até 2035",
+      "summary": "A Antaq entregou como anexo o estudo desenvolvido com a Universidade Federal do Maranhão sobre riscos portuários. O documento examinado tem 281 páginas e registra 125 respostas voluntárias de gestores e especialistas. Ele aponta que a dimensão ambiental é a que mais piora no horizonte estudado, enquanto riscos econômicos e geopolíticos predominam no curto prazo. Os percentuais representam percepções de uma amostra não probabilística, não a incidência comprovada de eventos.",
+      "why_now": "A agência divulgou os resultados gerais em junho; o pedido de setembro tornou acessível a metodologia e o relatório integral, permitindo conferir as métricas e investigar planos de adaptação porto a porto.",
+      "pitch": "Comparar as recomendações para obras resilientes, evacuação e resposta a eventos extremos com os planos e investimentos dos principais portos; solicitar as avaliações locais, já que o relatório traça um panorama nacional.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11648153",
+      "attachment_url": "https://api-laibr.cgu.gov.br/publico/busca/pedidos/arquivo/Relat%C3%B3rio%20Executivo%20(3029885).pdf?idAws=AnexosManifestacao/11648153/fa74190b-d9c4-4e14-9310-b8783d5fb392",
+      "protocol": "50001.186442/2026-40",
+      "response_date": "2026-09-17",
+      "evidence": "No relatório anexado, seção 2.2: 'Foram obtidas 125 (cento e vinte e cinco) respostas voluntárias de gestores e especialistas do setor portuário. Trata-se, portanto, de uma amostra não probabilística.' Na seção 3.2, a dimensão ambiental registra a maior piora temporal (+0,56).",
+      "attachment_review": "O PDF 'Relatório Executivo (3029885)' foi baixado da resposta oficial e examinado; apesar do nome do anexo, o arquivo tem 281 páginas e traz 'Relatório Completo' na capa. Metodologia, destaques e recomendações foram conferidos no próprio PDF."
+    }
+  ],
+  "precedents": [
+    {
+      "headline": "Processo desaparecido exige busca concluída ou declaração formal",
+      "decision": "Em 30 de setembro, a CGU deferiu recurso contra a Universidade Federal do Pará. Deu 30 dias para fornecer a íntegra de um processo físico de 2019, com proteção pontual de dados pessoais de terceiros, ou, se ele não for encontrado depois de buscas em seus acervos, emitir declaração formal de inexistência acompanhada da descrição das diligências realizadas.",
+      "helps_with": "Ao pedir um processo que aparece no sistema, mas cujo volume físico não foi localizado, cite o protocolo e a Súmula CMRI 6/2015. Solicite pesquisa nas unidades e no arquivo central; se a busca terminar sem êxito, peça declaração formal e relato das buscas, em vez de aceitar apenas a orientação para procurar outro setor.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11117762",
+      "document_url": "https://api-laibr.cgu.gov.br/publico/busca/pedidos/arquivo/SEI_23546074951202609_Parecer_Recurso_de_3%C2%AA_Instancia_2336.pdf?idAws=AnexosRecurso/253573/719556cd-3ade-4d86-970e-330192e77700",
+      "protocol": "23546.074951/2026-09",
+      "decision_date": "2026-09-30",
+      "evidence": "Parecer 2336/2026, conclusão: a UFPA deve, em 30 dias, fornecer o Processo 23073.029537/2019-11 ou, se não localizado, emitir declaração formal de inexistência; a análise pede descrição circunstanciada das buscas realizadas."
+    }
+  ]
+}
