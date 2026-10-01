@@ -94,7 +94,7 @@ def render(issue):
 <div class="topbar"><div class="container"><a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true"></span>A LAI que pegou</a><nav class="nav"><a href="../index.html#arquivo">Todas as edições</a></nav></div></div>
 <header class="hero issue"><div class="container narrow"><div class="issue-meta"><span class="chip"><span class="dot"></span>Edição de {date_label}</span><span class="chip plain">{len(issue['items'])} pistas{f" · {len(issue['precedents'])} precedente" + ("s" if len(issue['precedents']) != 1 else "") if issue['precedents'] else ""}</span></div>
 <h1>{clean(issue['headline'])}</h1><p class="lede">{clean(issue['deck'])}</p>
-<figure class="cover"><img src="../assets/capa-lai.gif" width="768" height="336" alt="Ilustração animada em pixel art: um jornalista envia um pedido de acesso à informação pelo notebook; o pedido passa por uma plataforma on-line e chega à Controladoria-Geral da União, onde servidores o recebem."></figure></div></header>
+<figure class="cover"><img src="../assets/capa-lai.gif?v=4" width="768" height="336" alt="Ilustração animada em pixel art: um jornalista envia pedidos de acesso à informação pela internet à Controladoria-Geral da União; as respostas voltam para ele e viram reportagens na TV, no jornal e no celular."></figure></div></header>
 <main class="container narrow">
 {''.join(cards)}{precedent_section}
 <a class="back" href="../index.html#arquivo">← Todas as edições</a></main>
