@@ -3,8 +3,7 @@
   "last_run_status": "success",
   "last_run_note": "3 pedidos e 1 precedentes verificados",
   "next_run_approx": "2026-10-02T08:00:00+01:00",
-  "schedule": "semanal · segundas 08:00 Europe/London",
-  "periodo_varredura_3_meses": "2026-02-24 a 2026-05-24",
+  "schedule": "diária de 1º a 7/10/2026; depois semanal, às segundas 08:00 Europe/London",
   "edicoes": [
     {
       "numero": 1,
