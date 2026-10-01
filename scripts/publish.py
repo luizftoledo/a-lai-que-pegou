@@ -81,9 +81,11 @@ def render(issue):
 h1,h2,h3{{font-family:Georgia,serif;line-height:1.16;letter-spacing:-.025em}}h1{{font-size:clamp(32px,6vw,48px);margin:20px 0 12px}}h2{{font-size:28px;margin:9px 0}}h3{{font-size:23px;margin:8px 0}}
 .deck{{font-size:20px;color:#34554f}}.story{{padding:27px 0;border-bottom:1px solid #c9d8d2}}.lead{{padding:35px 25px;margin:28px -25px 0;background:#e8f3ee;border-left:4px solid #237b70;border-bottom:0}}
 .summary{{font-size:18px;font-weight:550}}.source{{font-size:14px}}a{{color:#176d62;text-decoration:underline;text-underline-offset:3px}}.source span{{color:#658079;margin-left:8px}}
+.cover{{margin:24px 0 10px;background:#f3f1e9;border:1px solid #d5d3ca;overflow:hidden}}.cover img{{display:block;width:100%;height:auto}}.cover figcaption{{padding:4px 12px 9px;color:#6a6c68;font:11px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-align:right;letter-spacing:.04em}}
 section{{margin-top:42px}}section>h2{{border-top:3px solid #237b70;padding-top:15px}}.precedent{{padding:20px 0;border-bottom:1px solid #c9d8d2}}
 footer{{border-top:1px solid #c9d8d2;margin-top:50px;padding-top:18px;color:#58736c;font-size:13px}}@media(max-width:600px){{.lead{{margin:24px 0 0;padding:22px}}.source span{{display:block;margin:4px 0}}}}
 </style></head><body><div class="wrap"><header><div class="brand">A LAI que pegou</div><div class="eyebrow">Edição de {date_label} · pistas para jornalistas</div></header>
+<figure class="cover"><img src="../assets/capa-lai.svg" width="960" height="360" alt="Ilustração animada: jornalista envia um pedido pelo e-SIC; servidores de um órgão público consultam documentos e preparam a resposta."><figcaption>DO PEDIDO À RESPOSTA · ILUSTRAÇÃO ANIMADA</figcaption></figure>
 <main><h1>{clean(issue['headline'])}</h1><p class="deck">{clean(issue['deck'])}</p>
 {''.join(cards)}<section><h2>Precedentes que ajudam em outros pedidos</h2><p>Decisões em recurso da CGU ou da Comissão Mista de Reavaliação de Informações.</p>{''.join(precedents)}</section></main>
 <footer>Curadoria de respostas públicas à Lei de Acesso à Informação. Cada achado aponta para o documento oficial. A seleção indica caminhos de apuração; confirmação adicional com órgãos e pessoas citadas cabe à reportagem. <a href="../index.html">Todas as edições</a>.</footer></div></body></html>'''
