@@ -1,7 +1,7 @@
 {
   "date": "2026-10-01",
   "headline": "Estudo com 125 especialistas vê maior alta do risco ambiental nos portos até 2035",
-  "deck": "Pedido de LAI abriu o estudo completo da Antaq: na avaliação de 125 gestores e especialistas, a dimensão ambiental é a que mais se agrava até 2035. Veja também a recusa do Coaf sobre metadados do caso Banco Master e um precedente para cobrar a busca por processos não localizados.",
+  "deck": "Pedido de LAI abriu o estudo completo da Antaq: na avaliação de 125 gestores e especialistas, a dimensão ambiental é a que mais se agrava até 2035. No precedente da edição, a CGU mandou o Banco Central fornecer dados agregados que havia negado.",
   "items": [
     {
       "topic": "portos · clima",
@@ -31,14 +31,17 @@
   ],
   "precedents": [
     {
-      "headline": "Processo desaparecido exige busca concluída ou declaração formal",
-      "decision": "Em 30 de setembro, a CGU deferiu recurso contra a Universidade Federal do Pará. Deu 30 dias para fornecer a íntegra de um processo físico de 2019, com proteção pontual de dados pessoais de terceiros, ou, se ele não for encontrado depois de buscas em seus acervos, emitir declaração formal de inexistência acompanhada da descrição das diligências realizadas.",
-      "helps_with": "Ao pedir um processo que aparece no sistema, mas cujo volume físico não foi localizado, cite o protocolo e a Súmula CMRI 6/2015. Solicite pesquisa nas unidades e no arquivo central; se a busca terminar sem êxito, peça declaração formal e relato das buscas, em vez de aceitar apenas a orientação para procurar outro setor.",
-      "source_url": "https://informabr.cgu.gov.br/busca/11117762",
-      "document_url": "https://api-laibr.cgu.gov.br/publico/busca/pedidos/arquivo/SEI_23546074951202609_Parecer_Recurso_de_3%C2%AA_Instancia_2336.pdf?idAws=AnexosRecurso/253573/719556cd-3ade-4d86-970e-330192e77700",
-      "protocol": "23546.074951/2026-09",
-      "decision_date": "2026-09-30",
-      "evidence": "Parecer 2336/2026, conclusão: a UFPA deve, em 30 dias, fornecer o Processo 23073.029537/2019-11 ou, se não localizado, emitir declaração formal de inexistência; a análise pede descrição circunstanciada das buscas realizadas."
+      "headline": "CGU manda BC fornecer dados cambiais agregados antes negados",
+      "prior_denial": "O Banco Central negou até os números consolidados de exposição ao fator de risco 'cupom de moedas estrangeiras', alegando risco para estratégias de instituições e para a estabilidade financeira. Em recurso, aceitou entregar apenas o total do sistema e manteve a recusa à divisão por controle das instituições.",
+      "opened_information": "A CGU determinou a entrega da exposição líquida agregada de instituições S1 a S4 e da série separada entre controle nacional e estrangeiro, para março de 2018 a 2026, na medida em que os dados históricos estiverem disponíveis. O BC terá de comprovar eventual lacuna na série. A entrega está prevista para janeiro de 2027 e ainda não foi confirmada.",
+      "public_interest": "Os dados permitem investigar como a exposição a um risco cambial se distribui entre instituições de controle nacional e estrangeiro, sem revelar posições individuais. O próprio BC reconheceu à CGU que o recorte em dois grupos não identifica instituições específicas.",
+      "access_status": "entrega determinada",
+      "decision": "Em 11 de setembro, a CGU deferiu o recurso e ordenou ao BC entregar os dados em até 130 dias. O parecer registra a estimativa do BC de disponibilizá-los até 15 de janeiro de 2027; o cumprimento ainda não aparece confirmado no registro público.",
+      "helps_with": "Em pedidos de dados financeiros agregados, propor um recorte com grupos suficientemente amplos e, se houver negativa por risco abstrato de identificação, pedir a demonstração concreta desse risco. Este caso mostra como uma alternativa mais agregada, apresentada no recurso, levou o órgão a aceitar a divulgação; a decisão se refere a este pedido específico.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11061329",
+      "protocol": "18810.014071/2026-68",
+      "decision_date": "2026-09-11",
+      "evidence": "No Parecer nº 2208/2026/CGRAI/DIRAI/SNAI/CGU, item 9, o BC disse que a separação entre controle nacional e estrangeiro 'pode ser disponibilizada sem risco de identificação indireta de instituições específicas dentro de cada categoria'. A decisão da CGU determinou a entrega dos dados agregados (S1 a S4) e segregados por controle nacional e estrangeiro em até 130 dias. Parecer integral de cinco páginas baixado do registro oficial e lido em 1º/10/2026."
     }
   ]
 }
