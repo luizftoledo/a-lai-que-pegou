@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-10-01T11:18:31.094922+00:00",
+  "last_run": "2026-10-01T11:33:17.272353+00:00",
   "last_run_status": "success",
-  "last_run_note": "2 pedidos e 1 precedentes verificados",
+  "last_run_note": "3 pedidos e 1 precedentes verificados",
   "next_run_approx": "2026-10-02T08:00:00+01:00",
   "schedule": "semanal · segundas 08:00 Europe/London",
   "periodo_varredura_3_meses": "2026-02-24 a 2026-05-24",
@@ -91,9 +91,9 @@
       "numero": 10,
       "data": "2026-10-01",
       "file": "edicoes/2026-10-01.html",
-      "titulo": "Estudo com 125 especialistas vê maior alta do risco ambiental nos portos até 2035",
-      "em_destaque": "Pedido de LAI abriu o estudo completo da Antaq: na avaliação de 125 gestores e especialistas, a dimensão ambiental é a que mais se agrava até 2035. No precedente da edição, a CGU mandou o Banco Central fornecer dados agregados que havia negado.",
-      "e_mais": 1,
+      "titulo": "C6 liderou novos empréstimos consignados do INSS em 2025, com 1,6 milhão de operações",
+      "em_destaque": "Documento entregue pelo INSS revela o volume mensal de empréstimos por banco: o C6 aparece à frente das demais instituições em 2025. A edição traz também o estudo integral dos riscos portuários e, ao final, um precedente da CGU sobre dados cambiais antes negados.",
+      "e_mais": 2,
       "precedentes": 1
     }
   ]

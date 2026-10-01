@@ -1,6 +1,8 @@
 # Pauta e evidências por edição
 
 Crie um JSON `AAAA-MM-DD.json` com `date`, `headline`, `deck`, `items` e `precedents`.
+O `headline` da edição deve ser igual ao primeiro item de `items`: a pauta mais forte
+e noticiável. A seção de `precedents` é sempre a última, depois de todos os itens.
 
 Cada item de `items` precisa de: `headline`, `summary`, `why_now`, `pitch`,
 `source_url`, `protocol`, `response_date` (AAAA-MM-DD), `evidence` (passagem

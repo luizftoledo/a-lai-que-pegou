@@ -31,6 +31,7 @@ def validate(issue):
     date.fromisoformat(issue["date"])
     assert issue["headline"].strip() and issue["deck"].strip()
     assert 1 <= len(issue["items"]) <= 6, "Publish only verified findings; aim for six."
+    assert issue["headline"] == issue["items"][0]["headline"], "The edition title must be the strongest reported finding."
     assert isinstance(issue.get("precedents"), list), "Precedents must be a list, even when no decision qualifies."
     seen = set()
     for item in issue["items"]:
@@ -43,6 +44,8 @@ def validate(issue):
         assert len(item["evidence"]) >= 20, "Record the exact supporting passage or data."
         if item.get("attachment_url"):
             assert official(item["attachment_url"], ("cgu.gov.br", "gov.br"))
+        if item.get("context_url"):
+            assert official(item["context_url"], ("gov.br",))
     for p in issue["precedents"]:
         for field in ("headline", "decision", "prior_denial", "opened_information", "public_interest", "access_status", "helps_with", "source_url", "protocol", "decision_date", "evidence"):
             assert str(p.get(field, "")).strip(), f"Missing {field} in precedent"
@@ -59,12 +62,14 @@ def render(issue):
     for index, item in enumerate(issue["items"]):
         attachment = (f'<p class="source"><a href="{clean(item["attachment_url"])}">Ver anexo examinado →</a></p>'
                       if item.get("attachment_url") else "")
+        context = (f'<p class="source"><a href="{clean(item["context_url"])}">Ver contexto oficial →</a></p>'
+                   if item.get("context_url") else "")
         cards.append(f'''<article class="story{' lead' if index == 0 else ''}">
 <div class="eyebrow">{index + 1:02d} · {clean(item.get('topic', 'pedido respondido'))} · resposta em {clean(item['response_date'])}</div>
 <h2>{clean(item['headline'])}</h2><p class="summary">{clean(item['summary'])}</p>
 <p><strong>Por que agora:</strong> {clean(item['why_now'])}</p>
 <p><strong>Pista para apuração:</strong> {clean(item['pitch'])}</p>
-<p class="source"><a href="{clean(item['source_url'])}">Ler pedido e resposta na íntegra →</a> <span>Protocolo {clean(item['protocol'])}</span></p>{attachment}
+<p class="source"><a href="{clean(item['source_url'])}">Ler pedido e resposta na íntegra →</a> <span>Protocolo {clean(item['protocol'])}</span></p>{attachment}{context}
 </article>''')
     precedents = []
     for p in issue["precedents"]:
@@ -96,7 +101,10 @@ footer{{border-top:1px solid #c9d8d2;margin-top:50px;padding-top:18px;color:#587
     lines = ["A LAI que pegou", f"Edição de {date_label}", "", issue["headline"], issue["deck"],
              "", "Edição na web: https://luizftoledo.github.io/a-lai-que-pegou/edicoes/" + issue["date"] + ".html", ""]
     for item in issue["items"]:
-        lines += [item["headline"], item["summary"], "Por que agora: " + item["why_now"], "Pista para apuração: " + item["pitch"], "Íntegra: " + item["source_url"], ""]
+        lines += [item["headline"], item["summary"], "Por que agora: " + item["why_now"], "Pista para apuração: " + item["pitch"], "Íntegra: " + item["source_url"]]
+        if item.get("context_url"):
+            lines.append("Contexto oficial: " + item["context_url"])
+        lines.append("")
     if issue["precedents"]:
         lines += ["PRECEDENTES QUE AJUDAM EM OUTROS PEDIDOS", ""]
         for p in issue["precedents"]:

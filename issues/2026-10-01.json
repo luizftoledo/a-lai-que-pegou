@@ -1,8 +1,21 @@
 {
   "date": "2026-10-01",
-  "headline": "Estudo com 125 especialistas vê maior alta do risco ambiental nos portos até 2035",
-  "deck": "Pedido de LAI abriu o estudo completo da Antaq: na avaliação de 125 gestores e especialistas, a dimensão ambiental é a que mais se agrava até 2035. No precedente da edição, a CGU mandou o Banco Central fornecer dados agregados que havia negado.",
+  "headline": "C6 liderou novos empréstimos consignados do INSS em 2025, com 1,6 milhão de operações",
+  "deck": "Documento entregue pelo INSS revela o volume mensal de empréstimos por banco: o C6 aparece à frente das demais instituições em 2025. A edição traz também o estudo integral dos riscos portuários e, ao final, um precedente da CGU sobre dados cambiais antes negados.",
   "items": [
+    {
+      "topic": "INSS · crédito consignado",
+      "headline": "C6 liderou novos empréstimos consignados do INSS em 2025, com 1,6 milhão de operações",
+      "summary": "Uma planilha enviada pelo INSS em resposta a pedido de LAI registra 1.617.464 operações na linha do Banco C6 Consignado em 2025, na aba de empréstimos de margem livre. É o maior total entre os bancos identificados individualmente; o Bradesco aparece em seguida, com 980.206. São contagens de operações registradas, não de beneficiários únicos. A base não informa quantas foram contestadas ou irregulares e, por si, não atribui fraude a nenhuma instituição.",
+      "why_now": "A planilha foi entregue em setembro. A escala das operações ganha interesse no contexto do escrutínio do crédito consignado: o INSS suspendeu novas averbações do C6 por decisão de 16 de março de 2026 e suspendeu os efeitos dessa medida em 24 de março. Também mudou regras de autorização em agosto. Os números de 2025 antecedem essas decisões.",
+      "pitch": "Pedir ao INSS e ao C6 a metodologia da contagem e os números de contratos contestados, cancelados e restituídos por banco; comparar o perfil das operações e apurar o efeito das mudanças de 2026 sem tratar o volume, isoladamente, como indício de irregularidade.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11625785",
+      "context_url": "https://www.gov.br/inss/pt-br/centrais-de-conteudo/legislacao/despacho-decisorio/2026",
+      "protocol": "36777.299719/2026-00",
+      "response_date": "2026-09-18",
+      "evidence": "Na planilha oficial 'Quantitativos_2022_2023_2024_2025_2026_PorTipoConsignacao_Banco___Com_Graficos___Ate_Junho_2026', aba 'Margem Livre Empréstimo', soma dos meses de janeiro a dezembro de 2025: linha '626 - BANCO C6 CONSIGNADO' (Z21:AK21), 1.617.464; linha '237 - BANCO BRADESCO S/A' (Z10:AK10), 980.206. O despacho anexo nº 27016003 diz que a planilha reúne quantitativos por instituição e competência e que não cobre todos os detalhamentos pedidos.",
+      "attachment_review": "O arquivo XLSX oficial, com nove abas, foi baixado e lido. Conferi as células mensais de 2025 e a soma por banco, além do despacho de duas páginas. Há inconsistências em outras abas e períodos, por isso esta pauta usa apenas a série de empréstimos de margem livre de 2025 e evita inferir taxas de fraude ou participação de mercado do arquivo."
+    },
     {
       "topic": "portos · clima",
       "headline": "Estudo com 125 especialistas vê maior alta do risco ambiental nos portos até 2035",
