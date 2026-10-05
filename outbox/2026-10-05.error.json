@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-05",
+  "status": "blocked_source",
+  "published": false,
+  "email_sent": false,
+  "blocked_stage": "Consulta e verificação das respostas integrais e anexos recentes no BuscaLAI/InformaBR",
+  "observations": [
+    {
+      "source": "https://buscalai.cgu.gov.br/",
+      "result": "No navegador cloud redirecionou para /erro-rede e exibiu 'Sistema temporariamente indisponível' e 'No momento, não foi possível estabelecer comunicação com o sistema'."
+    },
+    {
+      "source": "https://informabr.cgu.gov.br/busca",
+      "result": "O formulário abriu, mas a busca por pedidos de 15/09/2026 a 04/10/2026 redirecionou para https://informabr.cgu.gov.br/erro-rede com a mesma mensagem. Respostas e anexos não puderam ser examinados."
+    },
+    {
+      "source": "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2026.zip",
+      "result": "HEAD HTTP 200; Last-Modified 2026-09-16T01:51:00Z; 68.846.370 bytes. Disponibilidade do arquivo confirmada; conteúdo não examinado e não usado como substituto dos documentos recentes."
+    },
+    {
+      "source": "https://dadosabertos-download.cgu.gov.br/BuscaPrecedentes/BuscaPrecedentes.csv",
+      "result": "HEAD HTTP 200; Last-Modified 2026-10-01T07:03:39Z; 485.959.893 bytes. Leitor web não aceita application/octet-stream. Pareceres não examinados."
+    }
+  ],
+  "github": "Leitura dos arquivos README.md, issues/README.md, scripts/publish.py, docs/status.json e issues/2026-10-01.json bem-sucedida; permissão push confirmada.",
+  "gmail": "Perfil da conta destinatária confirmado; Enviados consultados para evitar repetição. Nenhum envio nesta rodada.",
+  "action": "Conforme README.md, falha de fonte encerra a rodada sem alterar a última edição válida. Nenhum JSON de nova edição, HTML ou marca .sent criado; capa preservada.",
+  "automation": "Mantida ativa porque o próprio sistema informa indisponibilidade temporária."
+}
