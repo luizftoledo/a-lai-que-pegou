@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-12",
+  "headline": "MAPA confirma recolhimento de três lotes da GiardiaVax sem reavaliar benefício e risco da vacina",
+  "deck": "Resposta inédita confirma que um desvio de qualidade levou ao recolhimento de três lotes no Brasil. A edição mostra também que restrições dos EUA seguem atingindo três pescarias brasileiras, que a segunda chamada de ATPS teve 31% dos convocados sem conclusão e que um hospital não acompanha pedidos de analgesia no parto.",
+  "items": [
+    {
+      "topic": "saúde animal · regulação",
+      "headline": "MAPA confirma recolhimento de três lotes da GiardiaVax sem reavaliar benefício e risco da vacina",
+      "summary": "O Ministério da Agricultura informou que a Zoetis comunicou em 18 de julho de 2024 um desvio de qualidade na GiardiaVax e recolheu um lote comercial; a investigação levou ao recolhimento de outros dois. O MAPA diz que não registrou eventos adversos ligados ao episódio, mas também afirma que a vacina e sua bula não passaram por reavaliação de benefício e risco após o registro. O órgão não revelou lotes, quantidades nem a natureza do desvio, invocando sigilo previsto em portaria própria.",
+      "why_now": "A resposta foi publicada em 8 de outubro de 2026 e esclarece, pela primeira vez no registro público consultado, que o recall latino-americano de 2024 alcançou três lotes no Brasil. Ela chega enquanto pedidos de alteração do registro seguem protocolados no MAPA, ainda sem distribuição aos analistas, e depois de diretrizes internacionais de 2024 desaconselharem vacinas contra Giardia.",
+      "pitch": "Pedir à Zoetis os códigos e o volume dos três lotes, quantas doses chegaram a clínicas e tutores e se os 138.641 frascos recolhidos na América Latina incluíam o Brasil. Cobrar do MAPA a validade atual do registro, o cronograma das alterações pendentes e a justificativa para não reavaliar eficácia e bula diante das diretrizes científicas posteriores.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11614776",
+      "protocol": "21210.009634/2026-70",
+      "response_date": "2026-10-08",
+      "evidence": "A resposta registra: 'em 18 de Julho de 2024, a Zoetis [...] notificou ao MAPA desvio de qualidade e recolhimento de um lote comercial' e que, como resultado da investigação, 'foram recolhidos outros dois lotes'. Afirma ainda que a GiardiaVax e seus impressos 'não foi objeto de reavaliação da relação benefício-risco após a concessão do registro'.",
+      "attachment_review": "A resposta oficial foi lida integralmente na base aberta atualizada em 8/10/2026. A planilha GIARDIAVAX.xlsx, descrita pelo órgão como extrato cadastral do produto, estava listada, mas o download público foi bloqueado pelo InformaBR; nenhum dado da planilha foi usado. Todos os fatos desta pauta constam no texto integral da resposta."
+    },
+    {
+      "topic": "pesca · meio ambiente",
+      "headline": "EUA mantêm três pescarias brasileiras fora do mercado por falhas na proteção de mamíferos marinhos",
+      "summary": "O Ministério da Pesca confirmou que as pescarias 380, 382 e 12944 continuam sem equivalência ambiental para exportar aos Estados Unidos. A lista inclui corvina, anchova, tainha, peixe-sapo, pescada e outras espécies capturadas com redes de emalhe no Sul e Sudeste. O relatório da NOAA aponta 543 mortes anuais de toninhas associadas à pescaria 380, diante de um limite de captura incidental de 110,087, além da ausência de dados de mortalidade nas pescarias 382 e 12944. A restrição está em vigor desde 1º de janeiro de 2026.",
+      "why_now": "Na resposta de 5 de outubro, o MPA diz que o grupo nacional e os subgrupos estaduais para revisar a pesca com redes de emalhe ainda estão em processo de instituição e que o plano de gestão da corvina será publicado. A página da NOAA, atualizada em 24 de setembro de 2026, mantém o Brasil entre os países com algumas pescarias reprovadas.",
+      "pitch": "Medir o valor e o volume das exportações afetadas por espécie e porto, identificar quais empresas e frotas precisam de certificado de admissibilidade e checar se o plano da corvina e os grupos de trabalho foram efetivamente instituídos. Confrontar o MPA com o déficit de observadores a bordo, a falta de dados nas pescarias 382 e 12944 e a recomendação de testar dispositivos acústicos.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11651242",
+      "context_url": "https://www.gov.br/mpa/pt-br/assuntos/pesca-amadora-e-esportiva/certificacoes/certificacao-de-origem/certificado-de-admissibilidade-eua",
+      "protocol": "00380.004194/2026-32",
+      "response_date": "2026-10-05",
+      "evidence": "A resposta do MPA confirma que a NOAA aprovou 43 pescarias e negou equivalência às de IDs 380, 382 e 12944. No relatório final de sete páginas anexado à resposta, a NOAA informa média anual de 543 toninhas mortas na pescaria 380 para limite de 110,087 e diz que o Brasil não apresentou dados de captura incidental para as pescarias 382 e 12944.",
+      "attachment_review": "Foi lido integralmente o relatório oficial 'Brazil-Final-2025-508.pdf', de sete páginas, disponibilizado pela NOAA e listado entre os anexos da resposta. Também foram conferidas a lista atual de pescarias reprovadas e a página do MPA sobre certificação de admissibilidade. Os demais normativos anexos foram usados apenas para conferir a cronologia descrita pelo órgão.",
+      "attachment_url": "https://buscalai.cgu.gov.br/PedidosLai/DetalhePedido?idAnexo=10656316&idAws=AnexosManifestacao/11651242/e0eada2d-f71f-4424-9bf4-31af30fd902d&fileName=Brazil_Final_2025_508.pdf&idTipoAnexo=2&handler=DownloadFile"
+    },
+    {
+      "topic": "serviço público · CPNU",
+      "headline": "Segunda chamada de ATPS teve 31% dos convocados sem conclusão do curso de formação",
+      "summary": "A Enap informou que convocou 410 candidatos para as cinco turmas de Analista Técnico de Políticas Sociais da segunda chamada do CPNU 1 e registrou 282 concluintes. A diferença é de 128 pessoas, ou 31,2% dos convocados. Na primeira chamada, foram 514 convocados e 476 concluintes, diferença de 38, ou 7,4%. Nos dois ciclos, o auxílio financeiro pago aos participantes somou R$ 10,58 milhões.",
+      "why_now": "Os números foram entregues em 8 de outubro, quando o governo já prepara novos concursos e precisa dimensionar turmas de formação. A própria Enap diz que a prestação de contas dos contratos de apoio com a Funape ainda está em análise e que não produziu custo individualizado para a carreira.",
+      "pitch": "Separar desistência, reprovação, ausência de matrícula e candidatos que assumiram outros cargos entre os 128 que não concluíram. Pedir as planilhas mensais de auxílio por turma e a prestação de contas dos contratos com a Funape, comparando a previsão de vagas com o número que chegou ao fim em cada chamada.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11609359",
+      "protocol": "18002.011689/2026-91",
+      "response_date": "2026-10-08",
+      "evidence": "A resposta informa 514 convocados e 476 concluintes na primeira chamada; 410 convocados e 282 concluintes na segunda. Registra R$ 7.474.819,61 de auxílio financeiro para a primeira chamada e R$ 3.103.281,61 para a segunda, total de R$ 10.578.101,22.",
+      "attachment_review": "A resposta integral foi lida e os seis anexos foram identificados: dois contratos, dois planos de trabalho e dois termos de referência. Os dados usados nesta pauta constam expressamente no texto oficial; valores globais dos anexos não foram rateados nem tratados como custo de ATPS, porque a Enap afirma que os documentos abrangem várias carreiras."
+    },
+    {
+      "topic": "saúde da mulher · hospitais universitários",
+      "headline": "Hospital de Campo Grande oferece analgesia no parto, mas não acompanha pedidos nem recusas",
+      "summary": "O Hospital Universitário Maria Aparecida Pedrossian informou ter realizado 81 analgesias em partos normais em 2021, 61 em 2022, 39 em 2023, 33 em 2024, 38 em 2025 e 40 até julho de 2026. Apesar de Mato Grosso do Sul garantir o direito por lei desde 2021, o hospital diz não possuir série sobre quantas mulheres pediram o procedimento, quantas não foram atendidas ou por qual motivo. Também não acompanha quantas gestantes foram formalmente informadas sobre o direito.",
+      "why_now": "A resposta de outubro diz que a oferta foi ampliada em fevereiro de 2025 com um anestesiologista exclusivo, mas que o protocolo institucional ainda está em processo de publicação em uma wiki interna. Os 40 procedimentos dos sete primeiros meses de 2026 já superam todo o total de 2025, sem que o hospital consiga medir a demanda reprimida.",
+      "pitch": "Comparar analgesias com o total anual de partos normais no hospital e obter prontuários anonimizados ou extrações que permitam medir pedidos não atendidos. Verificar se a exigência de registrar projeto de pesquisa foi usada para desviar um pedido de informação pública e pedir a publicação externa do protocolo e do formulário de ciência das gestantes.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11646615",
+      "protocol": "23658.035951/2026-18",
+      "response_date": "2026-10-02",
+      "evidence": "A resposta lista 81, 61, 39, 33, 38 e 40 procedimentos de 2021 a julho de 2026. Em seguida, afirma que não dispõe de relatório consolidado sobre solicitações, procedimentos realizados e solicitações não atendidas com justificativa, nem de levantamento sobre gestantes formalmente cientificadas do direito.",
+      "attachment_review": "Sem anexo da resposta. O único arquivo do registro reproduz o pedido e a lei estadual citada; os números e as limitações de controle foram conferidos no texto integral da resposta oficial."
+    }
+  ],
+  "precedents": []
+}
