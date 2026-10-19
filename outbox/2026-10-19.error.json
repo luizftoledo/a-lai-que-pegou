@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-19",
+  "status": "blocked_source",
+  "published": false,
+  "email_sent": false,
+  "blocked_stage": "Leitura das respostas integrais e dos anexos recentes no BuscaLAI/InformaBR",
+  "observations": [
+    {
+      "source": "https://informabr.cgu.gov.br/busca",
+      "result": "O formulário abriu no navegador cloud. Após buscar pedidos de 01/10/2026 a 18/10/2026, redirecionou para /erro-rede e exibiu 'Sistema temporariamente indisponível', 'No momento, não foi possível estabelecer comunicação com o sistema' e aviso de instabilidade ou manutenção temporária. A mensagem persistiu após uma recarga."
+    },
+    {
+      "source": "https://api-laibr.cgu.gov.br/publico/busca/pedidos/11614776",
+      "result": "A consulta pública de controle retornou HTTP 403, CloudFront, 'Request blocked'. Não houve tentativa de contornar o controle."
+    },
+    {
+      "source": "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2026.zip",
+      "result": "HTTP 200; Last-Modified 2026-10-18T02:34:32Z; 79.357.308 bytes. ZIP baixado no ambiente cloud; listagem contém arquivos de pedidos, recursos e links de anexos com data 17/10/2026. Conteúdo não utilizado como substituto da leitura oficial e dos anexos exigida pelo README."
+    },
+    {
+      "source": "https://dadosabertos-download.cgu.gov.br/BuscaPrecedentes/BuscaPrecedentes.csv",
+      "result": "HTTP 200; Last-Modified 2026-10-01T07:03:39Z; 485.959.893 bytes. Disponibilidade e atualização verificadas; nenhum parecer integral validado nesta rodada."
+    }
+  ],
+  "github": "README.md, issues/README.md, scripts/publish.py, docs/status.json, issues/2026-10-12.json, registro .sent de 12/10 e diretório outbox lidos com sucesso.",
+  "gmail": "Perfil lta2119@columbia.edu confirmado. Busca em Enviados desde 18/10 não localizou envio desta edição. Nenhuma mensagem enviada nesta rodada.",
+  "action": "Rodada encerrada por falha de fonte, conforme README. Nenhum JSON de edição, HTML, envio ou registro .sent criado. Edição de 12/10/2026 e GIF da capa preservados.",
+  "automation": "Não desativada: o site apresenta a falha expressamente como temporária."
+}
