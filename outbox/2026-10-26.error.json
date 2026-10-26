@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-26",
+  "status": "blocked_source",
+  "published": false,
+  "email_sent": false,
+  "source_check": {
+    "informabr_search": "A página pública de busca abriu no navegador em nuvem.",
+    "informabr_detail": "A página https://informabr.cgu.gov.br/busca/11722479 exibiu HTTP 403 da CloudFront ('The request could not be satisfied' / 'Request blocked') em duas tentativas, incluindo uma recarga.",
+    "informabr_api": "GET https://api-laibr.cgu.gov.br/publico/busca/pedidos/11614776 retornou HTTP 403.",
+    "open_data": "O arquivo oficial Arquivos_csv_2026.zip respondeu HTTP 200, Last-Modified 2026-10-26T01:11:18Z, e continha dados até 2026-10-25. Foram localizados 3.010 pedidos com resposta desde 2026-10-13, usados somente para triagem.",
+    "attachments": "Os links antigos de anexo em buscalai.cgu.gov.br devolveram apenas o shell HTML do Informa.BR; o download verificável depende da API/página de detalhe bloqueada.",
+    "precedents": "BuscaPrecedentes.csv estava acessível, mas sem acesso confiável às íntegras vinculadas não houve seleção de precedente."
+  },
+  "duplicate_control": {
+    "repository_outbox": "Não havia arquivo outbox/2026-10-26.sent nem edição issues/2026-10-26.json.",
+    "gmail_sent_query": "in:sent to:lta2119@columbia.edu after:2026/10/25 (\"A LAI que pegou\" OR \"2026-10-26\")",
+    "gmail_matches": 0
+  },
+  "action": "A rotina editorial foi encerrada conforme o README: dados abertos não substituem a resposta integral. Nenhum issue JSON, HTML ou registro .sent foi criado; nenhum e-mail foi enviado.",
+  "preserved": {
+    "latest_valid_issue": "2026-10-12",
+    "live_issue_url": "https://luizftoledo.github.io/a-lai-que-pegou/edicoes/2026-10-12.html",
+    "live_checks": "Página inicial, edição de 12/10 e capa animada responderam HTTP 200.",
+    "cover_sha256": "1cbc66541f527b00a16c83fdc0440740d2545bad9afd05bd79a530a6fd28d241"
+  },
+  "automation": "Mantida ativa porque o bloqueio da fonte é compatível com falha temporária/configuração da CloudFront."
+}
