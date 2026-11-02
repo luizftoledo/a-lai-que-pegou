@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-02",
+  "status": "blocked_source",
+  "published": false,
+  "email_sent": false,
+  "source_check": {
+    "informabr_api": "GET https://api-laibr.cgu.gov.br/publico/busca/pedidos/11722479 retornou HTTP 403 da CloudFront: 'The request could not be satisfied' e 'Request blocked'.",
+    "informabr_public_state": "A fonte oficial indexada informa indisponibilidade temporária do serviço de consulta de pedidos.",
+    "open_data": "Arquivos_csv_2026.zip respondeu HTTP 200; Last-Modified 2026-11-02T01:32:03Z. A base foi tratada apenas como possível triagem, pois não substitui a resposta integral.",
+    "precedents": "BuscaPrecedentes.csv respondeu HTTP 200; Last-Modified 2026-11-01T07:03:37Z. Não houve seleção sem leitura verificável das íntegras."
+  },
+  "duplicate_control": {
+    "repository": "Não existiam issues/2026-11-02.json, outbox/2026-11-02.sent ou outro registro de edição desta data.",
+    "gmail_query": "in:sent to:lta2119@columbia.edu after:2026/11/01 (\"A LAI que pegou\" OR \"2026-11-02\")",
+    "gmail_matches": 0
+  },
+  "action": "A rodada foi encerrada conforme README.md. Nenhum issue JSON ou HTML foi criado, nenhuma edição foi publicada e nenhum e-mail foi enviado.",
+  "preserved": {
+    "latest_valid_issue": "2026-10-12",
+    "live_issue_url": "https://luizftoledo.github.io/a-lai-que-pegou/edicoes/2026-10-12.html",
+    "live_checks": "Página inicial, edição de 12/10 e capa animada responderam HTTP 200.",
+    "cover_sha256": "1cbc66541f527b00a16c83fdc0440740d2545bad9afd05bd79a530a6fd28d241"
+  },
+  "automation": "Mantida ativa porque a falha da fonte é compatível com indisponibilidade temporária/configuração da CloudFront."
+}
