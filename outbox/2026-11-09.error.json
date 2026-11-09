@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-09",
+  "status": "blocked_source",
+  "published": false,
+  "email_sent": false,
+  "source_check": {
+    "informabr_search": "A busca pública abriu no Chrome da nuvem.",
+    "informabr_detail": "https://informabr.cgu.gov.br/busca/11722479 exibiu HTTP 403 da CloudFront em duas tentativas, incluindo uma recarga. Request IDs: 0Wsfq7E9PNTiLeGs4hIQDZEiqtAFFQZGDgZzhT3JOLoPnehacWSB8w== e t52vScBCa35k3pWzRnsMRkKVhFvIA42lo9K_nuIRrXB3Xh8AUHY0Ig==.",
+    "informabr_api": "GET https://api-laibr.cgu.gov.br/publico/busca/pedidos/11722479 retornou HTTP 403 da CloudFront.",
+    "open_data": "O ZIP anual respondeu HTTP 200, Last-Modified 2026-11-09T01:29:23Z. Foi tratado apenas como triagem e não usado para edição porque as respostas integrais permaneceram inacessíveis.",
+    "precedents": "O CSV mensal respondeu HTTP 200, Last-Modified 2026-11-01T07:03:37Z. Nenhum precedente foi selecionado sem verificação do parecer integral."
+  },
+  "duplicate_control": {
+    "repository": "Não havia issues/2026-11-09.json, outbox/2026-11-09.sent nem edição de 2026-11-09.",
+    "gmail_query": "in:sent to:lta2119@columbia.edu after:2026/11/08 (\"A LAI que pegou\" OR \"2026-11-09\")",
+    "gmail_matches": 0
+  },
+  "action": "Rodada encerrada conforme as regras do repositório. Não foram criados issue JSON, HTML, publicação, email ou arquivo .sent.",
+  "preserved": {
+    "latest_valid_issue": "2026-10-12",
+    "live_issue_url": "https://luizftoledo.github.io/a-lai-que-pegou/edicoes/2026-10-12.html",
+    "live_checks": "Página inicial, edição de 12/10 e capa animada responderam HTTP 200.",
+    "cover_sha256": "1cbc66541f527b00a16c83fdc0440740d2545bad9afd05bd79a530a6fd28d241"
+  },
+  "automation": "Mantida ativa porque o bloqueio da fonte aparenta ser transitório/configuração da CloudFront."
+}
