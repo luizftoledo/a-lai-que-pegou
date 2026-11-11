@@ -21,3 +21,20 @@ parecer integral). Confirme separadamente se a ordem já foi cumprida.
 Os campos `evidence` e `attachment_review` são o registro de verificação da
 curadoria. Só publique informação que a fonte oficial sustenta. Se a resposta
 ou o anexo não estiver acessível, não use esse achado.
+
+## Campos exigidos desde 11/11/2026
+
+Cada item de `items` leva também `relevancia`, descrito em
+[CRITERIOS.md](../CRITERIOS.md): `pontos` e `motivos` nos eixos alcance,
+efeito, solidez, atualidade e clareza; `cobertura` (`nao_coberto` ou
+`coberto_sem_o_dado`); `verificado_por` (`api`, `pagina` ou `dados_abertos`).
+Negativas levam `"tipo": "negativa"`.
+
+`tambem_responderam` (opcional) lista pedidos de 5 a 7 pontos em uma linha
+cada: `headline`, `summary` (até 300 caracteres), `source_url` e `protocol`.
+
+`scripts/publish.py` recusa: item com menos de 8 pontos; abertura com alcance
+ou clareza abaixo de 2; primeiro item que não seja o de maior pontuação; título
+com mais de 90 caracteres, mais de dois números ou sigla fora da lista livre;
+resposta com mais de 21 dias; protocolo já publicado; `evidence` com menos de
+80 caracteres.

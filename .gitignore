@@ -1,5 +1,6 @@
 .DS_Store
-outbox/
-__pycache__/
+outbox/*.txt
 __pycache__/
 .env
+.cache/
+.ipynb_checkpoints/

@@ -3,21 +3,61 @@
 Newsletter de curadoria jornalística de respostas públicas à Lei de Acesso à
 Informação, publicada em https://luizftoledo.github.io/a-lai-que-pegou/.
 
+Os critérios de seleção estão em [CRITERIOS.md](CRITERIOS.md). O formato do
+arquivo de cada edição está em [issues/README.md](issues/README.md).
+
+## Fontes, em ordem
+
+1. **Dados abertos de pedidos** (`dadosabertos-download.cgu.gov.br`, ZIP anual
+   atualizado toda noite). Traz pedido, resposta (até 14 mil caracteres),
+   decisão, links dos anexos e recursos. É a base da triagem e não depende da
+   API. `scripts/triagem.py` grava `data/candidatos.json`; o GitHub Actions
+   roda isso às segundas, 05:30 UTC (`.github/workflows/triagem.yml`).
+2. **API pública do InformaBR** (`api-laibr.cgu.gov.br`). Texto integral e
+   anexos. Devolve 403 a partir de alguns provedores de nuvem; de conexão
+   doméstica responde. `scripts/detalhe.py ID` tenta a API e, se falhar, lê o
+   mesmo pedido nos dados abertos, informando a via usada.
+3. **Página do InformaBR ou do BuscaLAI no navegador**, para anexos e para
+   respostas cortadas nos dados abertos.
+
 ## Rotina editorial
 
-1. Verificar a data efetiva e a disponibilidade de [BuscaLAI](https://buscalai.cgu.gov.br/), [Busca Precedentes](https://www.gov.br/cgu/pt-br/acesso-a-informacao/dados-abertos/arquivos/busca-de-precedentes) e [dados abertos de pedidos](https://falabr.cgu.gov.br/web/dadosabertoslai). A base de dados abertos é uma pista de triagem; ela não substitui a resposta integral.
-2. Buscar pedidos **respondidos recentemente** em muitos temas e resultados; não parar na primeira leva. Ler texto completo e anexos públicos. Priorizar fatos ou dados novos, ângulos originais, relevância para o noticiário e apuração possível. Conferir se a história já foi publicada com o mesmo ângulo. Uma negativa só entra quando a recusa, por si, for excepcional e claramente noticiável; não usá-la para completar a edição ou abrir a newsletter diante de uma descoberta concreta melhor.
-3. Ler as decisões integrais antes de explicar um precedente. Só selecionar decisões em que um recurso tenha revertido uma negativa ou levado à entrega de informação concreta de interesse público antes negada. Identificar precisamente qual informação foi aberta, qual era a justificativa anterior para negá-la e como a decisão pode ajudar outro pedido similar. Descartar casos meramente procedimentais, pessoais ou sem utilidade jornalística comprovada. A seção de precedentes vem **sempre depois de todas as pautas**, no fim da newsletter; nunca fornece o título ou a abertura. Se nenhuma decisão passar por esse filtro, publicar sem seção de precedentes.
-4. Continuar a triagem até reunir os melhores achados verificáveis da rodada. Registrar cerca de seis, podendo publicar menos quando a verificação não sustentar seis. Abrir com o fato concreto mais forte e noticiável, que também deve orientar o título da edição. Se o achado escolhido para abrir não sustentar uma manchete forte, continuar a busca antes de publicar. Guardar evidência, protocolo e link em `issues/AAAA-MM-DD.json`.
-5. `python3 scripts/publish.py issues/AAAA-MM-DD.json` valida o registro e gera a página e a versão para e-mail. Rever os dois arquivos gerados antes de `git push origin main`.
-6. Confirmar que a edição responde no endereço público. Só então compor a mesma edição com títulos, seções e links no Gmail conectado, inserir a capa animada `docs/assets/capa-lai.gif` no início, enviar para `lta2119@columbia.edu`, conferir Enviados e registrar `outbox/AAAA-MM-DD.sent`. Antes de repetir uma tentativa incerta, conferir Enviados para evitar cópia duplicada.
+1. Ler `data/candidatos.json`. Se `fonte.desatualizada` for verdadeiro ou o
+   arquivo for de outra semana, rodar `python3 scripts/triagem.py`.
+2. Percorrer os candidatos além dos primeiros; `pontos_triagem` só ordena a
+   leitura. Para cada pista, ler pedido e resposta com
+   `python3 scripts/detalhe.py ID` e os anexos acessíveis.
+3. Pontuar cada pista pelos cinco eixos de CRITERIOS.md, com motivo escrito.
+   Conferir no noticiário se o fato já saiu com o mesmo dado.
+4. Para precedentes, partir de `recursos` em `data/candidatos.json` e ler a
+   decisão integral.
+5. Montar `issues/AAAA-MM-DD.json` e rodar
+   `python3 scripts/publish.py issues/AAAA-MM-DD.json`. O script recusa a
+   edição que não cumpre os critérios e lista os motivos.
+6. Rever a página e o texto de e-mail gerados, fazer `git push origin main` e
+   confirmar a edição no endereço público.
+7. Enviar a edição para `lta2119@columbia.edu` com a capa
+   `docs/assets/capa-lai.gif` no início, conferir Enviados e registrar
+   `outbox/AAAA-MM-DD.sent`. Antes de repetir um envio incerto, conferir
+   Enviados.
 
-Não há publicação automática a partir de resumos de busca. Uma falha de fonte
-encerra a rodada com registro de erro e sem alterar a última edição válida.
+## Quando uma fonte falha
+
+- **API ou página com 403 ou fora do ar:** seguir pelos dados abertos. Entram
+  os itens cujo texto completo está na base (`resposta_cortada` falso) e cujos
+  fatos publicados constam no texto da resposta. Registrar
+  `verificado_por: dados_abertos` e, em `attachment_review`, que o anexo não
+  foi aberto.
+- **Dados abertos indisponíveis ou mais de 3 dias atrasados:** usar a API ou o
+  navegador, de uma máquina em que respondam.
+- **Nenhuma via disponível:**
+  `python3 scripts/rodada_sem_edicao.py AAAA-MM-DD fonte_indisponivel "o que falhou"`.
+- **Fontes disponíveis, nenhum pedido com 8 pontos:**
+  `python3 scripts/rodada_sem_edicao.py AAAA-MM-DD sem_pauta "quantos lidos, maior pontuação"`.
+
+O registro atualiza `docs/status.json`, e a página inicial informa o motivo.
+Uma rodada sem edição não altera edições publicadas.
 
 ## Frequência
 
-Revisão semanal às segundas-feiras, a partir de 5 de outubro de 2026, às 8h
-(Europe/London). A rotina editorial é agendada no ChatGPT Work Cloud e usa o
-repositório no GitHub e o Gmail conectado, sem depender do Mac. O antigo
-`launchd` e a coleta semanal por GitHub Actions foram desativados.
+Revisão semanal às segundas-feiras, 8h (Europe/London).

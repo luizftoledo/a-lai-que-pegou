@@ -1,0 +1,33 @@
+name: Triagem pelos dados abertos
+
+on:
+  schedule:
+    # segunda, 05:30 UTC — antes da rodada editorial das 8h (Europe/London)
+    - cron: "30 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  triagem:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Gerar data/candidatos.json
+        run: |
+          set +e
+          python scripts/triagem.py
+          code=$?
+          # 2 = base desatualizada: grava os candidatos mesmo assim; a rodada editorial decide.
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then exit "$code"; fi
+      - name: Commit
+        run: |
+          git config user.name "LAI bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/candidatos.json
+          git diff --cached --quiet || git commit -m "triagem: candidatos da semana"
+          git push
