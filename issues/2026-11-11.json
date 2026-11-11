@@ -1,37 +1,105 @@
 {
  "date": "2026-11-11",
- "headline": "BNDES comprometeu R$ 35 bilhões do Tesouro em crédito para veículos e esconde montadoras",
- "deck": "O BNDES informou quanto cada linha do Move Brasil já consumiu do orçamento, entregou planilhas por programa e recusou listar as fabricantes beneficiadas, com base no sigilo empresarial.",
+ "headline": "Bets têm 33,7 milhões de CPFs ativos; mais de dois em cinco apostadores têm até 30 anos",
+ "deck": "Fazenda informa quantos CPFs estão ativos em bets e a idade dos apostadores, o Inep reconhece falha no atendimento especializado do Enem e o Ministério de Minas e Energia não responde se orientou a Petrobras sobre preços.",
  "items": [
   {
-   "topic": "crédito público · indústria automotiva",
-   "headline": "BNDES comprometeu R$ 35 bilhões do Tesouro em crédito para veículos e esconde montadoras",
-   "summary": "O BNDES respondeu que todo o dinheiro das linhas do Move Brasil que opera vem do Tesouro Nacional. Em 30 de setembro de 2026, o Renovação de Frota (orçamento de R$ 10 bilhões) tinha consumido R$ 9,4 bilhões; o Mais Mobilidade (R$ 21,2 bilhões), R$ 19,9 bilhões; e o Move Motoristas, ainda em vigor (R$ 30 bilhões), R$ 5,9 bilhões. Somados, são R$ 35,2 bilhões consumidos de R$ 61,2 bilhões autorizados. O banco entregou planilhas de operações até 27 de outubro, mas negou o ranking de fabricantes e concessionárias, o que impede saber quais empresas receberam o dinheiro, e invocou o sigilo empresarial do art. 22 da LAI.",
-   "why_now": "O Move Motoristas segue ativo e usou menos de um quinto do orçamento (R$ 5,9 bilhões de R$ 30 bilhões), enquanto as duas linhas anteriores, já encerradas, consumiram mais de 90% do que tinham. A resposta é de 9 de novembro de 2026.",
-   "pitch": "Analisar as planilhas anexas (aprovado, contratado e desembolsado por programa e por banco repassador) para mostrar quanto saiu de fato do Tesouro e quais bancos intermediaram. Perguntar ao BNDES e ao Ministério da Fazenda por que o ranking de montadoras é sigiloso se o dinheiro é público, e recorrer da negativa dos itens h e i.",
-   "source_url": "https://informabr.cgu.gov.br/busca/11860504",
-   "protocol": "52021.002687/2026-11",
-   "response_date": "2026-11-09",
-   "evidence": "A resposta registra que 'a origem dos recursos para todas as linhas operadas pelo BNDES no âmbito do Programa Move Brasil é toda oriunda da União, por meio do Tesouro Nacional' e informa, para o Move Motoristas, 'Orçamento Autorizado: R$ 30 bilhões' e 'Consumo Total: R$ 5,9 bilhões'. Sobre fabricantes e concessionárias, afirma que 'o BNDES está impossibilitado de fornecer tais informações' por sigilo empresarial (art. 22 da Lei 12.527/2011).",
-   "attachment_review": "O texto integral da resposta foi lido nos dados abertos da CGU, atualizados em 10/11/2026. O arquivo 52021002687202611.zip, com uma planilha por programa, não foi aberto; nenhum dado dele foi usado. Todos os fatos desta pauta constam no texto da resposta. O total de R$ 35,2 bilhões é a soma dos três consumos informados.",
+   "topic": "apostas · saúde financeira",
+   "headline": "Bets têm 33,7 milhões de CPFs ativos; mais de dois em cinco apostadores têm até 30 anos",
+   "summary": "A Secretaria de Prêmios e Apostas, do Ministério da Fazenda, informou que o sistema de gestão de apostas (Sigap) tem 33.674.613 CPFs com status ativo em pelo menos uma marca de bet. Entre os apostadores identificados, 67,65% são homens e 32,35% mulheres; 20,50% têm até 24 anos, 21,66% entre 25 e 30, 28,85% entre 31 e 40 e 18,19% entre 41 e 50. A Fazenda enviou planilha mensal de aportes, retiradas e receita bruta de jogo de janeiro de 2025 a junho de 2026, mas negou a receita por empresa, citando sigilo empresarial, e disse que o sistema não registra renda, frequência de apostas nem gênero e idade mês a mês.",
+   "why_now": "A resposta é de 5 de novembro de 2026 e traz o primeiro retrato oficial por idade e gênero do cadastro. Chega depois da Medida Provisória nº 1.394, de 25 de setembro de 2026, sobre apostas, citada em outro pedido respondido pelo Banco Central.",
+   "pitch": "Abrir a planilha dados_sic.xlsx e calcular, mês a mês, quanto os apostadores aportaram e retiraram e quanto sobrou como receita das empresas. Cruzar a faixa de até 30 anos com a de renda, que o sistema não tem, ouvindo especialistas em endividamento. Recorrer da negativa da receita por empresa.",
+   "source_url": "https://informabr.cgu.gov.br/busca/11843055",
+   "protocol": "18800.162263/2026-07",
+   "response_date": "2026-11-05",
+   "evidence": "A resposta registra: 'foram identificados 33.674.613 CPFs com status 1 - Ativo em pelo menos uma marca, conforme classificação prevista no Modelo de Dados do SIGAP' e que 'a distribuição por gênero corresponde a 32,35% do sexo feminino e 67,65% do sexo masculino', com '20,50% dos apostadores' até 24 anos e '21,66%' entre 25 e 30.",
+   "attachment_review": "O texto integral da resposta foi lido nos dados abertos da CGU e a página do pedido abre no InformaBR. A planilha dados_sic.xlsx não foi aberta; nenhum dado dela foi usado. Todos os fatos desta pauta constam no texto da resposta. O percentual de 42% é a soma de 20,50% e 21,66%.",
    "relevancia": {
     "pontos": {
-     "alcance": 2,
+     "alcance": 3,
      "efeito": 3,
      "solidez": 3,
      "atualidade": 2,
      "clareza": 3
     },
     "motivos": {
-     "alcance": "Crédito para caminhoneiros, motoristas de aplicativo, taxistas e empresas de ônibus, pago com dinheiro do Tesouro, que é de todos os contribuintes.",
-     "efeito": "R$ 35,2 bilhões de gasto público consumidos em linhas de financiamento de veículos.",
-     "solidez": "O banco entregou números oficiais por programa, com orçamento e consumo, e informou os itens que recusou.",
-     "atualidade": "O Move Motoristas está em vigor e tem R$ 24,1 bilhões do orçamento ainda sem consumo.",
-     "clareza": "Cabe em uma frase: o banco público gastou R$ 35 bilhões do Tesouro e não diz quais montadoras venderam."
+     "alcance": "33,7 milhões de CPFs cadastrados em bets autorizadas.",
+     "efeito": "Dinheiro das famílias em jogo, com efeito direto sobre endividamento.",
+     "solidez": "Números oficiais entregues pela secretaria que opera o sistema, com data de extração.",
+     "atualidade": "Medida Provisória sobre apostas editada em 25/09/2026.",
+     "clareza": "Cabe em uma frase: 33,7 milhões de CPFs ativos e mais de dois em cinco apostadores com até 30 anos."
     },
     "cobertura": "coberto_sem_o_dado",
     "verificado_por": "dados_abertos"
    }
+  },
+  {
+   "topic": "educação · Enem",
+   "headline": "Inep exibiu como aprovados 478 pedidos de atendimento do Enem e depois os reprovou",
+   "summary": "O Inep reconheceu uma inconsistência no sistema de atendimento especializado do Enem 2026: 478 atendimentos foram exibidos como aprovados e depois reprocessados e alterados para reprovados, e 1.066 recursos de atendimentos reprovados apareciam como aprovados, o que impediu o candidato de recorrer. O órgão afirma que identificou o problema depois do fim do prazo de recursos, em 3 de julho, que cerca de 170 dos 478 foram aprovados em nova análise e que os demais seguem reprovados, com direito a recurso. Em outro cenário, ligado à inclusão da sala para acompanhante, foram afetados 8.555 participantes com laudos aprovados em edições anteriores, dos quais 478 tiveram a solicitação reprovada integralmente após a possibilidade de recurso.",
+   "why_now": "A resposta é de 4 de novembro de 2026 e as provas estão previstas para 8 e 15 de novembro, segundo requerimento no Senado sobre a mesma falha. O Inep não informou como e quantos participantes foram avisados.",
+   "pitch": "Procurar candidatos com deficiência, autismo ou transtornos mentais que tiveram o atendimento reprovado depois de aparecer como aprovado e verificar se conseguiram recorrer. Perguntar ao Inep quantos dos 1.066 recursos foram reanalisados antes de 15 de novembro e por que não informou os canais de aviso, remetidos à área de gestão de pessoas.",
+   "source_url": "https://informabr.cgu.gov.br/busca/11893179",
+   "protocol": "23546.141622/2026-72",
+   "response_date": "2026-11-04",
+   "evidence": "A resposta registra '478 atendimentos exibidos equivocadamente como aprovados e posteriormente reprocessados e alterados para reprovados, 1.066 recursos de atendimentos reprovados apresentados como aprovados, impossibilitando a interposição de recurso' e que 'a identificação da inconsistência foi posterior a 3 de julho de 2026'.",
+   "attachment_review": "O texto da resposta foi lido nos dados abertos da CGU e a página do pedido abre no InformaBR. A planilha anexa não foi aberta; nenhum dado dela foi usado. Os fatos desta pauta constam no texto da resposta. O quesito 5, sobre os canais de aviso aos participantes, foi encaminhado pelo Inep a outra área e não foi respondido.",
+   "relevancia": {
+    "pontos": {
+     "alcance": 1,
+     "efeito": 3,
+     "solidez": 3,
+     "atualidade": 3,
+     "clareza": 3
+    },
+    "motivos": {
+     "alcance": "Participantes com deficiência, autismo e transtornos que pediram atendimento no Enem.",
+     "efeito": "Atendimento negado ou alterado pode impedir o candidato de fazer a prova nas condições de que precisa.",
+     "solidez": "O órgão entregou números exatos e reconheceu a falha.",
+     "atualidade": "Provas previstas para 8 e 15 de novembro de 2026.",
+     "clareza": "Explicável em uma frase."
+    },
+    "cobertura": "coberto_sem_o_dado",
+    "verificado_por": "dados_abertos"
+   }
+  },
+  {
+   "topic": "combustíveis · governo",
+   "headline": "Ministério de Minas e Energia diz que não participa das decisões de preço da Petrobras",
+   "summary": "O Ministério de Minas e Energia respondeu que não participa do processo decisório da Petrobras sobre preços de combustíveis e que a empresa tem autonomia. Ao ser perguntado se a União orientou a estatal a praticar preços de diesel ou gasolina diferentes dos de mercado, repetiu o texto sobre autonomia, sem dizer sim ou não. Sobre reuniões do ministro com dirigentes da empresa, remeteu à agenda pública do e-Agendas. Disse também que a política de subvenções, criada dias após o início do conflito entre EUA e Irã, não teve o Conselho Nacional de Política Energética entre seus propositores, e anexou notas técnicas sobre cinco medidas provisórias de 2026.",
+   "why_now": "A resposta é de 9 de novembro de 2026 e as subvenções ao diesel e à gasolina seguem em vigor, com novas medidas provisórias editadas ao longo do ano.",
+   "pitch": "Ler as notas técnicas anexas (medidas provisórias 1.340, 1.349, 1.358, 1.363 e 1.391) e comparar com as reuniões publicadas no e-Agendas do ministro e do secretário nacional de petróleo. Perguntar ao ministério por que não respondeu diretamente se orientou a Petrobras e quem decidiu o preço de referência das subvenções.",
+   "source_url": "https://informabr.cgu.gov.br/busca/11801092",
+   "protocol": "48003.020519/2026-58",
+   "response_date": "2026-11-09",
+   "evidence": "A resposta registra que 'o Ministério de Minas e Energia não participa do processo decisório interno da companhia relativo à definição ou ao ajuste de preços de combustíveis' e que a política de subvenções, 'estabelecida dias após o início do conflito entre EUA e Irã, não tem entre seus órgãos propositores o Conselho Nacional de Política Energética'.",
+   "attachment_review": "O texto da resposta foi lido nos dados abertos da CGU e a página do pedido abre no InformaBR. As nove notas técnicas e informativas anexas não foram abertas; nenhum conteúdo delas foi usado, apenas a lista informada no texto da resposta.",
+   "relevancia": {
+    "pontos": {
+     "alcance": 3,
+     "efeito": 2,
+     "solidez": 1,
+     "atualidade": 2,
+     "clareza": 3
+    },
+    "motivos": {
+     "alcance": "Preço de diesel e gasolina atinge todos os consumidores.",
+     "efeito": "Subvenções com dinheiro público e preços de combustíveis.",
+     "solidez": "O órgão não respondeu diretamente à pergunta central e não entregou, no texto, os documentos pedidos.",
+     "atualidade": "Subvenções em vigor e novas medidas provisórias em 2026.",
+     "clareza": "Cabe em uma frase sem sigla."
+    },
+    "cobertura": "coberto_sem_o_dado",
+    "verificado_por": "dados_abertos"
+   }
+  }
+ ],
+ "tambem_responderam": [
+  {
+   "headline": "Itamaraty informa R$ 3,4 milhões em hospedagem na viagem de Lula à ONU",
+   "summary": "O Itamaraty informou gasto de R$ 3.445.732,36 com hospedagem da comitiva presidencial na Assembleia Geral da ONU, de 20 a 22 de setembro, e estimativa de R$ 17.272,85 para interpretação em inglês. Diárias e passagens ficaram para o Painel de Viagens.",
+   "source_url": "https://informabr.cgu.gov.br/busca/11758467",
+   "protocol": "09002.003016/2026-76"
   }
  ],
  "precedents": []
