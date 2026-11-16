@@ -200,7 +200,7 @@ def render(issue):
 <div class="eyebrow">{index + 1:02d} · {clean(item.get('topic', 'pedido respondido'))} · resposta em {clean(item['response_date'])}</div>
 <h2>{clean(item['headline'])}</h2><p class="summary">{clean(item['summary'])}</p>
 <p class="why"><strong>Por que agora</strong>{clean(item['why_now'])}</p>
-<p class="pitch"><strong>Pista para apuração</strong>{clean(item['pitch'])}</p>
+<p class="pitch"><strong>Próximos passos</strong>{clean(item['pitch'])}</p>
 <div class="links"><a class="btn" href="{clean(primary_url)}">{primary_label}</a>{original}{attachment}{context}<span class="protocol">Protocolo {clean(item['protocol'])}</span></div>
 </article>''')
     precedents = []
@@ -228,16 +228,16 @@ def render(issue):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../assets/style.css?v=4"><script src="../assets/site.js?v=1"></script></head><body>
 <nav class="top-nav"><div class="container nav-inner"><a class="brand" href="https://datafixers.org/index_pt.html" aria-label="Datafixers — página inicial"><img class="brand-logo" src="../assets/datafixers_logo.svg" alt="Data Fixers" width="183" height="40"></a><a class="project-name" href="../index.html">A <span class="hl">LAI</span> que pegou</a><div class="nav-links"><a href="../index.html#arquivo">Todas as edições</a><a class="hide-sm" href="../index.html#dicionario">Dicionário</a></div><button class="theme-btn" id="themeToggle" type="button" aria-label="Alternar tema claro e escuro" title="Alternar tema"><svg class="i-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="i-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button></div></nav>
-<header class="hero issue"><div class="container narrow"><div class="issue-meta"><span class="chip"><span class="dot"></span>Edição de {date_label}</span><span class="chip plain">{n_items} pista{'s' if n_items != 1 else ''}{f" · {len(issue['precedents'])} precedente" + ("s" if len(issue['precedents']) != 1 else "") if issue['precedents'] else ""}</span></div>
+<header class="hero issue"><div class="container narrow"><div class="issue-meta"><span class="chip"><span class="dot"></span>Edição de {date_label}</span><span class="chip plain">{n_items} achado{'s' if n_items != 1 else ''}{f" · {len(issue['precedents'])} precedente" + ("s" if len(issue['precedents']) != 1 else "") if issue['precedents'] else ""}</span></div>
 <h1>{clean(issue['headline'])}</h1><p class="lede">{clean(issue['deck'])}</p></div></header>
 <main class="container narrow">
 {''.join(cards)}{also_section}{precedent_section}
 <a class="back" href="../index.html#arquivo">← Todas as edições</a></main>
-<footer><div class="container narrow"><img class="brand-logo" src="../assets/datafixers_logo.svg" alt="Data Fixers" width="183" height="40"><p class="credit">A LAI que pegou é um projeto <a href="https://datafixers.org/index_pt.html">Datafixers</a>, coordenado por <a href="https://luizftoledo.github.io/">Luiz Fernando Toledo</a>.</p><p class="disclaimer">Curadoria de respostas públicas à Lei de Acesso à Informação. Cada achado aponta para o documento oficial. A seleção indica caminhos de apuração; confirmação adicional com órgãos e pessoas citadas cabe à reportagem.</p></div></footer></body></html>'''
+<footer><div class="container narrow"><img class="brand-logo" src="../assets/datafixers_logo.svg" alt="Data Fixers" width="183" height="40"><p class="credit">A LAI que pegou é um projeto <a href="https://datafixers.org/index_pt.html">Datafixers</a>, coordenado por <a href="https://luizftoledo.github.io/">Luiz Fernando Toledo</a>.</p><p class="disclaimer">Curadoria de respostas públicas à Lei de Acesso à Informação. Cada achado aponta para o documento oficial. A seleção indica caminhos para aprofundar o assunto; antes de usar a informação, vale confirmá-la com os órgãos e pessoas citados.</p></div></footer></body></html>'''
     lines = ["A LAI que pegou", f"Edição de {date_label}", "", issue["headline"], issue["deck"],
              "", "Edição na web: https://luizftoledo.github.io/a-lai-que-pegou/edicoes/" + issue["date"] + ".html", ""]
     for item in issue["items"]:
-        lines += [item["headline"], item["summary"], "Por que agora: " + item["why_now"], "Pista para apuração: " + item["pitch"], "Pedido e resposta: " + (item.get("transcript_url") or item["source_url"])]
+        lines += [item["headline"], item["summary"], "Por que agora: " + item["why_now"], "Próximos passos: " + item["pitch"], "Pedido e resposta: " + (item.get("transcript_url") or item["source_url"])]
         if item.get("transcript_url"):
             lines.append("Registro no InformaBR: " + item["source_url"])
         if item.get("context_url"):
