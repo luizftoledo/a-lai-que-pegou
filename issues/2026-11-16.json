@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-16",
+  "headline": "Governo prevê novos membros do conselho de defesa civil só para meados de 2027",
+  "deck": "Ministério confirma ausência de reuniões do conselho nacional desde dezembro de 2023 e informa prazo para recomposição. Outra resposta revela que quase metade das armas vinculadas a atiradores desportivos é de uso restrito.",
+  "items": [
+    {
+      "topic": "desastres · prevenção",
+      "headline": "Governo prevê novos membros do conselho de defesa civil só para meados de 2027",
+      "summary": "O Ministério da Integração e do Desenvolvimento Regional informou que não houve reuniões do Conselho Nacional de Proteção e Defesa Civil entre 13 de dezembro de 2023 e 20 de outubro de 2026. A pasta atribui a pausa à reestruturação normativa e administrativa e prevê indicar os novos membros apenas em meados de 2027. O conselho é uma instância consultiva da política de prevenção e resposta a desastres. A resposta também informa que o módulo federal para registrar planos municipais de contingência só deverá operar no segundo semestre de 2027. Isso não significa que os municípios não tenham planos nem que outras estruturas de resposta estejam paradas: a Casa Civil anunciou reunião da Sala de Situação do El Niño em 11 de novembro.",
+      "why_now": "A resposta de 12/11 apresenta um prazo de recomposição ainda não localizado na cobertura consultada. O TCU já alertara, em julho, para a inoperância do colegiado; a novidade é a previsão para 2027. Chega em uma semana de alertas de chuvas e de monitoramento federal do El Niño 2026/2027.",
+      "pitch": "Cobrar do ministério o cronograma e os responsáveis pela recomposição, por que os novos membros só são previstos para meados de 2027 e quais funções do conselho estão sendo desempenhadas por outras instâncias. Verificar com o TCU o cumprimento do alerta e com municípios como os planos de contingência são atualizados enquanto o módulo federal não funciona.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11858671",
+      "protocol": "59009.000873/2026-22",
+      "response_date": "2026-11-12",
+      "evidence": "No item 1: 'não ocorreram reuniões do Conselho Nacional de Proteção e Defesa Civil (Conpdec) no período apontado', com 'previsão de indicação dos novos membros para meados de 2027'. No item 5, o módulo de registro no S2iD 'está em desenvolvimento e só operará na versão 4.0, prevista para o segundo semestre de 2027'. O pedido delimita o período de 13/12/2023 a 20/10/2026.",
+      "attachment_review": "Pedido e resposta completos lidos no ZIP oficial de dados abertos de 2026; resposta com 8420 caracteres, abaixo do limite de corte. A API retornou 403. Os cinco links de anexos da resposta devolveram HTML do aplicativo (2.844 bytes), não os arquivos ZIP/PDF. Não foram usados fatos exclusivos desses anexos. Todos os fatos publicados constam do texto da resposta. O prazo de 2027 é previsão do órgão, não entrega concluída.",
+      "context_url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/novembro/governo-intensifica-monitoramento-e-faz-balanco-de-acoes-em-resposta-ao-el-nino/",
+      "relevancia": {
+        "pontos": {
+          "alcance": 3,
+          "efeito": 3,
+          "solidez": 2,
+          "atualidade": 3,
+          "clareza": 3
+        },
+        "motivos": {
+          "alcance": "Instância nacional da política que protege populações de áreas de risco em todo o país.",
+          "efeito": "Prevenção e coordenação de desastres afetam segurança, vidas e moradia.",
+          "solidez": "Confirmação expressa do ministério sobre ausência de reuniões e previsão de recomposição.",
+          "atualidade": "Alertas de chuva e reunião federal sobre El Niño ocorreram na semana de 11 a 15/11.",
+          "clareza": "O governo informa quando pretende indicar os novos membros do conselho."
+        },
+        "cobertura": "coberto_sem_o_dado",
+        "verificado_por": "dados_abertos"
+      },
+      "open_data_url": "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2026.zip"
+    },
+    {
+      "topic": "segurança · armas",
+      "headline": "Quase metade das armas de atiradores desportivos é de uso restrito, informa a PF",
+      "summary": "A Polícia Federal informou ter identificado 1.298.052 armas vinculadas à atividade de atirador desportivo: 622.454 de uso restrito, equivalentes a 47,95%, e 675.598 de uso permitido. São armas cadastradas, não pessoas nem armas apreendidas, e a classificação de uso restrito não significa posse ilegal. A mesma resposta registra 1.057.738 certificados de colecionadores, atiradores e caçadores emitidos ou renovados até 2025 na base atual. A PF ressalva que esse estoque não permite reconstruir a situação exata em 31/12/2025; portanto, os números não devem ser apresentados como retrato daquela data ou como série de crescimento.",
+      "why_now": "A resposta é de 9/11. Na semana seguinte, a PF divulgou novas ações contra obtenção irregular de registros, inclusive em 10 e 11/11, e passou a oferecer o DPA-BASE para aprimorar fiscalização. As buscas pelo total e pelo percentual não localizaram cobertura com esses mesmos números; o dado dimensiona o acervo a fiscalizar, sem associá-lo às irregularidades investigadas.",
+      "pitch": "Pedir data de extração, critérios de classificação e distribuição por estado, calibre e situação do registro das 622.454 armas. Verificar quantas precisam de renovação ou adequação às regras vigentes e como a PF cruza esse estoque com a fiscalização. Não inferir irregularidade pela categoria de uso restrito.",
+      "source_url": "https://informabr.cgu.gov.br/busca/11848032",
+      "protocol": "08198.043356/2026-27",
+      "response_date": "2026-11-09",
+      "evidence": "A PF registra: 'Foram identificadas 1.298.052 armas de fogo vinculadas à atividade de atirador desportivo', sendo 'Armas de uso permitido: 675.598 (52,05%) e Armas de uso restrito: 622.454 (47,95%)'. Sobre certificados, ressalva que a base SIGMA 'apresenta o estoque cadastral atual, não permitindo identificar com precisão a situação dos CRs em 31/12/2025'.",
+      "attachment_review": "Pedido e resposta completos lidos nos dados abertos oficiais. A resposta tem 2202 caracteres, sem corte. Não há anexos públicos associados ao pedido na tabela PedidosLinkArquivo. Conferida a soma: 675.598 + 622.454 = 1.298.052; 622.454 / 1.298.052 = 47,95%, por arredondamento.",
+      "context_url": "https://www.gov.br/pf/pt-br/assuntos/noticias/2026/11/pf-deflagra-nova-fase-de-operacao-que-investiga-registros-irregulares-de-cac",
+      "relevancia": {
+        "pontos": {
+          "alcance": 2,
+          "efeito": 3,
+          "solidez": 3,
+          "atualidade": 3,
+          "clareza": 3
+        },
+        "motivos": {
+          "alcance": "Acervo nacional de quase 1,3 milhão de armas de atiradores desportivos.",
+          "efeito": "Controle de armas tem efeito direto sobre a segurança pública.",
+          "solidez": "A PF entregou total, divisão e percentuais verificáveis no texto integral.",
+          "atualidade": "Operações e novos instrumentos de fiscalização de registros foram divulgados nesta semana.",
+          "clareza": "Quase metade do acervo informado é de uso restrito, sem equivaler a ilegalidade."
+        },
+        "cobertura": "nao_coberto",
+        "verificado_por": "dados_abertos"
+      },
+      "open_data_url": "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2026.zip"
+    }
+  ],
+  "precedents": [],
+  "editorial_notes": {
+    "source": "ZIP anual oficial de 2026 baixado nesta rodada.",
+    "selection": "Comparadas pistas de defesa civil, armas, BNDES, crédito, apostas, hemoderivados, datacenters e Correios. Descartadas respostas rotineiras, negativas sem excepcionalidade e achados dependentes de anexos inacessíveis.",
+    "precedents": "24 recursos favoráveis desde 26/10 triados. Sem parecer integral qualificado e verificado, seção omitida.",
+    "coverage_queries": [
+      "Conpdec meados de 2027",
+      "Conselho Nacional de Proteção e Defesa Civil 2027",
+      "622.454 armas",
+      "47,95% armas",
+      "1.298.052 armas"
+    ]
+  }
+}
