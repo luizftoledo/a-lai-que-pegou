@@ -1,39 +1,51 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A LAI que pegou</title>
-<meta name="description" content="Newsletter semanal de pistas para jornalistas: o que as respostas à Lei de Acesso à Informação revelam.">
-<meta property="og:title" content="A LAI que pegou"><meta property="og:description" content="O que as respostas à LAI revelam. Pistas semanais para jornalistas."><meta property="og:image" content="https://luizftoledo.github.io/a-lai-que-pegou/assets/capa-lai.gif?v=4">
-<meta name="theme-color" content="#0d2c27">
+<title>A LAI que pegou · Datafixers</title>
+<meta name="description" content="Newsletter semanal de pistas para jornalistas: o que as respostas à Lei de Acesso à Informação revelam. Um projeto Datafixers.">
+<meta property="og:title" content="A LAI que pegou · Datafixers"><meta property="og:description" content="O que as respostas à LAI revelam. Pistas semanais para jornalistas."><meta property="og:image" content="https://luizftoledo.github.io/a-lai-que-pegou/assets/capa-lai.gif?v=4"><meta property="og:site_name" content="Data Fixers">
+<meta name="theme-color" content="#fbfbfa">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/style.css?v=4">
+<script src="assets/site.js?v=1"></script>
 </head><body>
-<div class="topbar"><div class="container"><a class="logo" href="./"><span class="logo-mark" aria-hidden="true"></span>A LAI que pegou</a>
-<nav class="nav"><a href="#arquivo">Edições</a><a class="hide-sm" href="#como">Como fazemos</a><a href="#dicionario">Dicionário</a></nav></div></div>
+<nav class="top-nav"><div class="container nav-inner">
+<a class="brand" href="https://datafixers.org/index_pt.html" aria-label="Datafixers — página inicial"><img class="brand-logo" src="assets/datafixers_logo.svg" alt="Data Fixers" width="183" height="40"></a>
+<a class="project-name" href="./">A <span class="hl">LAI</span> que pegou</a>
+<div class="nav-links"><a href="#arquivo">Edições</a><a class="hide-sm" href="#como">Como fazemos</a><a href="#dicionario">Dicionário</a></div>
+<button class="theme-btn" id="themeToggle" type="button" aria-label="Alternar tema claro e escuro" title="Alternar tema"><svg class="i-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="i-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+</div></nav>
 
 <header class="hero"><div class="container"><div class="hero-grid">
-<div><span class="chip"><span class="dot"></span>Newsletter semanal · pistas para jornalistas</span>
-<h1>A LAI que <span class="mark">pegou</span></h1>
-<p class="subtitle">O que as respostas à LAI revelam</p>
-<p class="lede">Desde 2012, a <a class="term" href="#lai">Lei de Acesso à Informação</a> já recebeu mais de 1 milhão de pedidos só no governo federal. Para todos os efeitos, é uma lei que pegou. Cada resposta pode guardar dados, documentos e decisões que ainda não viraram notícia, mas quase ninguém tem tempo de ler tudo. Toda semana, a gente garimpa os pedidos respondidos e os <a class="term" href="#precedente">precedentes</a> que valem uma apuração e entrega o que importa.</p></div>
+<div>
+<div class="kicker">Um projeto Datafixers · Newsletter semanal</div>
+<h1>A <span class="hl">LAI</span> que pegou</h1>
+<p class="subtitle">O que as respostas à Lei de Acesso revelam</p>
+<p class="lede">Desde 2012, a <a class="term" href="#lai">Lei de Acesso à Informação</a> já recebeu mais de 1 milhão de pedidos só no governo federal. Para todos os efeitos, é uma lei que pegou. Cada resposta pode guardar dados, documentos e decisões que ainda não viraram notícia, mas quase ninguém tem tempo de ler tudo. Toda semana, a gente garimpa os pedidos respondidos e os <a class="term" href="#precedente">precedentes</a> que valem uma apuração e entrega o que importa.</p>
+<div class="hero-actions"><a class="btn-primary" id="cta-latest" href="#arquivo">Ler a edição mais recente</a><a class="btn-secondary" href="#arquivo">Ver todas as edições</a></div>
 </div>
-<figure class="cover"><img src="assets/capa-lai.gif?v=4" width="768" height="336" alt="Ilustração animada em pixel art: um jornalista envia pedidos de acesso à informação pela internet à Controladoria-Geral da União; as respostas voltam para ele e viram reportagens na TV, no jornal e no celular."></figure>
-</div></header>
+<figure class="hero-mark"><img src="assets/robo-lai.svg" width="360" height="220" alt="Robô do Datafixers examinando documentos públicos com uma lupa"><figcaption class="kicker">Pistas para jornalistas, toda segunda-feira</figcaption></figure>
+</div></div></header>
 
 <main class="container">
 <div id="notice" class="notice" hidden></div>
 
 <section class="section" id="arquivo">
-<div class="section-head"><div><div class="kicker">Arquivo</div><h2>Edições</h2></div></div>
-<div id="edicoes" class="editions" aria-live="polite"><p class="loading">Carregando edições…</p></div>
+<div class="section-head"><div><div class="kicker">Arquivo</div><h2>Edições</h2></div><span class="kicker" id="count"></span></div>
+<div id="latest" aria-live="polite"><p class="loading">Carregando edições…</p></div>
+<ol id="edicoes" class="archive"></ol>
+</section>
+
+<section class="cover-band" aria-label="Como a LAI vira notícia">
+<figure class="cover"><img src="assets/capa-lai.gif?v=4" width="768" height="336" alt="Ilustração animada em pixel art: um jornalista envia pedidos de acesso à informação pela internet à Controladoria-Geral da União; as respostas voltam para ele e viram reportagens na TV, no jornal e no celular."></figure>
+<div class="cover-caption"><span class="kicker">Do pedido à reportagem</span><p>Um pedido sai pela internet, a CGU e os órgãos respondem, e a resposta vira notícia na TV, no jornal e no celular. É esse caminho que a newsletter encurta.</p></div>
 </section>
 
 <section class="section" id="como">
 <div class="section-head"><div><div class="kicker">Método</div><h2>Como fazemos</h2></div></div>
 <div class="steps">
-<div class="step"><div class="n">1</div><h3>Consultamos as bases</h3><p>Toda semana, buscamos pedidos respondidos no <a class="term" href="#buscalai">BuscaLAI</a>, na <a class="term" href="#busca-precedentes">Busca de Precedentes</a> da <a class="term" href="#cgu">CGU</a> e nos <a class="term" href="#dados-abertos">dados abertos da LAI</a>.</p></div>
-<div class="step"><div class="n">2</div><h3>Lemos a íntegra</h3><p>Lemos a resposta oficial e os anexos relevantes antes de selecionar uma história.</p></div>
-<div class="step"><div class="n">3</div><h3>Entregamos a pista</h3><p>Cada item traz a íntegra com o número de <a class="term" href="#protocolo">protocolo</a>, uma explicação do interesse público e uma pista concreta para a próxima apuração.</p></div>
+<div class="step"><div class="n">01</div><h3>Consultamos as bases</h3><p>Toda semana, buscamos pedidos respondidos no <a class="term" href="#buscalai">BuscaLAI</a>, na <a class="term" href="#busca-precedentes">Busca de Precedentes</a> da <a class="term" href="#cgu">CGU</a> e nos <a class="term" href="#dados-abertos">dados abertos da LAI</a>.</p></div>
+<div class="step"><div class="n">02</div><h3>Lemos a íntegra</h3><p>Lemos a resposta oficial e os anexos relevantes antes de selecionar uma história.</p></div>
+<div class="step"><div class="n">03</div><h3>Entregamos a pista</h3><p>Cada item traz a íntegra com o número de <a class="term" href="#protocolo">protocolo</a>, uma explicação do interesse público e uma pista concreta para a próxima apuração.</p></div>
 </div>
 </section>
 
@@ -44,26 +56,32 @@
 </main>
 
 <footer><div class="container">
-<span>Projeto experimental de <a href="https://luizftoledo.github.io/">Luiz Fernando Toledo</a></span>
-<div class="sources"><a href="https://buscalai.cgu.gov.br/">BuscaLAI</a><a href="https://www.gov.br/cgu/pt-br/acesso-a-informacao/dados-abertos/arquivos/busca-de-precedentes">Busca Precedentes</a><a href="https://falabr.cgu.gov.br/web/dadosabertoslai">Dados abertos LAI</a></div>
+<img class="brand-logo" src="assets/datafixers_logo.svg" alt="Data Fixers" width="183" height="40">
+<p class="credit">A LAI que pegou é um projeto <a href="https://datafixers.org/index_pt.html">Datafixers</a>, coordenado por <a href="https://luizftoledo.github.io/">Luiz Fernando Toledo</a>.</p>
+<div class="sources"><a href="https://buscalai.cgu.gov.br/">BuscaLAI</a><a href="https://www.gov.br/cgu/pt-br/acesso-a-informacao/dados-abertos/arquivos/busca-de-precedentes">Busca de Precedentes</a><a href="https://falabr.cgu.gov.br/web/dadosabertoslai">Dados abertos LAI</a><a href="https://datafixers.org/index_pt.html">datafixers.org</a></div>
 </div></footer>
 <script>
 function fmt(d){const [y,m,dd]=d.split('-');return `${dd}/${m}/${y}`}
+function el(t,c,txt){const e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e}
 fetch('status.json?'+Date.now()).then(r=>{if(!r.ok)throw Error('status indisponível');return r.json()}).then(s=>{
  const entries=[...(s.edicoes||[])].sort((a,b)=>b.data.localeCompare(a.data));
- const box=document.getElementById('edicoes');box.textContent='';
- if(!entries.length){box.textContent='Nenhuma edição publicada.';return}
- entries.forEach((e,i)=>{
-  const c=document.createElement('article');c.className='edition'+(i===0?' latest':'');
-  const meta=document.createElement('div');meta.className='meta';
-  const n=document.createElement('span');n.className='num';n.textContent='Nº '+String(e.numero).padStart(2,'0');
-  const d=document.createElement('span');d.textContent=fmt(e.data);meta.append(n,d);
-  if(i===0){const b=document.createElement('span');b.className='badge-new';b.textContent='Mais recente';meta.append(b)}
-  const h=document.createElement('h3');const a=document.createElement('a');a.href=e.file;a.textContent=e.titulo;h.append(a);
-  const p=document.createElement('p');p.textContent=e.em_destaque||'';
-  const go=document.createElement('span');go.className='go';go.textContent='Ler edição →';
-  c.append(meta,h,p,go);box.append(c)});
- const last=entries[0].data;const age=(Date.now()-new Date(last+'T12:00:00Z'))/86400000;
- if(age>8){const n=document.getElementById('notice');n.hidden=false;const why=(s.last_run_status&&s.last_run_status!=='success'&&s.last_run_date)?` Rodada de ${fmt(s.last_run_date)}: ${s.last_run_public_note||'sem edição'}`:'';n.textContent=`Última edição publicada em ${fmt(last)}.${why} As edições anteriores permanecem no arquivo.`}
-}).catch(()=>{document.getElementById('edicoes').textContent='Não foi possível carregar o arquivo agora.'});
+ const top=document.getElementById('latest'),list=document.getElementById('edicoes');top.textContent='';
+ if(!entries.length){top.textContent='Nenhuma edição publicada.';return}
+ document.getElementById('count').textContent=entries.length+' edições';
+ const [first,...rest]=entries;
+ document.getElementById('cta-latest').href=first.file;
+ const f=el('article','latest'),meta=el('div','meta');
+ meta.append(el('span','num','Nº '+String(first.numero).padStart(2,'0')),el('span','kicker',fmt(first.data)),el('span','badge-new','Mais recente'));
+ const body=el('div'),h=el('h3'),a=el('a',null,first.titulo);a.href=first.file;h.append(a);
+ const go=el('a','btn-primary','Ler edição');go.href=first.file;
+ body.append(h,el('p',null,first.em_destaque||''),go);f.append(meta,body);top.append(f);
+ rest.forEach(e=>{
+  const li=el('li'),m=el('div','meta kicker');
+  m.append(el('span','n','Nº '+String(e.numero).padStart(2,'0')),el('span',null,fmt(e.data)));
+  const b=el('div'),h3=el('h3'),l=el('a',null,e.titulo);l.href=e.file;h3.append(l);b.append(h3);
+  if(e.em_destaque)b.append(el('p',null,e.em_destaque));
+  li.append(m,b,el('span','go','Ler →'));list.append(li)});
+ const age=(Date.now()-new Date(first.data+'T12:00:00Z'))/86400000;
+ if(age>8){const n=document.getElementById('notice');n.hidden=false;const why=(s.last_run_status&&s.last_run_status!=='success'&&s.last_run_date)?` Rodada de ${fmt(s.last_run_date)}: ${s.last_run_public_note||'sem edição'}`:'';n.textContent=`Última edição publicada em ${fmt(first.data)}.${why} As edições anteriores permanecem no arquivo.`}
+}).catch(()=>{document.getElementById('latest').textContent='Não foi possível carregar o arquivo agora.'});
 </script></body></html>
