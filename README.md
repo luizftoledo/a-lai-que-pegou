@@ -61,3 +61,10 @@ Uma rodada sem edição não altera edições publicadas.
 ## Frequência
 
 Revisão semanal às segundas-feiras, 8h (Europe/London).
+
+## Exigências editoriais atualizadas em 16/11/2026
+
+- Publicar de cinco a seis achados, todos aprovados pelos critérios de relevância. Ampliar a pesquisa até atingir o mínimo. Se não houver cinco qualificados, registrar a insuficiência, sem completar com material fraco.
+- Gerar cópias verificáveis dos campos públicos de pedido e resposta com `python3 scripts/arquivar_fontes.py issues/AAAA-MM-DD.json .cache/Arquivos_csv_ANO.zip` antes de publicar. Os botões principais devem abrir essas cópias, identificadas como extraídas da base da CGU, mantendo o registro oficial, o download da base e o JSON de origem. Não apresentar essas páginas como documentos emitidos pelo governo nem como cópia de anexos.
+- Confirmar conteúdo dos cinco links ao vivo. HTTP 200 com a tela vazia do aplicativo não confirma acesso à resposta.
+

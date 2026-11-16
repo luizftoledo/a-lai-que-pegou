@@ -100,3 +100,8 @@ perda de objeto; a leitura da decisão integral continua obrigatória.
 ```
 
 A pontuação fica no JSON da edição e não aparece na página.
+
+## Atualização do editor em 16/11/2026
+
+O mínimo de publicação passa a ser cinco achados qualificados e o máximo permanece seis. A pontuação e os demais critérios continuam obrigatórios para cada item. A exigência de quantidade não autoriza material fraco; se a pesquisa ampliada não atingir cinco, registrar a insuficiência e preservar a última edição válida. Os botões de leitura devem ter cópia verificável do texto público da CGU, com origem identificada e links oficiais, sem depender exclusivamente do InformaBR.
+

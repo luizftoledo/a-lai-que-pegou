@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-11-16T08:18:50.637451+00:00",
+  "last_run": "2026-11-16T08:37:25.985038+00:00",
   "last_run_status": "success",
-  "last_run_note": "2 pedidos e 0 precedentes verificados",
+  "last_run_note": "5 pedidos e 0 precedentes verificados",
   "schedule": "semanal, às segundas 08:00 Europe/London, desde 05/10/2026",
   "edicoes": [
     {
@@ -117,8 +117,8 @@
       "data": "2026-11-16",
       "file": "edicoes/2026-11-16.html",
       "titulo": "Governo prevê novos membros do conselho de defesa civil só para meados de 2027",
-      "em_destaque": "Ministério confirma ausência de reuniões do conselho nacional desde dezembro de 2023 e informa prazo para recomposição. Outra resposta revela que quase metade das armas vinculadas a atiradores desportivos é de uso restrito.",
-      "e_mais": 1,
+      "em_destaque": "Cinco achados sobre defesa civil, armas, crédito a motoristas, subsídios a combustíveis e sigilo de água e energia de data centers. Pedido e resposta completos estão disponíveis em cópias verificáveis da base pública da CGU.",
+      "e_mais": 4,
       "precedentes": 0
     }
   ]

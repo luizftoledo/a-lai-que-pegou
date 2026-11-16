@@ -105,8 +105,9 @@ def validate(issue):
         if not str(issue.get(field, "")).strip():
             errors.append(f"Falta `{field}` na edição.")
     items = issue.get("items") or []
-    if not 1 <= len(items) <= 6:
-        errors.append("A edição precisa de 1 a 6 itens verificados.")
+    minimo = 5 if issue["date"] >= "2026-11-16" else 1
+    if not minimo <= len(items) <= 6:
+        errors.append(f"A edição precisa de {minimo} a 6 itens verificados.")
     if not isinstance(issue.get("precedents"), list):
         errors.append("`precedents` deve ser uma lista, mesmo vazia.")
     if errors:
@@ -129,6 +130,14 @@ def validate(issue):
             continue
         if not official(item["source_url"], ("gov.br",)):
             errors.append(f"{where}: `source_url` deve ser https em domínio gov.br.")
+        if issue["date"] >= "2026-11-16":
+            expected = "https://luizftoledo.github.io/a-lai-que-pegou/fontes/"
+            transcript = item.get("transcript_url", "")
+            suffix = transcript.removeprefix(expected)
+            if not transcript.startswith(expected) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}/\d+\.html", suffix):
+                errors.append(f"{where}: falta link válido da cópia verificável de pedido e resposta.")
+            elif not (DOCS / "fontes" / suffix).is_file():
+                errors.append(f"{where}: transcrição ainda não foi gerada.")
         for field in ("attachment_url", "context_url"):
             if item.get(field) and not official(item[field], ("gov.br",)):
                 errors.append(f"{where}: `{field}` deve ser https em domínio gov.br.")
@@ -180,6 +189,9 @@ def render(issue):
     date_label = date.fromisoformat(issue["date"]).strftime("%d/%m/%Y")
     cards = []
     for index, item in enumerate(issue["items"]):
+        primary_url = item.get("transcript_url") or item["source_url"]
+        primary_label = "Ler pedido e resposta (cópia dos dados abertos) →" if item.get("transcript_url") else "Ler pedido e resposta na íntegra →"
+        original = (f'<a class="btn ghost" href="{clean(item["source_url"])}">Registro no InformaBR</a>' if item.get("transcript_url") else "")
         attachment = (f'<a class="btn ghost" href="{clean(item["attachment_url"])}">Anexo examinado</a>'
                       if item.get("attachment_url") else "")
         context = (f'<a class="btn ghost" href="{clean(item["context_url"])}">Contexto oficial</a>'
@@ -189,7 +201,7 @@ def render(issue):
 <h2>{clean(item['headline'])}</h2><p class="summary">{clean(item['summary'])}</p>
 <p class="why"><strong>Por que agora</strong>{clean(item['why_now'])}</p>
 <p class="pitch"><strong>Pista para apuração</strong>{clean(item['pitch'])}</p>
-<div class="links"><a class="btn" href="{clean(item['source_url'])}">Ler pedido e resposta na íntegra →</a>{attachment}{context}<span class="protocol">Protocolo {clean(item['protocol'])}</span></div>
+<div class="links"><a class="btn" href="{clean(primary_url)}">{primary_label}</a>{original}{attachment}{context}<span class="protocol">Protocolo {clean(item['protocol'])}</span></div>
 </article>''')
     precedents = []
     for p in issue["precedents"]:
@@ -227,7 +239,9 @@ def render(issue):
     lines = ["A LAI que pegou", f"Edição de {date_label}", "", issue["headline"], issue["deck"],
              "", "Edição na web: https://luizftoledo.github.io/a-lai-que-pegou/edicoes/" + issue["date"] + ".html", ""]
     for item in issue["items"]:
-        lines += [item["headline"], item["summary"], "Por que agora: " + item["why_now"], "Pista para apuração: " + item["pitch"], "Íntegra: " + item["source_url"]]
+        lines += [item["headline"], item["summary"], "Por que agora: " + item["why_now"], "Pista para apuração: " + item["pitch"], "Pedido e resposta: " + (item.get("transcript_url") or item["source_url"])]
+        if item.get("transcript_url"):
+            lines.append("Registro no InformaBR: " + item["source_url"])
         if item.get("context_url"):
             lines.append("Contexto oficial: " + item["context_url"])
         lines.append("")
@@ -282,3 +296,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
