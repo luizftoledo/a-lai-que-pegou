@@ -183,5 +183,6 @@
       "1.298.052 armas"
     ],
     "revision": "Edição ampliada para cinco achados a pedido do editor. Botões principais abrem transcrições dos textos integrais extraídos da base da CGU, com origem e JSON. O envio original de dois itens não foi repetido."
-  }
+  },
+  "precedents_note": "Nesta edição, nenhum precedente foi validado por leitura do parecer integral. Foram triados 24 recursos favoráveis desde 26/10; os documentos integrais testados, referentes aos pedidos 48003.017190/2026-48 (Eletronuclear) e 23546.092085/2026-20 (Universidade Federal do Delta do Parnaíba), retornaram HTTP 403. As decisões resumidas não foram usadas como substituto dos pareceres. Não há confirmação de entrega registrada nesta curadoria."
 }

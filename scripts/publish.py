@@ -200,7 +200,7 @@ def render(issue):
 <div class="eyebrow">{index + 1:02d} · {clean(item.get('topic', 'pedido respondido'))} · resposta em {clean(item['response_date'])}</div>
 <h2>{clean(item['headline'])}</h2><p class="summary">{clean(item['summary'])}</p>
 <p class="why"><strong>Por que agora</strong>{clean(item['why_now'])}</p>
-<p class="pitch"><strong>Próximos passos</strong>{clean(item['pitch'])}</p>
+<p class="pitch"><strong>Pista para apuração</strong>{clean(item['pitch'])}</p>
 <div class="links"><a class="btn" href="{clean(primary_url)}">{primary_label}</a>{original}{attachment}{context}<span class="protocol">Protocolo {clean(item['protocol'])}</span></div>
 </article>''')
     precedents = []
@@ -221,23 +221,25 @@ def render(issue):
         f'<li><a href="{clean(x["source_url"])}">{clean(x["headline"])}</a>. {clean(x["summary"])} <span class="protocol">Protocolo {clean(x["protocol"])}</span></li>'
         for x in also) + '</ul></section>') if also else ''
     n_items = len(issue['items'])
-    precedent_section = ('''<section class="section"><div class="kicker">Para o próximo pedido</div><h2>Precedentes que ajudam em outros pedidos</h2><p class="precedents-intro">Decisões em recurso que determinaram acesso a informações de interesse público antes negadas. A situação da entrega aparece em cada caso.</p>''' + ''.join(precedents) + '</section>') if precedents else ''
+    precedent_section = ('''<section class="section"><div class="kicker">Para o próximo pedido</div><h2>Precedentes que ajudam em outros pedidos</h2><p class="precedents-intro">Decisões em recurso que determinaram acesso a informações de interesse público antes negadas. A situação da entrega aparece em cada caso.</p>''' + ''.join(precedents) + '</section>') if precedents else ('<section class="section"><div class="kicker">Para o próximo pedido</div><h2>Precedentes que ajudam em outros pedidos</h2><p>' + clean(issue.get('precedents_note', 'Nenhum precedente foi validado nesta edição após a revisão das fontes.')) + '</p></section>')
     page = f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{clean(issue['headline'])} · A LAI que pegou</title>
-<meta name="description" content="{clean(issue['deck'])}"><meta property="og:title" content="{clean(issue['headline'])}"><meta property="og:image" content="https://luizftoledo.github.io/a-lai-que-pegou/assets/capa-lai.gif"><meta name="theme-color" content="#fbfbfa">
+<meta name="description" content="{clean(issue['deck'])}"><meta property="og:title" content="{clean(issue['headline'])}"><meta property="og:image" content="https://luizftoledo.github.io/a-lai-que-pegou/assets/capa-lai.gif"><meta name="theme-color" content="#0d2c27">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="../assets/style.css?v=4"><script src="../assets/site.js?v=1"></script></head><body>
-<nav class="top-nav"><div class="container nav-inner"><a class="brand" href="https://datafixers.org/index_pt.html" aria-label="Datafixers — página inicial"><img class="brand-logo" src="../assets/datafixers_logo.svg" alt="Data Fixers" width="183" height="40"></a><a class="project-name" href="../index.html">A <span class="hl">LAI</span> que pegou</a><div class="nav-links"><a href="../index.html#arquivo">Todas as edições</a><a class="hide-sm" href="../index.html#dicionario">Dicionário</a></div><button class="theme-btn" id="themeToggle" type="button" aria-label="Alternar tema claro e escuro" title="Alternar tema"><svg class="i-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="i-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button></div></nav>
-<header class="hero issue"><div class="container narrow"><div class="issue-meta"><span class="chip"><span class="dot"></span>Edição de {date_label}</span><span class="chip plain">{n_items} informaç{'ões' if n_items != 1 else 'ão'}{f" · {len(issue['precedents'])} precedente" + ("s" if len(issue['precedents']) != 1 else "") if issue['precedents'] else ""}</span></div>
-<h1>{clean(issue['headline'])}</h1><p class="lede">{clean(issue['deck'])}</p></div></header>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=3"></head><body>
+<div class="topbar"><div class="container"><a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true"></span>A LAI que pegou</a><nav class="nav"><a href="../index.html#arquivo">Todas as edições</a></nav></div></div>
+<header class="hero issue"><div class="container narrow"><div class="issue-meta"><span class="chip"><span class="dot"></span>Edição de {date_label}</span><span class="chip plain">{n_items} pista{'s' if n_items != 1 else ''}{f" · {len(issue['precedents'])} precedente" + ("s" if len(issue['precedents']) != 1 else "") if issue['precedents'] else ""}</span></div>
+<h1>{clean(issue['headline'])}</h1><p class="lede">{clean(issue['deck'])}</p>
+<figure class="cover"><img src="../assets/capa-lai.gif?v=4" width="768" height="336" alt="Ilustração animada em pixel art: um jornalista envia pedidos de acesso à informação pela internet à Controladoria-Geral da União; as respostas voltam para ele e viram reportagens na TV, no jornal e no celular."></figure></div></header>
 <main class="container narrow">
 {''.join(cards)}{also_section}{precedent_section}
 <a class="back" href="../index.html#arquivo">← Todas as edições</a></main>
-<footer><div class="container narrow"><img class="brand-logo" src="../assets/datafixers_logo.svg" alt="Data Fixers" width="183" height="40"><p class="credit">A LAI que pegou é um projeto <a href="https://datafixers.org/index_pt.html">Datafixers</a>, coordenado por <a href="https://luizftoledo.github.io/">Luiz Fernando Toledo</a>.</p><p class="disclaimer">Curadoria de respostas públicas à Lei de Acesso à Informação. Cada informação aponta para o documento oficial. A seleção indica caminhos para aprofundar o assunto; antes de usar a informação, vale confirmá-la com os órgãos e pessoas citados.</p></div></footer></body></html>'''
+<footer><div class="container narrow"><span>A LAI que pegou · projeto de <a href="https://luizftoledo.github.io/">Luiz Fernando Toledo</a></span><p class="disclaimer">Curadoria de respostas públicas à Lei de Acesso à Informação. Cada achado aponta para o documento oficial. A seleção indica caminhos de apuração; confirmação adicional com órgãos e pessoas citadas cabe à reportagem.</p></div></footer></body></html>'''
     lines = ["A LAI que pegou", f"Edição de {date_label}", "", issue["headline"], issue["deck"],
              "", "Edição na web: https://luizftoledo.github.io/a-lai-que-pegou/edicoes/" + issue["date"] + ".html", ""]
     for item in issue["items"]:
-        lines += [item["headline"], item["summary"], "Por que agora: " + item["why_now"], "Próximos passos: " + item["pitch"], "Pedido e resposta: " + (item.get("transcript_url") or item["source_url"])]
+        lines += [item["headline"], item["summary"], "Por que agora: " + item["why_now"], "Pista para apuração: " + item["pitch"], "Pedido e resposta: " + (item.get("transcript_url") or item["source_url"])]
         if item.get("transcript_url"):
             lines.append("Registro no InformaBR: " + item["source_url"])
         if item.get("context_url"):
