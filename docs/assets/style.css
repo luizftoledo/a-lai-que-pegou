@@ -199,3 +199,4 @@ main > .section > h2{padding-bottom:1.25rem;border-bottom:1px solid var(--rule);
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 @media(max-width:600px){.hero-mark{display:none}}
+.how-cover{margin:2rem 0 0}
