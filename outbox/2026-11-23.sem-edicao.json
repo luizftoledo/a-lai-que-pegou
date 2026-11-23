@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-23",
+  "status": "achados_insuficientes",
+  "published": false,
+  "email_sent": false,
+  "carousel_status": "não produzido: geração condicionada à publicação de edição validada",
+  "source": {
+    "url": "https://dadosabertos-download.cgu.gov.br/FalaBR/Arquivos_FalaBR_Filtrado/Arquivos_csv_2026.zip",
+    "last_modified": "2026-11-22T01:30:25Z",
+    "latest_response": "2026-11-21",
+    "window": "2026-11-02 a 2026-11-23",
+    "responses_in_window": 5165,
+    "after_filters": 4626,
+    "candidates_saved": 1500,
+    "cgu_cmri_favorable_resources": 60
+  },
+  "method": "Triagem mecânica e leitura editorial direcionada de pedidos e respostas de temas distintos; não equivale à leitura integral dos 5.165 registros. Busca no noticiário e revisão dos metadados de anexos. A base anual e o índice aberto de precedentes foram baixados.",
+  "leads": [
+    {
+      "protocol": "18800.170756/2026-11",
+      "url": "https://informabr.cgu.gov.br/busca/11945194",
+      "finding": "Fazenda informa 37.360 domínios encaminhados à Anatel para bloqueio em outubro, contra 16.529 em setembro de 2026. Não é contagem comprovada de bloqueios executados nem de operadores únicos.",
+      "evidence": "Out/2026 37.360; Set/2026 16.529; resposta em 17/11/2026.",
+      "review": "Texto da resposta lido. Anexo dados_sic.xlsx retornou HTML de aplicação, não planilha. Números de domínios constam da resposta; dados financeiros do anexo não usados."
+    },
+    {
+      "protocol": "01217.008420/2026-17",
+      "url": "https://informabr.cgu.gov.br/busca/11971976",
+      "finding": "Cemaden informa uma de seis estações geotécnicas operacional em Angra dos Reis, 25 de 28 pluviométricas operacionais e uma de três PCDs operacional em Ilha Grande. Não significa ausência de todos os meios de monitoramento ou prova de falha na emissão de alertas.",
+      "evidence": "Resposta de 17/11/2026; texto registra manutenção em maio de 2026, quando todas ficaram operacionais, e limitações de cobertura celular em alguns locais da ilha.",
+      "review": "Texto lido. Anexo XLSX retornou HTML, não planilha. O pedido contém nome e contato do solicitante: devem ser suprimidos em qualquer futura cópia pública, com indicação da supressão."
+    },
+    {
+      "protocol": "52016.009591/2026-52",
+      "url": "https://informabr.cgu.gov.br/busca/11970219",
+      "finding": "MDIC detalha modelo da projeção Mercosul-UE: referência GTAP 2017, pleno emprego e mobilidade de fatores; efeito de 0,34% no PIB medido em 2044 relativamente ao cenário sem acordo, não taxa anual de crescimento.",
+      "evidence": "Resposta de 18/11/2026 lida integralmente, sem anexo listado.",
+      "review": "Pista metodológica. Não permite concluir que o modelo esteja errado; requer comparação com a documentação já divulgada e avaliação especializada."
+    }
+  ],
+  "exclusions": [
+    {
+      "protocol": "18840.001956/2026-40",
+      "reason": "Resposta traz 157 contratos do Fies Empreendedor e R$ 10,57 milhões até setembro, mas o detalhamento do pedido na base termina cortado em 4.000 caracteres. API indisponível; não é possível entregar a cópia integral exigida. Salutation contém identificação pessoal da solicitante, que não deve ser republicada."
+    },
+    {
+      "protocol": "00105.005274/2026-64",
+      "reason": "68 adesões municipais e 11 estaduais até 28/10/2026; tema da baixa adesão já noticiado. Sem ler a lista anexa não foi demonstrado recorte novo suficiente para completar a edição. R$ 2,7 bilhões/46% referem-se a relatório de maio, não execução atual."
+    },
+    {
+      "protocol": "59009.000977/2026-37",
+      "reason": "Resposta registra alerta moderado de 06/11 por SMS/WhatsApp e ausência de cell broadcast para aquela ocorrência. Isso por si só não prova falha, atraso ou descumprimento; houve notícia de cell broadcast em 05/11, data distinta. Não converter ausência de acionamento em denúncia sem critério técnico."
+    },
+    {
+      "protocol": "01217.008545/2026-39",
+      "reason": "Anatel informa inexistência de classificação específica de SIM swap e busca textual pelos termos. Anexo com quantitativos não pôde ser lido. Lacuna metodológica, sem dado de incidência verificável, insuficiente para completar a edição."
+    },
+    {
+      "protocol": "48023.002736/2026-28",
+      "reason": "Petrobras informa que números agregados de descomissionamento já foram divulgados publicamente; detalhamento recusado não é por si só recusa excepcional noticiável."
+    }
+  ],
+  "precedent_review": {
+    "validated": 0,
+    "index_matches": 36,
+    "tested_protocols": [
+      "48003.017190/2026-48",
+      "25072.042185/2026-54",
+      "21213.000549/2026-16",
+      "18800.092416/2026-33"
+    ],
+    "result": "Downloads dos quatro pareceres integrais retornaram HTTP 403. O índice aberto e as decisões resumidas não substituem a leitura dos pareceres. Nenhum precedente aprovado. Se houvesse edição, seção final permaneceria visível com esse motivo."
+  },
+  "access": {
+    "github": "leitura e escrita pela conexão cloud",
+    "gmail": "Enviados conferido: última edição localizada em 16/11, message_id 1a1e372d4b98c9ee, sem novo envio",
+    "api": "https://api-laibr.cgu.gov.br/publico/busca/pedidos/11971976 retornou HTTP 403",
+    "attachments": "Links de BuscaLAI testados retornaram HTTP 200 text/html de 2.844 bytes, não os arquivos indicados.",
+    "precedents": "Busca de Precedentes e quatro PDFs testados retornaram 403"
+  },
+  "conclusion": "Não publicar: mínimo de cinco achados qualificados e verificáveis não atingido. Última edição válida preservada. Não gerar edição JSON, fontes ou carrosséis que aparentem publicação."
+}

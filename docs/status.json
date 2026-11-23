@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-11-16T09:54:37.556136+00:00",
-  "last_run_status": "success",
-  "last_run_note": "5 pedidos e 0 precedentes verificados",
+  "last_run": "2026-11-23T08:04:34Z",
+  "last_run_status": "achados_insuficientes",
+  "last_run_note": "Pesquisa ampliada não atingiu cinco achados aprovados; sem nova publicação ou envio. Ver outbox/2026-11-23.sem-edicao.json.",
   "schedule": "semanal, às segundas 08:00 Europe/London, desde 05/10/2026",
   "edicoes": [
     {
@@ -121,5 +121,7 @@
       "e_mais": 4,
       "precedentes": 0
     }
-  ]
+  ],
+  "last_run_date": "2026-11-23",
+  "last_run_public_note": "A pesquisa não reuniu cinco achados qualificados e verificáveis. A última edição válida foi preservada."
 }
