@@ -9,35 +9,35 @@ Edição na web: https://luizftoledo.github.io/a-lai-que-pegou/edicoes/2026-11-2
 Fazenda envia 37 mil domínios de bets para bloqueio em outubro, mais do dobro de setembro
 A Secretaria de Prêmios e Apostas informou ter encaminhado 37.360 domínios à Anatel para bloqueio em outubro de 2026, contra 16.529 em setembro: 2,26 vezes o volume anterior. Até 11 de novembro, eram mais 13.509. São endereços encaminhados para bloqueio, não comprovação de bloqueios executados nem contagem de empresas únicas. A mesma resposta relata fiscalização manual dos domínios das operadoras antes autorizadas.
 Por que agora: A resposta de 17/11 detalha a fiscalização após a proibição das apostas. A busca no noticiário não localizou a mesma série mensal; o dado permite confrontar anúncios de bloqueio com a execução efetiva.
-Pista para apuração: Pedir à Anatel os recebimentos e bloqueios efetivos por data; separar domínios repetidos, espelhos e operadores. Comparar outubro com setembro sem atribuir causalidade apenas à proibição.
+O que perguntar em seguida: Pedir à Anatel os recebimentos e bloqueios efetivos por data; separar domínios repetidos, espelhos e operadores. Comparar outubro com setembro sem atribuir causalidade apenas à proibição.
 Pedido e resposta: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11945194.html
 Registro no InformaBR: https://informabr.cgu.gov.br/busca/11945194
 
 Só uma de seis estações geotécnicas do Cemaden funciona em Angra, informa ministério
 O Ministério da Ciência, Tecnologia e Inovação informou que, em Angra dos Reis, apenas uma das seis plataformas geotécnicas do Cemaden estava operacional. Das 28 estações pluviométricas, 25 funcionavam, e a única hidrológica estava operacional. Especificamente em Ilha Grande, a resposta registra uma de três plataformas operacional. O órgão diz que todas foram vistoriadas e ficaram operacionais em maio de 2026 e aponta limitações de telefonia celular em alguns locais da ilha. O quadro não significa ausência de todo o monitoramento no município nem prova falha na emissão de alertas.
 Por que agora: A resposta de 17/11 oferece um retrato antes do verão, quando a região entra no período de atenção para chuvas. Não foi localizada notícia com estes mesmos quantitativos de disponibilidade.
-Pista para apuração: Pedir histórico de falhas e manutenção por estação e a data de diagnóstico; ouvir Cemaden, defesa civil municipal e estadual sobre redundância e impacto. Distinguir falha de transmissão de defeito do sensor.
+O que perguntar em seguida: Pedir histórico de falhas e manutenção por estação e a data de diagnóstico; ouvir Cemaden, defesa civil municipal e estadual sobre redundância e impacto. Distinguir falha de transmissão de defeito do sensor.
 Pedido e resposta: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11971976.html
 Registro no InformaBR: https://informabr.cgu.gov.br/busca/11971976
 
 Seguro-defeso soma R$ 5,97 bilhões em pagamentos sob gestão do Ministério do Trabalho
 O Ministério do Trabalho informou 1.487.716 requerimentos recebidos e 1.067.530 benefícios concedidos para os defesos sob sua responsabilidade, entre 1º de novembro de 2025 e 24 de outubro de 2026. Em 37 lotes, foram emitidas 3.689.167 parcelas, com R$ 5,97 bilhões pagos. Isso equivale a cerca de R$ 5,6 mil por benefício concedido no período, não por parcela. No Amazonas, foram 134.604 requerimentos. A resposta separa esse fluxo dos passivos de defesos anteriores, cuja habilitação compete ao INSS. A diferença entre requerimentos e concessões não pode ser chamada de fila ou indeferimento sem conhecer as situações de cada pedido.
 Por que agora: A resposta de 06/11 consolida quase um ano da transferência da gestão. A consulta ao noticiário não encontrou o mesmo conjunto de números; a prestação de contas permite separar pagamentos correntes de atrasados.
-Pista para apuração: Obter quantidade de requerimentos pendentes, negados e em recurso, com tempos de espera. Solicitar ao INSS o passivo anterior e evitar somar bases com períodos ou unidades de contagem diferentes.
+O que perguntar em seguida: Obter quantidade de requerimentos pendentes, negados e em recurso, com tempos de espera. Solicitar ao INSS o passivo anterior e evitar somar bases com períodos ou unidades de contagem diferentes.
 Pedido e resposta: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11811621.html
 Registro no InformaBR: https://informabr.cgu.gov.br/busca/11811621
 
 Ministério não registra adesão de Roraima ao atendimento a vítimas de trabalho escravo
 O Ministério dos Direitos Humanos informou não ter registro de adesão de Roraima ao Fluxo Nacional de Atendimento às Vítimas de Trabalho Escravo nem de comissão estadual formalmente instalada. A pasta diz ter enviado, em 22 de maio de 2026, pedido de participação no monitoramento dos colegiados à Secretaria de Justiça estadual, sem resposta às tentativas de contato ou ao formulário. Também afirma não registrar ações da comissão nacional no estado entre 2022 e 2025. Trata-se do que consta nas bases da pasta: a resposta não demonstra ausência de toda ação de fiscalização, de iniciativas judiciais ou de outras formas de assistência no estado.
 Por que agora: A resposta de 05/11 atualiza a situação após a inclusão, em outubro, de empregadores de Roraima na lista suja do trabalho escravo. Não foi localizada notícia com esta resposta sobre adesão e monitoramento.
-Pista para apuração: Ouvir a Secretaria de Justiça de Roraima sobre a adesão, a comissão e o formulário. Levantar o atendimento após os resgates com assistência social e Ministério Público do Trabalho, distinguindo repressão e acolhimento.
+O que perguntar em seguida: Ouvir a Secretaria de Justiça de Roraima sobre a adesão, a comissão e o formulário. Levantar o atendimento após os resgates com assistência social e Ministério Público do Trabalho, distinguindo repressão e acolhimento.
 Pedido e resposta: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11770792.html
 Registro no InformaBR: https://informabr.cgu.gov.br/busca/11770792
 
 Projeção do acordo Mercosul-União Europeia pressupõe pleno emprego e mede efeito em 2044
 O Ministério do Desenvolvimento detalhou a simulação que estima ganho de 0,34% no PIB com o acordo Mercosul-União Europeia. Esse número é a diferença em 2044 em relação a um cenário sem o acordo, não crescimento adicional por ano. A base de referência é de 2017; o modelo pressupõe pleno emprego e livre movimentação de trabalho e capital entre setores de uma região. Não há desagregação regional do Brasil. Os R$ 37 bilhões divulgados aplicam o percentual aos valores macroeconômicos de 2023. Essas escolhas metodológicas não provam erro da projeção, mas delimitam o que ela permite concluir.
 Por que agora: A resposta de 18/11 explicita as hipóteses por trás dos números usados para apresentar o acordo. A consulta não localizou cobertura com este mesmo detalhamento; o interesse está em esclarecer o horizonte e as limitações da estimativa.
-Pista para apuração: Solicitar os arquivos de simulação e exercícios de sensibilidade. Ouvir economistas sobre desemprego, mobilidade dos trabalhadores e impactos regionais, sem tratar projeção de longo prazo como resultado observado.
+O que perguntar em seguida: Solicitar os arquivos de simulação e exercícios de sensibilidade. Ouvir economistas sobre desemprego, mobilidade dos trabalhadores e impactos regionais, sem tratar projeção de longo prazo como resultado observado.
 Pedido e resposta: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11970219.html
 Registro no InformaBR: https://informabr.cgu.gov.br/busca/11970219
 

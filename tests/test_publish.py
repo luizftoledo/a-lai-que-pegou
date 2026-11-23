@@ -77,6 +77,22 @@ class Travas(unittest.TestCase):
         x = copy.deepcopy(item()); del x["relevancia"]
         self.assertIn("relevancia", self.erros(issue(x)))
 
+    def test_precedente_repetido(self):
+        antigo = json.loads((ROOT / "issues" / "2026-11-23.json").read_text(encoding="utf-8"))["precedents"][0]
+        ed = issue(item())
+        ed["precedents"] = [copy.deepcopy(antigo)]
+        self.assertIn("protocolo de precedente já publicado", self.erros(ed))
+
+    def test_render_usa_layout_datafixers_e_data_br(self):
+        path = ROOT / "issues" / "2026-11-23.json"
+        page, _ = publish.render(json.loads(path.read_text(encoding="utf-8")))
+        self.assertIn('class="top-nav"', page)
+        self.assertNotIn('class="topbar"', page)
+        self.assertIn("../assets/style.css?v=4", page)
+        self.assertIn("../assets/site.js?v=1", page)
+        self.assertIn("resposta em 17/11/2026", page)
+        self.assertIn("Decisão · 17/02/2023", page)
+
 
 if __name__ == "__main__":
     unittest.main()
