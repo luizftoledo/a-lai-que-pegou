@@ -109,7 +109,9 @@ def validate(issue):
     if not minimo <= len(items) <= 6:
         errors.append(f"A edição precisa de {minimo} a 6 itens verificados.")
     if not isinstance(issue.get("precedents"), list):
-        errors.append("`precedents` deve ser uma lista, mesmo vazia.")
+        errors.append("`precedents` deve ser uma lista.")
+    elif issue["date"] >= "2026-11-23" and not issue["precedents"]:
+        errors.append("A edição precisa de pelo menos um precedente validado.")
     if errors:
         return errors
     if issue["headline"] != items[0].get("headline"):
@@ -221,7 +223,7 @@ def render(issue):
         f'<li><a href="{clean(x["source_url"])}">{clean(x["headline"])}</a>. {clean(x["summary"])} <span class="protocol">Protocolo {clean(x["protocol"])}</span></li>'
         for x in also) + '</ul></section>') if also else ''
     n_items = len(issue['items'])
-    precedent_section = ('''<section class="section"><div class="kicker">Para o próximo pedido</div><h2>Precedentes que ajudam em outros pedidos</h2><p class="precedents-intro">Decisões em recurso que determinaram acesso a informações de interesse público antes negadas. A situação da entrega aparece em cada caso.</p>''' + ''.join(precedents) + '</section>') if precedents else ('<section class="section"><div class="kicker">Para o próximo pedido</div><h2>Precedentes que ajudam em outros pedidos</h2><p>' + clean(issue.get('precedents_note', 'Nenhum precedente foi validado nesta edição após a revisão das fontes.')) + '</p></section>')
+    precedent_section = ('''<section class="section"><div class="kicker">Para o próximo pedido</div><h2>Precedentes que ajudam em outros pedidos</h2><p class="precedents-intro">Decisões em recurso que determinaram acesso a informações de interesse público antes negadas. A situação da entrega aparece em cada caso.</p>''' + ''.join(precedents) + '</section>') if precedents else ''
     page = f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{clean(issue['headline'])} · A LAI que pegou</title>
 <meta name="description" content="{clean(issue['deck'])}"><meta property="og:title" content="{clean(issue['headline'])}"><meta property="og:image" content="https://luizftoledo.github.io/a-lai-que-pegou/assets/capa-lai.gif"><meta name="theme-color" content="#0d2c27">
@@ -255,8 +257,6 @@ def render(issue):
             if p.get("document_url"):
                 lines += ["Parecer (PDF): " + p["document_url"]]
             lines += [""]
-    else:
-        lines += ["PRECEDENTES QUE AJUDAM EM OUTROS PEDIDOS", "", issue.get("precedents_note", "Nenhum precedente foi validado nesta edição após a revisão das fontes."), ""]
     return page, "\n".join(lines)
 
 

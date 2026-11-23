@@ -9,9 +9,8 @@ Cada item de `items` precisa de: `headline`, `summary`, `why_now`, `pitch`,
 literal ou números exatos da resposta), `attachment_review` (o que foi examinado,
 ou "Sem anexo público") e, quando houver, `attachment_url`.
 
-Use `precedents: []` se nenhuma decisão examinada abrir uma informação
-concreta de interesse público antes negada. Não preencha a seção com questões
-apenas procedimentais. Quando houver um precedente, registre `headline`,
+Desde 23/11/2026, inclua pelo menos um precedente validado por edição.
+Exclua casos apenas procedimentais. Registre `headline`,
 `prior_denial` (o que o órgão negava e por quê), `opened_information` (a
 informação específica liberada), `public_interest`, `access_status` (`entrega
 determinada` ou `entrega confirmada`), `decision`, `helps_with`, `source_url`,

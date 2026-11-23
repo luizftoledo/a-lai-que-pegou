@@ -22,12 +22,19 @@ def item(headline="Banco lidera novos empréstimos consignados do INSS com 1,6 m
 
 
 def issue(*items):
-    return {"date": "2026-11-16", "headline": items[0]["headline"], "deck": "Linha fina.", "items": list(items), "precedents": []}
+    return {"date": "2026-11-15", "headline": items[0]["headline"], "deck": "Linha fina.", "items": list(items), "precedents": []}
 
 
 class Travas(unittest.TestCase):
     def test_edicao_valida(self):
         self.assertEqual(publish.validate(issue(item())), [])
+
+    def test_edicao_atual_exige_precedente(self):
+        path = ROOT / "issues" / "2026-11-23.json"
+        edicao = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(publish.validate(edicao), [])
+        edicao["precedents"] = []
+        self.assertIn("pelo menos um precedente", self.erros(edicao))
 
     def test_edicoes_antigas_continuam_validas(self):
         for path in sorted((ROOT / "issues").glob("2026-10-*.json")):

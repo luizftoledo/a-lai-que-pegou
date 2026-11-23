@@ -83,10 +83,14 @@ Registrar em `relevancia.cobertura`:
 
 ## 8. Precedentes
 
-Sem mudança: só decisão de CGU ou CMRI que reverteu negativa ou levou à entrega
-de informação concreta de interesse público. A seção vem no fim e não dá o
-título. `data/candidatos.json` lista em `recursos` as decisões deferidas ou com
-perda de objeto; a leitura da decisão integral continua obrigatória.
+Toda edição deve trazer pelo menos um precedente validado na seção final, sem
+usá-lo como manchete. Selecionar decisão da CGU ou da CMRI que tenha revertido
+uma negativa ou levado à entrega de informação concreta de interesse público.
+Ler o parecer integral e a decisão, explicar o que foi negado, o resultado e
+como citá-lo em pedidos semelhantes. Distinguir ordem de acesso de entrega
+confirmada. Ampliar a busca para decisões históricas ainda aplicáveis e
+inéditas na newsletter quando necessário. Falhas de acesso e resultados da
+triagem ficam nas notas internas.
 
 ## 9. Registro por item
 

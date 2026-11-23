@@ -165,6 +165,19 @@
       "transcript_url": "https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11970219.html"
     }
   ],
-  "precedents": [],
-  "precedents_note": "Nenhum precedente foi validado nesta edição. Foram triados 60 recursos favoráveis ou com perda de objeto na janela de 45 dias e cruzados com o índice aberto de precedentes. Os quatro pareceres integrais testados, dos protocolos 48003.017190/2026-48, 25072.042185/2026-54, 21213.000549/2026-16 e 18800.092416/2026-33, retornaram HTTP 403. O índice e o resumo da decisão não substituem a leitura do parecer integral; por isso, nenhuma decisão foi apresentada como precedente aprovado."
+  "precedents": [
+    {
+      "headline": "CGU determina acesso ao processo disciplinar de Eduardo Pazuello",
+      "prior_denial": "O Exército entregou apenas um extrato, apoiado em decisões anteriores da CGU que limitavam o acesso ao resumo do processo.",
+      "opened_information": "Os autos da apuração sobre a participação de Eduardo Pazuello, então general da ativa e ex-ministro da Saúde, em uma manifestação a favor do então presidente Jair Bolsonaro no Rio de Janeiro em maio de 2021. A ordem abrange a defesa de Pazuello e a decisão de arquivamento, com tarjas nos dados pessoais protegidos.",
+      "public_interest": "Os autos permitem verificar como o Comando do Exército apurou a conduta de um general da ativa em um ato político e por que arquivou o caso.",
+      "access_status": "entrega determinada",
+      "decision": "Em 17 de fevereiro de 2023, a CGU deu provimento parcial a 13 recursos e determinou que o Exército disponibilizasse os autos em dez dias, com tarjas restritas a informações pessoais protegidas.",
+      "helps_with": "Ao pedir a íntegra de um processo disciplinar militar já concluído, cite o Enunciado CGU nº 3/2023 e o protocolo 60143.009212/2022-73. Peça cópia dos autos, incluindo defesa e decisão, com tarjas nos dados protegidos.",
+      "source_url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2023/02/cgu-conclui-analise-de-22-recursos-sobre-sigilos-impostos-a-informacoes-publicas/sei_2696805_parecer___recurso_de_3a_instancia_125_parecer-1b.pdf",
+      "protocol": "60143.009212/2022-73",
+      "decision_date": "2023-02-17",
+      "evidence": "Página 11, decisão assinada: “o acesso ao inteiro teor do procedimento disciplinar requerido, com o tarjamento, estritamente, de informações pessoais e dados biográficos”."
+    }
+  ]
 }

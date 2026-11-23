@@ -29,8 +29,14 @@ arquivo de cada edição está em [issues/README.md](issues/README.md).
    `python3 scripts/detalhe.py ID` e os anexos acessíveis.
 3. Pontuar cada pista pelos cinco eixos de CRITERIOS.md, com motivo escrito.
    Conferir no noticiário se o fato já saiu com o mesmo dado.
-4. Para precedentes, partir de `recursos` em `data/candidatos.json` e ler a
-   decisão integral.
+4. Validar pelo menos um precedente para a seção final. Começar pelos
+   recursos recentes em `data/candidatos.json`. Se a janela inicial ou o
+   acesso falhar, ampliar o período e consultar Busca LAI, Busca Precedentes
+   e os acervos oficiais da CGU e da CMRI, inclusive PDFs publicados em gov.br.
+   Usar decisão histórica ainda aplicável e inédita na newsletter quando
+   necessário. Ler o parecer integral e confirmar a decisão assinada.
+   Registrar falhas de acesso apenas nas notas internas e continuar a busca
+   antes de fechar a edição.
 5. Montar `issues/AAAA-MM-DD.json` e rodar
    `python3 scripts/publish.py issues/AAAA-MM-DD.json`. O script recusa a
    edição que não cumpre os critérios e lista os motivos.
