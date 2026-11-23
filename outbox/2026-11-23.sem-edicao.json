@@ -78,5 +78,13 @@
     "attachments": "Links de BuscaLAI testados retornaram HTTP 200 text/html de 2.844 bytes, não os arquivos indicados.",
     "precedents": "Busca de Precedentes e quatro PDFs testados retornaram 403"
   },
-  "conclusion": "Não publicar: mínimo de cinco achados qualificados e verificáveis não atingido. Última edição válida preservada. Não gerar edição JSON, fontes ou carrosséis que aparentem publicação."
+  "conclusion": "Não publicar: mínimo de cinco achados qualificados e verificáveis não atingido. Última edição válida preservada. Não gerar edição JSON, fontes ou carrosséis que aparentem publicação.",
+  "subsequent_run": {
+    "status": "publicada após busca ampliada",
+    "edition": "issues/2026-11-23.json",
+    "published": true,
+    "email_sent": true,
+    "message_id": "1a2079048747af72",
+    "note": "A nova busca ampliou a triagem de 1.500 para 4.626 candidatos e fez leitura editorial direcionada, incluindo respostas anteriores a 16/11 dentro da janela de 21 dias. Acrescentou seguro-defeso e Roraima às três pistas já retidas. O registro acima preserva a primeira tentativa sem edição."
+  }
 }

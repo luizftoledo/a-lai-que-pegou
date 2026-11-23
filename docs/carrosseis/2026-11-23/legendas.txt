@@ -1,0 +1,51 @@
+01 · Apresentação
+A LAI que pegou é um projeto experimental de triagem de pedidos de informação de interesse público com apoio de IA. Fontes oficiais e protocolos para checagem no site. Edição de 23/11/2026. Leia no link da bio.
+
+02
+Fazenda envia 37 mil domínios de bets para bloqueio em outubro, mais do dobro de setembro
+
+A Secretaria de Prêmios e Apostas informou ter encaminhado 37.360 domínios à Anatel para bloqueio em outubro de 2026, contra 16.529 em setembro: 2,26 vezes o volume anterior. Até 11 de novembro, eram mais 13.509. São endereços encaminhados para bloqueio, não comprovação de bloqueios executados nem contagem de empresas únicas. A mesma resposta relata fiscalização manual dos domínios das operadoras antes autorizadas.
+
+Protocolo: 18800.170756/2026-11
+Fonte: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11945194.html
+Leia no link da bio.
+
+
+03
+Só uma de seis estações geotécnicas do Cemaden funciona em Angra, informa ministério
+
+O Ministério da Ciência, Tecnologia e Inovação informou que, em Angra dos Reis, apenas uma das seis plataformas geotécnicas do Cemaden estava operacional. Das 28 estações pluviométricas, 25 funcionavam, e a única hidrológica estava operacional. Especificamente em Ilha Grande, a resposta registra uma de três plataformas operacional. O órgão diz que todas foram vistoriadas e ficaram operacionais em maio de 2026 e aponta limitações de telefonia celular em alguns locais da ilha. O quadro não significa ausência de todo o monitoramento no município nem prova falha na emissão de alertas.
+
+Protocolo: 01217.008420/2026-17
+Fonte: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11971976.html
+Leia no link da bio.
+
+
+04
+Seguro-defeso soma R$ 5,97 bilhões em pagamentos sob gestão do Ministério do Trabalho
+
+O Ministério do Trabalho informou 1.487.716 requerimentos recebidos e 1.067.530 benefícios concedidos para os defesos sob sua responsabilidade, entre 1º de novembro de 2025 e 24 de outubro de 2026. Em 37 lotes, foram emitidas 3.689.167 parcelas, com R$ 5,97 bilhões pagos. Isso equivale a cerca de R$ 5,6 mil por benefício concedido no período, não por parcela. No Amazonas, foram 134.604 requerimentos. A resposta separa esse fluxo dos passivos de defesos anteriores, cuja habilitação compete ao INSS. A diferença entre requerimentos e concessões não pode ser chamada de fila ou indeferimento sem conhecer as situações de cada pedido.
+
+Protocolo: 36777.333128/2026-61
+Fonte: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11811621.html
+Leia no link da bio.
+
+
+05
+Ministério não registra adesão de Roraima ao atendimento a vítimas de trabalho escravo
+
+O Ministério dos Direitos Humanos informou não ter registro de adesão de Roraima ao Fluxo Nacional de Atendimento às Vítimas de Trabalho Escravo nem de comissão estadual formalmente instalada. A pasta diz ter enviado, em 22 de maio de 2026, pedido de participação no monitoramento dos colegiados à Secretaria de Justiça estadual, sem resposta às tentativas de contato ou ao formulário. Também afirma não registrar ações da comissão nacional no estado entre 2022 e 2025. Trata-se do que consta nas bases da pasta: a resposta não demonstra ausência de toda ação de fiscalização, de iniciativas judiciais ou de outras formas de assistência no estado.
+
+Protocolo: 00105.004977/2026-75
+Fonte: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11770792.html
+Leia no link da bio.
+
+
+06
+Projeção do acordo Mercosul-União Europeia pressupõe pleno emprego e mede efeito em 2044
+
+O Ministério do Desenvolvimento detalhou a simulação que estima ganho de 0,34% no PIB com o acordo Mercosul-União Europeia. Esse número é a diferença em 2044 em relação a um cenário sem o acordo, não crescimento adicional por ano. A base de referência é de 2017; o modelo pressupõe pleno emprego e livre movimentação de trabalho e capital entre setores de uma região. Não há desagregação regional do Brasil. Os R$ 37 bilhões divulgados aplicam o percentual aos valores macroeconômicos de 2023. Essas escolhas metodológicas não provam erro da projeção, mas delimitam o que ela permite concluir.
+
+Protocolo: 52016.009591/2026-52
+Fonte: https://luizftoledo.github.io/a-lai-que-pegou/fontes/2026-11-23/11970219.html
+Leia no link da bio.
