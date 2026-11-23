@@ -52,6 +52,16 @@ def main():
                             'arquivo_csv': csv_name, 'zip_sha256': digest,
                             'edicao': issue['date'], 'anexos': 'A lista abaixo não significa que os arquivos foram abertos ou arquivados.'},
         }
+        # Suprime somente a assinatura pessoal do solicitante, quando sinalizada
+        # pela revisão editorial. A íntegra substantiva do pedido é preservada.
+        if item.get('privacy_omit_request_signature'):
+            marker = 'Desde já agradeço,'
+            if marker not in record['pedido']:
+                raise ValueError('Assinatura pessoal não localizada: ' + pid)
+            record['pedido'] = record['pedido'].split(marker, 1)[0].rstrip() + ' [Assinatura e contato pessoal do solicitante suprimidos.]'
+            record['proveniencia']['privacidade'] = 'Apenas a assinatura final com nome e contato pessoal do solicitante foi suprimida. O conteúdo substantivo foi preservado.'
+        if len(d['DetalhamentoSolicitacao']) >= 3990:
+            raise ValueError('Pedido possivelmente cortado na base: ' + pid)
         raw = json.dumps(record, ensure_ascii=False, indent=2) + '\n'
         (out / f'{pid}.json').write_text(raw, encoding='utf-8')
         e = html.escape
@@ -67,7 +77,7 @@ def main():
 <h2>Pedido</h2><pre>{text(record['pedido'])}</pre><h2>Resposta</h2><pre>{text(record['resposta'])}</pre>
 <h2>Anexos listados na base</h2><p>Links fornecidos pela CGU, sujeitos à disponibilidade do portal. A lista não indica revisão nem cópia dos anexos.</p><ul>{att or '<li>Sem anexo público listado.</li>'}</ul>
 <h2>Origem e conferência</h2><p>Arquivo: <code>{e(csv_name)}</code>. SHA-256 do ZIP utilizado: <code>{digest}</code>. SHA-256 deste JSON: <code>{hashlib.sha256(raw.encode()).hexdigest()}</code>.</p>
-<p>O campo de resposta tem {len(record['resposta'])} caracteres e não atingiu o limite de corte da base. A leitura não inclui documentos de anexos nem todo o histórico de recursos.</p></body></html>'''
+<p>O campo de resposta tem {len(record['resposta'])} caracteres e não atingiu o limite de corte da base. A leitura não inclui documentos de anexos nem todo o histórico de recursos.</p><p>{e(record['proveniencia'].get('privacidade', 'Não foram incluídos campos de identificação do solicitante.'))}</p></body></html>'''
         (out / f'{pid}.html').write_text(page, encoding='utf-8')
         item['transcript_url'] = BASE + f"fontes/{issue['date']}/{pid}.html"
     issue_path.write_text(json.dumps(issue, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

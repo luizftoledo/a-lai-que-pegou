@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-11-23T08:04:34Z",
-  "last_run_status": "achados_insuficientes",
-  "last_run_note": "Pesquisa ampliada não atingiu cinco achados aprovados; sem nova publicação ou envio. Ver outbox/2026-11-23.sem-edicao.json.",
+  "last_run": "2026-11-23T08:37:00.219838+00:00",
+  "last_run_status": "success",
+  "last_run_note": "5 pedidos e 0 precedentes verificados",
   "schedule": "semanal, às segundas 08:00 Europe/London, desde 05/10/2026",
   "edicoes": [
     {
@@ -118,6 +118,15 @@
       "file": "edicoes/2026-11-16.html",
       "titulo": "Governo prevê novos membros do conselho de defesa civil só para meados de 2027",
       "em_destaque": "Cinco achados sobre defesa civil, armas, crédito a motoristas, subsídios a combustíveis e sigilo de água e energia de data centers. Pedido e resposta completos estão disponíveis em cópias verificáveis da base pública da CGU.",
+      "e_mais": 4,
+      "precedentes": 0
+    },
+    {
+      "numero": 14,
+      "data": "2026-11-23",
+      "file": "edicoes/2026-11-23.html",
+      "titulo": "Fazenda envia 37 mil domínios de bets para bloqueio em outubro, mais do dobro de setembro",
+      "em_destaque": "Cinco achados sobre fiscalização de bets, estações de monitoramento de desastres, seguro-defeso, atendimento a vítimas de trabalho escravo e as hipóteses da projeção do acordo Mercosul-União Europeia. Pedido e resposta estão em cópias verificáveis dos dados abertos da CGU.",
       "e_mais": 4,
       "precedentes": 0
     }

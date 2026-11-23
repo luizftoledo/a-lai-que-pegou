@@ -255,6 +255,8 @@ def render(issue):
             if p.get("document_url"):
                 lines += ["Parecer (PDF): " + p["document_url"]]
             lines += [""]
+    else:
+        lines += ["PRECEDENTES QUE AJUDAM EM OUTROS PEDIDOS", "", issue.get("precedents_note", "Nenhum precedente foi validado nesta edição após a revisão das fontes."), ""]
     return page, "\n".join(lines)
 
 
